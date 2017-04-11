@@ -11,7 +11,7 @@ print(url)
 soup = BeautifulSoup(url)
 print(soup)
 
-links = soup.findAll('//*[@id="median-price"]/div[2]/div/div[1]/div[1]/div[1]/a[3]/div[2]')
+links = soup.findAll('<div class="price strong">')
 print(links)
 
 
