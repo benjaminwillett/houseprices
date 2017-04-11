@@ -10,13 +10,14 @@ url = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenh
 soup = BeautifulSoup(url)
 
 links = soup.findAll("div", {"class": "price strong"})
+refined = links[0,1,2]
 
 
 @app.route('/' , methods=['GET','POST'])
 def default():
     global links
     global soup
-    return render_template('main.html', LINKS=links)
+    return render_template('main.html', LINKS=links, REFINED=refined)
 
 
 
