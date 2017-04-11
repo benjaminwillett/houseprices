@@ -15,7 +15,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Medium House Price Cheltenham!'
+    global links
+    return '4 Bed Medium House Price Cheltenham =', links
 
 
 if __name__ == '__main__':
