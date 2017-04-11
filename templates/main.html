@@ -17,7 +17,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- The Grid -->
   <div class="w3-row-padding">
 
-<H5>Current 4 Bedroom House Median Price in Cheltenham</H5>
+       <div class="w3-container">
+
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"><H5>Current 4 Bedroom House Median Price in Cheltenham</H5>
 <p><b>{% for each in REFINEDCHELT %}
     {{ each }}</b> Price has changed by {{ CHANGE }}</p>
 
@@ -35,8 +37,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 {% endfor %}
 
-<H5>Current 4 Bedroom House Median Price in Beaumaris/H5>
+<H5>Current 4 Bedroom House Median Price in Beaumaris</H5>
 <p><b>{% for each in REFINEDBEAU %}
     {{ each }}</b></p>
 
 {% endfor %}
+  </div>
+</div>
