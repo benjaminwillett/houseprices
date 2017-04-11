@@ -17,7 +17,7 @@ print(str(temp) + "is temp")
 refined = temp
 print(str(refined) + "is refined")
 
-priceHistory.append(temp)
+priceHistory.append(refined)
 print(str(priceHistory) + "is price history")
 
 @app.route('/' , methods=['GET','POST'])
