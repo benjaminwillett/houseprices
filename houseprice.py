@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from BeautifulSoup import BeautifulSoup
 import urllib3
+import time
 
 
 app = Flask(__name__)
@@ -9,6 +10,7 @@ loop = True
 priceHistory = []
 change = 0
 http = urllib3.PoolManager()
+
 
 while loop == True:
     urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
@@ -44,6 +46,7 @@ while loop == True:
     if refinedChelt > priceHistory[0]:
         change = ((int(refinedChelt) - (int(priceHistory[0]))))
     print(str(change) + " is the change")
+    time.sleep(60)
 
 
 @app.route('/' , methods=['GET','POST'])
