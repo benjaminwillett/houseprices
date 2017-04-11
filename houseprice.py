@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from BeautifulSoup import BeautifulSoup
 import urllib3
 
@@ -12,6 +12,12 @@ links = soup.findAll('//*[@id="median-price"]/div[2]/div/div[1]/div[1]/div[1]/a[
 
 
 app = Flask(__name__)
+
+
+@app.route('/' , methods=['GET','POST'])
+def default():
+    global links
+    return render_template('main.html', LINKS=links)
 
 @app.route('/')
 def hello_world():
