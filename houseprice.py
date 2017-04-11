@@ -1,6 +1,6 @@
 from flask import Flask
 from BeautifulSoup import BeautifulSoup
-import urllib3
+import urllib2
 
 url = urllib2.urlopen("https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic")
 
