@@ -29,37 +29,37 @@ def getContent():
     global loop
 
     urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
-    urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
-    urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
-    urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
+ #   urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
+ #   urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
+ #   urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
 
     soupChelt = BeautifulSoup(urlChelt)
-    soupMent = BeautifulSoup(urlMent)
-    soupPark = BeautifulSoup(urlPark)
-    soupBeau = BeautifulSoup(urlBeau)
+#    soupMent = BeautifulSoup(urlMent)
+ #   soupPark = BeautifulSoup(urlPark)
+ #   soupBeau = BeautifulSoup(urlBeau)
 
     linksChelt = soupChelt.findAll("div", {"class": "price strong"})
-    linksMent = soupMent.findAll("div", {"class": "price strong"})
-    linksPark = soupPark.findAll("div", {"class": "price strong"})
-    linksBeau = soupBeau.findAll("div", {"class": "price strong"})
+ #   linksMent = soupMent.findAll("div", {"class": "price strong"})
+ #   linksPark = soupPark.findAll("div", {"class": "price strong"})
+  #  linksBeau = soupBeau.findAll("div", {"class": "price strong"})
 
     tempChelt = linksChelt[2]
-    tempMent = linksMent[2]
-    tempPark = linksPark[2]
-    tempBeau = linksBeau[2]
+ #   tempMent = linksMent[2]
+ #   tempPark = linksPark[2]
+ #   tempBeau = linksBeau[2]
     print(str(tempChelt) + "is tempChelt")
-    print(str(tempMent) + "is tempMent")
-    print(str(tempPark) + "is tempPark")
-    print(str(tempBeau) + "is tempBeau")
+ #   print(str(tempMent) + "is tempMent")
+ #   print(str(tempPark) + "is tempPark")
+ #   print(str(tempBeau) + "is tempBeau")
 
     refinedChelt = tempChelt
-    refinedMent = tempMent
-    refinedPark = tempPark
-    refinedBeau = tempBeau
+#    refinedMent = tempMent
+#    refinedPark = tempPark
+#    refinedBeau = tempBeau
     print(str(refinedChelt) + "is refinedChelt")
-    print(str(refinedMent) + "is refinedMent")
-    print(str(refinedPark) + "is refinedPark")
-    print(str(refinedBeau) + "is refinedBeau")
+ #   print(str(refinedMent) + "is refinedMent")
+ #   print(str(refinedPark) + "is refinedPark")
+ #   print(str(refinedBeau) + "is refinedBeau")
 
     priceHistory.append(refinedChelt)
     print(str(priceHistory) + "is price history")
