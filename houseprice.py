@@ -14,9 +14,13 @@ http = urllib3.PoolManager()
 
 while loop == True:
     urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
+    time.sleep(1)
     urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
+    time.sleep(1)
     urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
+    time.sleep(1)
     urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
+    time.sleep(1)
 
     soupChelt = BeautifulSoup(urlChelt)
     soupMent = BeautifulSoup(urlMent)
