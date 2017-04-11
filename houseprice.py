@@ -11,7 +11,7 @@ print(url)
 soup = BeautifulSoup(url)
 print(soup)
 
-links = soup.find("div", {"class": "price strong"})
+links = soup.findAll("div", {"class": "price strong"})
 print(links)
 
 
