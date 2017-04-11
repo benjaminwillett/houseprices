@@ -11,7 +11,7 @@ print(url)
 soup = BeautifulSoup(url)
 print(soup)
 
-links = soup.findAll("4 BR</div><div>", {"class": "price strong"})
+links = soup.findAll("div", {"class": "price strong"})
 print(links)
 
 
@@ -19,7 +19,7 @@ print(links)
 def default():
     global links
     global soup
-    return render_template('main.html', LINKS=links, SOUP=soup)
+    return render_template('main.html', LINKS=links)
 
 
 
