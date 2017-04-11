@@ -1,5 +1,5 @@
 <H5>Current 4 Bedroom House Median Price in Cheltenham</H5>
-{% for each in REFINED %}
+{% for each in REFINEDCHELT %}
         <p><b>{{ each }}</b> Price has changed by {{ CHANGE }}</p>
 
 {% endfor %}
@@ -7,4 +7,22 @@
 <H5>4 Bedroom House Price History in Cheltenham</H5>
 {% for each in PRICEHISTORY[0] %}
         <p><b>{{ each }}</b></p>
+{% endfor %}
+
+<H5>Current 4 Bedroom House Median Price in Mentone</H5>
+{% for each in REFINEDMENT%}
+        <p><b>{{ each }}</b></p>
+
+{% endfor %}
+
+<H5>Current 4 Bedroom House Median Price in Parkdale</H5>
+{% for each in REFINEDPARK %}
+        <p><b>{{ each }}</b></p>
+
+{% endfor %}
+
+<H5>Current 4 Bedroom House Median Price in Beaumaris</H5>
+{% for each in REFINEDBEAU %}
+        <p><b>{{ each }}</b></p>
+
 {% endfor %}

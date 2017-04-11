@@ -8,31 +8,49 @@ app = Flask(__name__)
 priceHistory = []
 change = 0
 http = urllib3.PoolManager()
-url = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
+urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
+urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
+urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
+urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
 
-soup = BeautifulSoup(url)
+soupChelt = BeautifulSoup(urlChelt)
+soupMent = BeautifulSoup(urlMent)
+soupPark = BeautifulSoup(urlPark)
+soupBeau = BeautifulSoup(urlBeau)
 
-links = soup.findAll("div", {"class": "price strong"})
-temp = links[2]
-print(str(temp) + "is temp")
-refined = temp
-print(str(refined) + "is refined")
+linksChelt = soupChelt.findAll("div", {"class": "price strong"})
+linksMent = soupMent.findAll("div", {"class": "price strong"})
+linksPark = soupPark.findAll("div", {"class": "price strong"})
+linksBeau = soupBeau.findAll("div", {"class": "price strong"})
 
-priceHistory.append(refined)
+tempChelt = linksChelt[2]
+tempMent = linksMent[2]
+tempPark = linksPark[2]
+tempBeau = linksBeau[2]
+print(str(tempChelt) + "is temp")
+
+refinedChelt = tempChelt
+refinedMent = tempMent
+refinedPark = tempPark
+refinedBeau = tempBeau
+print(str(refinedChelt) + "is refined")
+
+priceHistory.append(refinedChelt)
 print(str(priceHistory) + "is price history")
 
-if refined > priceHistory[0]:
-    change = ((int(refined) - (int(priceHistory[0]))))
+if refinedChelt > priceHistory[0]:
+    change = ((int(refinedChelt) - (int(priceHistory[0]))))
 print(str(change) + " is the change")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
-    global links
-    global soup
-    global refined
+    global refinedChelt
+    global refinedMent
+    global refinedPark
+    global refinedBeau
     global priceHistory
     global change
-    return render_template('main.html', LINKS=links, REFINED=refined, PRICEHISTORY=priceHistory, CHANGE=change)
+    return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, REFINEDBEAU=refinedBeau, PRICEHISTORY=priceHistory, CHANGE=change)
 
 
 
