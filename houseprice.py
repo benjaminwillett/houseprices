@@ -91,7 +91,8 @@ def default():
     global change
     global refinedChelt
     global refinedMent
-    return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, CHANGE=change)
+    global refinedPark
+    return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, CHANGE=change)
 
 
 if __name__ == '__main__':
