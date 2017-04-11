@@ -11,8 +11,7 @@ url = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenh
 soup = BeautifulSoup(url)
 
 links = soup.findAll("div", {"class": "price strong"})
-m = re.search('(?<=$)\w+', str(links))
-refined = m
+refined = links
 
 
 @app.route('/' , methods=['GET','POST'])
