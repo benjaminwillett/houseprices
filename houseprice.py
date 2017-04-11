@@ -12,8 +12,9 @@ soup = BeautifulSoup(url)
 
 links = soup.findAll("div", {"class": "price strong"})
 temp = links[1]
+print(temp + "is temp")
 refined = temp
-print(refined)
+print(refined + "is refined")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
