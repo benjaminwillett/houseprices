@@ -21,7 +21,7 @@ priceHistory.append(refined)
 print(str(priceHistory) + "is price history")
 
 if refined > priceHistory[0]:
-    change = refined - priceHistory[0]
+    change = ((int(refined) - (int(priceHistory[0]))))
 
 
 @app.route('/' , methods=['GET','POST'])
