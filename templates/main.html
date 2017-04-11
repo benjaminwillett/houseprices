@@ -1,8 +1,13 @@
-
+<H1>Current 4 Bedroom House Median Price in Cheltenham</H1>
 {%  set count = 1 %}
 {% for each in REFINED %}
     {% set count = count + 1 %}
 
         <p>{{ each}}</p>
 
+{% endfor %}
+
+<H1>4 Bedroom House Price History in Cheltenham</H1>
+{% for each in PRICEHISTORY %}
+        <p>{{ each}}</p>
 {% endfor %}
