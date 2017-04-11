@@ -20,28 +20,49 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
        <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><H5>Current 4 Bedroom House Median Price in Cheltenham</H5>
+        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-house fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Cheltenham</H5>
 <div class="w3-container"><p><b>{% for each in REFINEDCHELT %}
     {{ each }}</b> Price has changed by {{ CHANGE }}</p>
 
 {% endfor %}
 
-<H5>Current 4 Bedroom House Median Price in Mentone</H5>
-<p><b>{% for each in REFINEDMENT %}
+       <div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-house fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Mentone</H5>
+<div class="w3-container"><p><b>{% for each in REFINEDMENT %}
     {{ each }}</b></p>
 
 {% endfor %}
 
-<H5>Current 4 Bedroom House Median Price in Parkdale</H5>
-<p><b>{% for each in REFINEDPARK %}
+<div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-house fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Parkdale</H5>
+<div class="w3-container"><p><b>{% for each in REFINEDPARK %}
     {{ each }}</b></p>
 
 {% endfor %}
 
-<H5>Current 4 Bedroom House Median Price in Beaumaris</H5>
-<p><b>{% for each in REFINEDBEAU %}
+<div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-house fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Beaumaris</H5>
+<div class="w3-container"><p><b>{% for each in REFINEDBEAU %}
     {{ each }}</b></p>
 
 {% endfor %}
+  </div>
+</div>
+</div>
+</div>
+         </div>
+</div>
+</div>
+         </div>
+       </div>
+</div>
+         </div>
+       </div>
   </div>
 </div>
