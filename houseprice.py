@@ -1,11 +1,15 @@
 from flask import Flask
-import requests
-from lxml import html
+from BeautifulSoup import BeautifulSoup
+import urllib2
 
-r = requests.get("https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic")
-tree = html.fromstring(r.content)
+url = urllib2.urlopen("https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic")
 
-prices = tree.xpath('//*[@id="median-price"]/div[2]/div/div[1]/div[1]/div[1]/a[3]/div[2]')
+content = url.read()
+
+soup = BeautifulSoup(content)
+
+links = soup.findAll('//*[@id="median-price"]/div[2]/div/div[1]/div[1]/div[1]/a[3]/div[2]')
+
 
 app = Flask(__name__)
 
