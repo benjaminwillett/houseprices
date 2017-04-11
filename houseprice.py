@@ -6,6 +6,7 @@ import urllib3
 app = Flask(__name__)
 
 priceHistory = []
+change = 0
 http = urllib3.PoolManager()
 url = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
 
