@@ -18,8 +18,7 @@ def default():
     global links
     global soup
     global refined
-    count = 0
-    return render_template('main.html', LINKS=links, REFINED=refined, COUNT=count)
+    return render_template('main.html', LINKS=links, REFINED=refined)
 
 
 
