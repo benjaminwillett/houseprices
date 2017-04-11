@@ -76,6 +76,7 @@ def getContent():
  #   time.sleep(60)
 
 getContent()
+print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
