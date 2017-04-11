@@ -11,7 +11,7 @@ url = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenh
 soup = BeautifulSoup(url)
 
 links = soup.findAll("div", {"class": "price strong"})
-temp = links[0]
+temp = links[1]
 print(str(temp) + "is temp")
 refined = temp
 print(str(refined) + "is refined")
