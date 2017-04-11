@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from BeautifulSoup import BeautifulSoup
 import urllib3
 import time
+import threading
 
 
 app = Flask(__name__)
@@ -12,45 +13,58 @@ change = 0
 http = urllib3.PoolManager()
 
 
-while loop == True:
-    urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
-    time.sleep(1)
-    urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
-    time.sleep(1)
-    urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
-    time.sleep(1)
-    urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
-    time.sleep(1)
+class myThread (threading.Thread):
+    def __init__(self, threadID, name, counter):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.counter = counter
+    def run(self):
+        print "Starting " + self.name
+        getContent()
+        print "Exiting " + self.name
 
-    soupChelt = BeautifulSoup(urlChelt)
-    soupMent = BeautifulSoup(urlMent)
-    soupPark = BeautifulSoup(urlPark)
-    soupBeau = BeautifulSoup(urlBeau)
+def getContent():
+    global change
+    while loop == True:
+        urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
+        time.sleep(1)
+        urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
+        time.sleep(1)
+        urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
+        time.sleep(1)
+        urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
+        time.sleep(1)
 
-    linksChelt = soupChelt.findAll("div", {"class": "price strong"})
-    linksMent = soupMent.findAll("div", {"class": "price strong"})
-    linksPark = soupPark.findAll("div", {"class": "price strong"})
-    linksBeau = soupBeau.findAll("div", {"class": "price strong"})
+        soupChelt = BeautifulSoup(urlChelt)
+        soupMent = BeautifulSoup(urlMent)
+        soupPark = BeautifulSoup(urlPark)
+        soupBeau = BeautifulSoup(urlBeau)
 
-    tempChelt = linksChelt[2]
-    tempMent = linksMent[2]
-    tempPark = linksPark[2]
-    tempBeau = linksBeau[2]
-    print(str(tempChelt) + "is temp")
+        linksChelt = soupChelt.findAll("div", {"class": "price strong"})
+        linksMent = soupMent.findAll("div", {"class": "price strong"})
+        linksPark = soupPark.findAll("div", {"class": "price strong"})
+        linksBeau = soupBeau.findAll("div", {"class": "price strong"})
 
-    refinedChelt = tempChelt
-    refinedMent = tempMent
-    refinedPark = tempPark
-    refinedBeau = tempBeau
-    print(str(refinedChelt) + "is refined")
+        tempChelt = linksChelt[2]
+        tempMent = linksMent[2]
+        tempPark = linksPark[2]
+        tempBeau = linksBeau[2]
+        print(str(tempChelt) + "is temp")
 
-    priceHistory.append(refinedChelt)
-    print(str(priceHistory) + "is price history")
+        refinedChelt = tempChelt
+        refinedMent = tempMent
+        refinedPark = tempPark
+        refinedBeau = tempBeau
+        print(str(refinedChelt) + "is refined")
 
-    if refinedChelt > priceHistory[0]:
-        change = ((int(refinedChelt) - (int(priceHistory[0]))))
-    print(str(change) + " is the change")
-    time.sleep(60)
+        priceHistory.append(refinedChelt)
+        print(str(priceHistory) + "is price history")
+
+        if refinedChelt > priceHistory[0]:
+            change = ((int(refinedChelt) - (int(priceHistory[0]))))
+        print(str(change) + " is the change")
+        time.sleep(60)
 
 
 @app.route('/' , methods=['GET','POST'])
