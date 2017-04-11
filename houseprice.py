@@ -20,13 +20,18 @@ print(str(refined) + "is refined")
 priceHistory.append(refined)
 print(str(priceHistory) + "is price history")
 
+if refined > priceHistory:
+    change = refined - priceHistory
+
+
 @app.route('/' , methods=['GET','POST'])
 def default():
     global links
     global soup
     global refined
     global priceHistory
-    return render_template('main.html', LINKS=links, REFINED=refined, PRICEHISTORY=priceHistory)
+    global change
+    return render_template('main.html', LINKS=links, REFINED=refined, PRICEHISTORY=priceHistory, CHANGE=change)
 
 
 
