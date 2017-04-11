@@ -13,16 +13,16 @@ change = 0
 http = urllib3.PoolManager()
 
 
-class myThread (threading.Thread):
-    def __init__(self, threadID, name, counter):
-        threading.Thread.__init__(self)
-        self.threadID = threadID
-        self.name = name
-        self.counter = counter
-    def run(self):
-        print "Starting " + self.name
-        getContent()
-        print "Exiting " + self.name
+#class myThread (threading.Thread):
+#    def __init__(self, threadID, name, counter):
+#        threading.Thread.__init__(self)
+#        self.threadID = threadID
+#        self.name = name
+ #       self.counter = counter
+ #   def run(self):
+ #       print "Starting " + self.name
+ #       getContent()
+#        print "Exiting " + self.name
 
 def getContent():
     global change
@@ -69,11 +69,13 @@ def getContent():
     print(str(change) + " is the change")
 
 
-while loop == True:
-    thread1 = myThread(1, "Thread-1", 1)
+#while loop == True:
+#    thread1 = myThread(1, "Thread-1", 1)
     # Start new Threads
-    thread1.start()
-    time.sleep(60)
+#    thread1.start()
+ #   time.sleep(60)
+
+getContent()
 
 @app.route('/' , methods=['GET','POST'])
 def default():
