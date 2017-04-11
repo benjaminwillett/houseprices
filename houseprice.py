@@ -81,7 +81,8 @@ print("Finished collecting all the content mother fuckers!")
 @app.route('/' , methods=['GET','POST'])
 def default():
     global refinedChelt
-    return render_template('main.html')
+    global change
+    return render_template('main.html', REFINEDCHELT=refinedChelt, CHANGE=change)
 
 
 if __name__ == '__main__':
