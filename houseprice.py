@@ -87,7 +87,7 @@ def default():
     global priceHistory
     global change
 
-    return render_template('main.html', REFINEDCHELT=refinedChelt,  CHANGE=change)
+    return render_template('main.html', REFINEDCHELT=refinedChelt, CHANGE=change)
 
 
 if __name__ == '__main__':
