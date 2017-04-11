@@ -17,6 +17,7 @@ refined = links[0,1,2]
 def default():
     global links
     global soup
+    global refined
     return render_template('main.html', LINKS=links, REFINED=refined)
 
 
