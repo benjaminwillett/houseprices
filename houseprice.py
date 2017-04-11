@@ -85,8 +85,7 @@ def default():
     global priceHistory
     global change
 
-    return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, REFINEDBEAU=refinedBeau, PRICEHISTORY=priceHistory, CHANGE=change)
-
+    return "test"
 
 
 if __name__ == '__main__':
