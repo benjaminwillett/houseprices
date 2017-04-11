@@ -47,19 +47,19 @@ def getContent():
         tempMent = linksMent[2]
         tempPark = linksPark[2]
         tempBeau = linksBeau[2]
-        print(str(tempChelt) + "is temp")
-        print(str(tempMent) + "is temp")
-        print(str(tempPark) + "is temp")
-        print(str(tempBeau) + "is temp")
+        print(str(tempChelt) + "is tempChelt")
+        print(str(tempMent) + "is tempMent")
+        print(str(tempPark) + "is tempPark")
+        print(str(tempBeau) + "is tempBeau")
 
         refinedChelt = tempChelt
         refinedMent = tempMent
         refinedPark = tempPark
         refinedBeau = tempBeau
-        print(str(refinedChelt) + "is refined")
-        print(str(refinedMent + "is refined")
-        print(str(refinedPark) + "is refined")
-        print(str(refinedBeau) + "is refined")
+        print(str(refinedChelt) + "is refinedChelt")
+        print(str(refinedMent) + "is refinedMent")
+        print(str(refinedPark) + "is refinedPark")
+        print(str(refinedBeau) + "is refinedBeau")
 
         priceHistory.append(refinedChelt)
         print(str(priceHistory) + "is price history")
