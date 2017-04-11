@@ -26,6 +26,7 @@ class myThread (threading.Thread):
 
 def getContent():
     global change
+    global loop
     while loop == True:
         urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
         time.sleep(1)
