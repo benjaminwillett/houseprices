@@ -90,7 +90,8 @@ print("Finished collecting all the content mother fuckers!")
 def default():
     global change
     global refinedChelt
-    return render_template('main.html', REFINEDCHELT=refinedChelt, CHANGE=change)
+    global refinedMent
+    return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, CHANGE=change)
 
 
 if __name__ == '__main__':
