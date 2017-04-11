@@ -22,7 +22,7 @@ print(str(priceHistory) + "is price history")
 
 if refined > priceHistory[0]:
     change = ((int(refined) - (int(priceHistory[0]))))
-
+print(str(change) + " is the change")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
