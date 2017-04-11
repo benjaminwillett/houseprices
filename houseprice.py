@@ -1,9 +1,9 @@
 from flask import Flask
 from BeautifulSoup import BeautifulSoup
-import urllib2
+import urllib3
 
-url = urllib2.urlopen("https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic")
-
+http = urllib3.PoolManager()
+url = http.request("https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic")
 content = url.read()
 
 soup = BeautifulSoup(content)
