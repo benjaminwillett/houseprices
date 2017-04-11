@@ -3,7 +3,6 @@
 {% for each in REFINED %}
     {% set count = count + 1 %}
     {% if count == 4 %}
-        {%  set m = re.search('(?<=$)\w+', each) %}
-        <p>{{ m.group(0) }}</p>
+        <p>{{ each}}</p>
     {%  endif %}
 {% endfor %}
