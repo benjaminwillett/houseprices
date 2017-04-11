@@ -80,7 +80,6 @@ print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
-
     global refinedChelt
     global refinedMent
     global refinedPark
@@ -88,7 +87,7 @@ def default():
     global priceHistory
     global change
 
-    render_template('main.html', REFINEDCHELT=refinedChelt,  CHANGE=change)
+    return render_template('main.html', REFINEDCHELT=refinedChelt,  CHANGE=change)
 
 
 if __name__ == '__main__':
