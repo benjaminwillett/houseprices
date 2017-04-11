@@ -23,6 +23,7 @@ pytz==2016.6.1
 requests==2.10.0
 six==1.10.0
 textmagic==2.0.3
+threading
 twilio==5.6.0
 update==0.4.4
 urllib3
