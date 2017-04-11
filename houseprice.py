@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from BeautifulSoup import BeautifulSoup
 import urllib3
+import re
 
 app = Flask(__name__)
 
@@ -10,7 +11,8 @@ url = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenh
 soup = BeautifulSoup(url)
 
 links = soup.findAll("div", {"class": "price strong"})
-refined = links
+m = re.search('(?<=$)\w+', links)
+refined = m
 
 
 @app.route('/' , methods=['GET','POST'])
