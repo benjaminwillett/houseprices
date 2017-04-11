@@ -8,6 +8,10 @@ import threading
 app = Flask(__name__)
 
 loop = True
+refinedChelt = []
+refinedMent = []
+refinedPark = []
+refinedBeau = []
 priceHistory = []
 change = 0
 http = urllib3.PoolManager()
@@ -27,6 +31,10 @@ http = urllib3.PoolManager()
 def getContent():
     global change
     global loop
+    global refinedChelt
+    global refinedMent
+    global refinedPark
+    global refinedBeau
 
     urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
     urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
@@ -80,8 +88,8 @@ print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
-    global refinedChelt
     global change
+    global refinedChelt
     return render_template('main.html', REFINEDCHELT=refinedChelt, CHANGE=change)
 
 
