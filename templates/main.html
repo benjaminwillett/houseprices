@@ -1,4 +1,7 @@
 
 {% for each in REFINED %}
-<p>{{ each }}</p>
+    {{ COUNT + 1 }}
+    {% if COUNT == 3 %}
+        <p>{{ each }}</p>
+    {%  endif %}
 {% endfor %}
