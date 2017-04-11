@@ -27,46 +27,46 @@ class myThread (threading.Thread):
 def getContent():
     global change
     global loop
-    while loop == True:
-        urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
-        urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
-        urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
-        urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
 
-        soupChelt = BeautifulSoup(urlChelt)
-        soupMent = BeautifulSoup(urlMent)
-        soupPark = BeautifulSoup(urlPark)
-        soupBeau = BeautifulSoup(urlBeau)
+    urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
+    urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
+    urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
+    urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
 
-        linksChelt = soupChelt.findAll("div", {"class": "price strong"})
-        linksMent = soupMent.findAll("div", {"class": "price strong"})
-        linksPark = soupPark.findAll("div", {"class": "price strong"})
-        linksBeau = soupBeau.findAll("div", {"class": "price strong"})
+    soupChelt = BeautifulSoup(urlChelt)
+    soupMent = BeautifulSoup(urlMent)
+    soupPark = BeautifulSoup(urlPark)
+    soupBeau = BeautifulSoup(urlBeau)
 
-        tempChelt = linksChelt[2]
-        tempMent = linksMent[2]
-        tempPark = linksPark[2]
-        tempBeau = linksBeau[2]
-        print(str(tempChelt) + "is tempChelt")
-        print(str(tempMent) + "is tempMent")
-        print(str(tempPark) + "is tempPark")
-        print(str(tempBeau) + "is tempBeau")
+    linksChelt = soupChelt.findAll("div", {"class": "price strong"})
+    linksMent = soupMent.findAll("div", {"class": "price strong"})
+    linksPark = soupPark.findAll("div", {"class": "price strong"})
+    linksBeau = soupBeau.findAll("div", {"class": "price strong"})
 
-        refinedChelt = tempChelt
-        refinedMent = tempMent
-        refinedPark = tempPark
-        refinedBeau = tempBeau
-        print(str(refinedChelt) + "is refinedChelt")
-        print(str(refinedMent) + "is refinedMent")
-        print(str(refinedPark) + "is refinedPark")
-        print(str(refinedBeau) + "is refinedBeau")
+    tempChelt = linksChelt[2]
+    tempMent = linksMent[2]
+    tempPark = linksPark[2]
+    tempBeau = linksBeau[2]
+    print(str(tempChelt) + "is tempChelt")
+    print(str(tempMent) + "is tempMent")
+    print(str(tempPark) + "is tempPark")
+    print(str(tempBeau) + "is tempBeau")
 
-        priceHistory.append(refinedChelt)
-        print(str(priceHistory) + "is price history")
+    refinedChelt = tempChelt
+    refinedMent = tempMent
+    refinedPark = tempPark
+    refinedBeau = tempBeau
+    print(str(refinedChelt) + "is refinedChelt")
+    print(str(refinedMent) + "is refinedMent")
+    print(str(refinedPark) + "is refinedPark")
+    print(str(refinedBeau) + "is refinedBeau")
 
-        if refinedChelt > priceHistory[0]:
-            change = ((int(refinedChelt) - (int(priceHistory[0]))))
-        print(str(change) + " is the change")
+    priceHistory.append(refinedChelt)
+    print(str(priceHistory) + "is price history")
+
+    if refinedChelt > priceHistory[0]:
+        change = ((int(refinedChelt) - (int(priceHistory[0]))))
+    print(str(change) + " is the change")
 
 
 while loop == True:
@@ -85,7 +85,8 @@ def default():
     global priceHistory
     global change
 
-    return "test"
+    render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark,
+                    REFINEDBEAU=refinedBeau, PRICEHISTORY=priceHistory, CHANGE=change)
 
 
 if __name__ == '__main__':
