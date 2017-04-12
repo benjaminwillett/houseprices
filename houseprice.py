@@ -105,7 +105,7 @@ def add_pricing():
     global refinedBeau
     a = request.args.get('a', "updating", type=str)
     b = request.args.get('b', "updating", type=str)
-    return jsonify(refinedChelt)
+    return jsonify(result=refinedChelt)
 
 
 if __name__ == '__main__':
