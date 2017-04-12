@@ -60,10 +60,10 @@ def getContent():
     print(str(tempPark) + "is tempPark")
     print(str(tempBeau) + "is tempBeau")
 
-    refinedChelt = tempChelt[25:]
-    refinedMent = tempMent[25:]
-    refinedPark = tempPark[25:]
-    refinedBeau = tempBeau[25:]
+    refinedChelt = tempChelt
+    refinedMent = tempMent
+    refinedPark = tempPark
+    refinedBeau = tempBeau
     print(str(refinedChelt) + "is refinedChelt")
     print(str(refinedMent) + "is refinedMent")
     print(str(refinedPark) + "is refinedPark")
@@ -99,7 +99,7 @@ def add_pricing():
     global refinedPark
     global refinedBeau
     print(str(refinedChelt) + " this is refinedChelt in /_update")
-    return jsonify(result1 = (str(refinedChelt)),result2= (str(refinedMent)),result3 = (str(refinedPark)),result4 = (str(refinedBeau)))
+    return jsonify(result1 = (str(refinedChelt[25:])),result2= (str(refinedMent)),result3 = (str(refinedPark)),result4 = (str(refinedBeau)))
 
 
 if __name__ == '__main__':
