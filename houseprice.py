@@ -102,7 +102,7 @@ def add_pricing():
     global refinedMent
     global refinedPark
     global refinedBeau
-    return jsonify(result1 = refinedChelt[1])
+    return jsonify(result1 = refinedChelt[2])
 
 
 if __name__ == '__main__':
