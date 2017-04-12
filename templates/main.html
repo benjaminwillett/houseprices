@@ -79,7 +79,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     $('a#update').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_update', {
       }, function(data) {
-        $("#update1").text(data.test);
+        $("#update1").text(data.result);
 {#          $("#update2").text(data.refinedMent);#}
 {#          $("#update3").text(data.refinedPark);#}
 {#          $("#update4").text(data.refinedBeau);#}
