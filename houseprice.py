@@ -89,7 +89,6 @@ print("Finished collecting all the content mother fuckers!")
 @app.route('/' , methods=['GET','POST'])
 def default():
     letsThread()
-    time.sleep(1)
     global change
     global refinedChelt
     global refinedMent
