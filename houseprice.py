@@ -77,17 +77,18 @@ def getContent():
     print(str(change) + " is the change")
 
 
-while loop == True:
+def letsThread():
     thread1 = myThread(1, "Thread-1", 1)
     # Start new Threads
     thread1.start()
-    time.sleep(60)
+
 
 
 print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
+    letsThread()
     global change
     global refinedChelt
     global refinedMent
