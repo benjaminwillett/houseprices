@@ -88,7 +88,6 @@ print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
-    letsThread()
     global change
     global refinedChelt
     global refinedMent
@@ -99,9 +98,10 @@ def default():
 
 @app.route('/_pricing')
 def add_pricing():
+    letsThread()
     a = request.args.get('a', "updating", type=str)
     b = request.args.get('b', "updating", type=str)
-    return jsonify(result=a + b)
+    return jsonify(refinedChelt)
 
 
 if __name__ == '__main__':
