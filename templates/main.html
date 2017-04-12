@@ -80,9 +80,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       $.getJSON($SCRIPT_ROOT + '/_update', {
       }, function(data) {
         $("#update1").text(data.result1);
-{#          $("#update2").text(data.refinedMent);#}
-{#          $("#update3").text(data.refinedPark);#}
-{#          $("#update4").text(data.refinedBeau);#}
+          $("#update2").text(data.result2);
+          $("#update3").text(data.result3);
+          $("#update4").text(data.result4);
       });
       return false;
     });

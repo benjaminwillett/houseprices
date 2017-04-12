@@ -99,7 +99,7 @@ def add_pricing():
     global refinedPark
     global refinedBeau
     print(str(refinedChelt) + " this is refinedChelt in /_update")
-    return jsonify(result1 = (str(refinedChelt)))
+    return jsonify(result1 = (str(refinedChelt)),result2= (str(refinedMent)),result3 = (str(refinedPark)),result4 = (str(refinedBeau)))
 
 
 if __name__ == '__main__':
