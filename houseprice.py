@@ -60,7 +60,7 @@ def getContent():
     print(str(tempPark) + "is tempPark")
     print(str(tempBeau) + "is tempBeau")
 
-    refinedChelt = tempChelt[2]
+    refinedChelt = tempChelt[3]
     refinedMent = tempMent
     refinedPark = tempPark
     refinedBeau = tempBeau
