@@ -88,12 +88,7 @@ print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
-    global change
-    global refinedChelt
-    global refinedMent
-    global refinedPark
-    global refinedBeau
-    return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, REFINEDBEAU=refinedBeau, CHANGE=change)
+    return render_template('main.html')
 
 
 @app.route('/_pricing')
@@ -103,9 +98,7 @@ def add_pricing():
     global refinedMent
     global refinedPark
     global refinedBeau
-    a = request.args.get('a', "updating", type=str)
-    b = request.args.get('b', "updating", type=str)
-    return jsonify(result=refinedChelt)
+    return jsonify(REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, REFINEDBEAU=refinedBeau, CHANGE=change)
 
 
 if __name__ == '__main__':
