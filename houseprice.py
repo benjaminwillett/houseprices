@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, request
 from BeautifulSoup import BeautifulSoup
 import urllib3
 import time
@@ -95,6 +95,13 @@ def default():
     global refinedPark
     global refinedBeau
     return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, REFINEDBEAU=refinedBeau, CHANGE=change)
+
+
+@app.route('/_pricing')
+def add_pricing():
+    a = request.args.get('a', "updating", type=str)
+    b = request.args.get('b', "updating", type=str)
+    return jsonify(result=a + b)
 
 
 if __name__ == '__main__':
