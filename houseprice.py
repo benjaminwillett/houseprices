@@ -91,7 +91,7 @@ def default():
     letsThread()
     return render_template('main.html')
 
-@app.route('/_update')
+@app.route('/_update' , methods=['GET','POST'])
 def add_pricing():
     letsThread()
     global refinedChelt
