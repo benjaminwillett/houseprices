@@ -88,11 +88,11 @@ print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
-    letsThread()
-    global refinedChelt
-    global refinedMent
-    global refinedPark
-    global refinedBeau
+    # letsThread()
+    # global refinedChelt
+    # global refinedMent
+    # global refinedPark
+    # global refinedBeau
     return render_template('main.html')
 
 @app.route('/_update')
