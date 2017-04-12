@@ -78,8 +78,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   $(function() {
     $('a#calculate').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_pricing', {
-        a: $('input[name="a"]').val(),
-        b: $('input[name="b"]').val()
       }, function(data) {
         $("#REFINEDCHELT").text(data.REFINEDCHELT);
       });
@@ -88,8 +86,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   });
 </script>
 <h1>jQuery Example</h1>
-<p><input type=text size=5 name=a> +
-   <input type=text size=5 name=b> =
+
    <span id=REFINEDCHELT>?</span>
 <p><a href=# id=calculate>calculate server side</a>
     </p>
