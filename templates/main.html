@@ -27,7 +27,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Cheltenham</H5>
-<div class="w3-container"><p><b>{% for each in REFINEDCHELT %}
+<div class="w3-container"><p><b id="update1">{% for each in REFINEDCHELT %}
     <H4>{{ each }}</H4></b>Price has changed by {{ CHANGE }}</p>
 
 {% endfor %}
@@ -39,7 +39,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Mentone</H5>
-<div class="w3-container"><p><b>{% for each in REFINEDMENT %}
+<div class="w3-container"><p><b id="update2">{% for each in REFINEDMENT %}
     <H4>{{ each }}</H4></b></p>
 
 {% endfor %}
@@ -51,7 +51,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Parkdale</H5>
-<div class="w3-container"><p><b>{% for each in REFINEDPARK %}
+<div class="w3-container"><p><b id="update3">{% for each in REFINEDPARK %}
     <H4>{{ each }}</H4></b></p>
 
 {% endfor %}
@@ -63,7 +63,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Beaumaris</H5>
-<div class="w3-container"><p><b>{% for each in REFINEDBEAU %}
+<div class="w3-container"><p><b id="update4">{% for each in REFINEDBEAU %}
     <H4>{{ each }}</H4></b></p>
 
 {% endfor %}
@@ -76,10 +76,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div>
 <script type=text/javascript>
   $(function() {
-    $('a#calculate').bind('click', function() {
-      $.getJSON($SCRIPT_ROOT + '/_pricing', {
+    $('a#update').bind('click', function() {
+      $.getJSON($SCRIPT_ROOT + '/_update', {
       }, function(data) {
-        $("#REFINEDCHELT").text(data.REFINEDCHELT);
+        $("#update1").text(data.refinedChelt);
+          $("#update2").text(data.refinedMent);
+          $("#update3").text(data.refinedPark);
+          $("#update4").text(data.refinedBeau);
       });
       return false;
     });
@@ -87,7 +90,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </script>
 <h1>jQuery Example</h1>
 
-   <span id=REFINEDCHELT>?</span>
-<p><a href=# id=calculate>calculate server side</a>
+<p><a href=# id=update>Update!</a>
     </p>
     </div>

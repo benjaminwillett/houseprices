@@ -88,10 +88,16 @@ print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
-    return render_template('main.html')
+    letsThread()
+    global refinedChelt
+    global refinedMent
+    global refinedPark
+    global refinedBeau
+    return render_template('main.html'),jsonify(REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, REFINEDBEAU=refinedBeau, CHANGE=change)
 
 
-@app.route('/_pricing')
+
+@app.route('/_update')
 def add_pricing():
     letsThread()
     global refinedChelt
