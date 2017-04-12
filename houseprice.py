@@ -99,6 +99,10 @@ def default():
 @app.route('/_pricing')
 def add_pricing():
     letsThread()
+    global refinedChelt
+    global refinedMent
+    global refinedPark
+    global refinedBeau
     a = request.args.get('a', "updating", type=str)
     b = request.args.get('b', "updating", type=str)
     return jsonify(refinedChelt)
