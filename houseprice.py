@@ -51,7 +51,7 @@ def getContent():
     linksPark = soupPark.findAll("div", {"class": "price strong"})
     linksBeau = soupBeau.findAll("div", {"class": "price strong"})
 
-    tempChelt = linksChelt[2][25:]
+    tempChelt = linksChelt[2]
     tempMent = linksMent[2]
     tempPark = linksPark[2]
     tempBeau = linksBeau[2]
@@ -60,7 +60,7 @@ def getContent():
     print(str(tempPark) + "is tempPark")
     print(str(tempBeau) + "is tempBeau")
 
-    refinedChelt = tempChelt
+    refinedChelt = tempChelt[25:]
     refinedMent = tempMent
     refinedPark = tempPark
     refinedBeau = tempBeau
