@@ -88,6 +88,7 @@ print("Finished collecting all the content mother fuckers!")
 
 @app.route('/' , methods=['GET','POST'])
 def default():
+    letsThread()
     return render_template('main.html')
 
 @app.route('/_update')
