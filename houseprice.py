@@ -85,7 +85,7 @@ def default():
     global refinedMent
     global refinedPark
     global refinedBeau
-    return render_template('main.html', REFINEDCHELT=refinedChelt, REFINEDMENT=refinedMent, REFINEDPARK=refinedPark, REFINEDBEAU=refinedBeau)
+    return render_template('main.html')
 
 @app.route('/_update')
 def add_pricing():
