@@ -75,18 +75,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 <div>
 <script type=text/javascript>
-  $(function() {
-    $('a#update').bind('click', function() {
+  function updatePage() {
       $.getJSON($SCRIPT_ROOT + '/_update', {
       }, function(data) {
-        $("#update1").text(data.result1);
+          $("#update1").text(data.result1);
           $("#update2").text(data.result2);
           $("#update3").text(data.result3);
           $("#update4").text(data.result4);
       });
-      return false;
-    });
-  });
+            setTimeout(updatePage, 10000);
+  }
 </script>
 <h1>Testing</h1>
 
