@@ -78,6 +78,8 @@ def letsThread():
 
 print("Finished collecting all the content mother fuckers!")
 
+letsThread()
+
 @app.route('/' , methods=['GET','POST'])
 def default():
     letsThread()
