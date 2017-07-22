@@ -71,7 +71,7 @@ def getContent():
 
     getBtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
 
-    print(str(getBtc))
+    print(str("PANTS PANTS PANST PANTS PANTS PANTS PANTS PANTS" + getBtc))
 
 
 def letsThread():
