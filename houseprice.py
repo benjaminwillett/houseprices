@@ -70,8 +70,8 @@ def getContent():
 
 
     getBtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
-    Btc = getBtc.result
-    print(Btc)
+  
+    print(getBtc)
 
 def letsThread():
     thread1 = myThread(1, "Thread-1", 1)
