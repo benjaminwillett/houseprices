@@ -70,6 +70,7 @@ def getContent():
 
 
     getBtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
+    soupBtc = BeautifulSoup(getBtc)
 
     print("PANTS PANTS PANST PANTS PANTS PANTS PANTS PANTS" + (str(getBtc)))
 
@@ -93,6 +94,15 @@ def default():
     global refinedPark
     global refinedBeau
     return render_template('main.html', REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK =refinedPark,REFINEDBEAU=refinedBeau)
+
+@app.route('/index' , methods=['GET','POST'])
+def default():
+    letsThread()
+    global refinedChelt
+    global refinedMent
+    global refinedPark
+    global refinedBeau
+    return render_template('index.html')
 
 @app.route('/_update')
 def add_pricing():
