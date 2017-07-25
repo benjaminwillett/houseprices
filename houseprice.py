@@ -94,14 +94,11 @@ def default():
     global refinedBeau
     return render_template('main.html', REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK =refinedPark,REFINEDBEAU=refinedBeau)
 
+
 @app.route('/index' , methods=['GET','POST'])
 def login_form():
-    letsThread()
-    global refinedChelt
-    global refinedMent
-    global refinedPark
-    global refinedBeau
     return render_template('index.html')
+
 
 @app.route('/_update')
 def add_pricing():
