@@ -2,69 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/static/assets/bootstrap/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/static/assets/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/static/assets/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/assets/bootstrap/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/static/assets/bootstrap/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/assets/bootstrap/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/static/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/static/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/static/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/assets/bootstrap/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/assets/bootstrap/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/bootstrap/js/npm.js" afterPath="$PROJECT_DIR$/static/assets/bootstrap/js/npm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/css/form-elements.css" afterPath="$PROJECT_DIR$/static/assets/css/form-elements.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/static/assets/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/static/assets/font-awesome/HELP-US-OUT.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/static/assets/font-awesome/css/font-awesome.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/static/assets/font-awesome/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/static/assets/font-awesome/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/static/assets/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/static/assets/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/static/assets/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/static/assets/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/static/assets/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/animated.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/bordered-pulled.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/core.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/fixed-width.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/font-awesome.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/icons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/larger.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/list.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/path.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/rotated-flipped.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/stacked.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/static/assets/font-awesome/less/variables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_animated.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_core.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_fixed-width.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_icons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_larger.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_list.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_mixins.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_path.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_stacked.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/static/assets/font-awesome/scss/font-awesome.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/ico/apple-touch-icon-114-precomposed.png" afterPath="$PROJECT_DIR$/static/assets/ico/apple-touch-icon-114-precomposed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/ico/apple-touch-icon-144-precomposed.png" afterPath="$PROJECT_DIR$/static/assets/ico/apple-touch-icon-144-precomposed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/ico/apple-touch-icon-57-precomposed.png" afterPath="$PROJECT_DIR$/static/assets/ico/apple-touch-icon-57-precomposed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/ico/apple-touch-icon-72-precomposed.png" afterPath="$PROJECT_DIR$/static/assets/ico/apple-touch-icon-72-precomposed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/ico/favicon.png" afterPath="$PROJECT_DIR$/static/assets/ico/favicon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/img/backgrounds/1.jpg" afterPath="$PROJECT_DIR$/static/assets/img/backgrounds/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/js/jquery-1.11.1.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery-1.11.1.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/js/jquery-1.11.1.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery-1.11.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/js/jquery.backstretch.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.backstretch.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/js/jquery.backstretch.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.backstretch.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/js/placeholder.js" afterPath="$PROJECT_DIR$/static/assets/js/placeholder.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/js/scripts.js" afterPath="$PROJECT_DIR$/static/assets/js/scripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="housepricecheltenham.iws" />
@@ -121,8 +58,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8370119">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.79796267">
+              <caret line="171" column="26" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -315,6 +252,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="housepricecheltenham" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PycharmProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="housepricecheltenham" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backgrounds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -714,8 +685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8370119">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.79796267">
+          <caret line="171" column="26" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
           <folding />
         </state>
       </provider>
