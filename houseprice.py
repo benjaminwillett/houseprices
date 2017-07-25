@@ -95,7 +95,7 @@ def default():
     return render_template('main.html', REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK =refinedPark,REFINEDBEAU=refinedBeau)
 
 @app.route('/index' , methods=['GET','POST'])
-def default():
+def login_form():
     letsThread()
     global refinedChelt
     global refinedMent
