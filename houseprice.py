@@ -105,6 +105,11 @@ def login_two():
     return render_template('index_two.html')
 
 
+@app.route('/index_three' , methods=['GET','POST'])
+def login_two():
+    return render_template('index_three.html')
+
+
 @app.route('/_update')
 def add_pricing():
     letsThread()
