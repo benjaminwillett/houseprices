@@ -96,12 +96,12 @@ def default():
 
 
 @app.route('/index_one' , methods=['GET','POST'])
-def login_form():
+def login_one():
     return render_template('index_one.html')
 
 
 @app.route('/index_two' , methods=['GET','POST'])
-def login_form():
+def login_two():
     return render_template('index_two.html')
 
 
