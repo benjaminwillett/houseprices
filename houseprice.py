@@ -106,7 +106,7 @@ def login_two():
 
 
 @app.route('/index_three' , methods=['GET','POST'])
-def login_two():
+def login_three():
     return render_template('index_three.html')
 
 
