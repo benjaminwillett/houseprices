@@ -95,9 +95,14 @@ def default():
     return render_template('main.html', REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK =refinedPark,REFINEDBEAU=refinedBeau)
 
 
-@app.route('/index' , methods=['GET','POST'])
+@app.route('/index_one' , methods=['GET','POST'])
 def login_form():
-    return render_template('index.html')
+    return render_template('index_one.html')
+
+
+@app.route('/index_two' , methods=['GET','POST'])
+def login_form():
+    return render_template('index_two.html')
 
 
 @app.route('/_update')
