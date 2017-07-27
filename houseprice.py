@@ -115,6 +115,11 @@ def knight():
     return render_template('index_knight.html')
 
 
+@app.route('/niceadmin' , methods=['GET','POST'])
+def niceadmin():
+    return render_template('index_niceadmin.html')
+
+
 @app.route('/_update')
 def add_pricing():
     letsThread()
