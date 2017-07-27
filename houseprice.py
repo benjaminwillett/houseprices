@@ -110,6 +110,11 @@ def login_three():
     return render_template('index_three.html')
 
 
+@app.route('/knight' , methods=['GET','POST'])
+def knight():
+    return render_template('index_knight.html')
+
+
 @app.route('/_update')
 def add_pricing():
     letsThread()
