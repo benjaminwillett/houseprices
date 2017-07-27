@@ -117,7 +117,7 @@ def knight():
 
 @app.route('/niceadmin' , methods=['GET','POST'])
 def niceadmin():
-    return render_template('index_niceadmin.html')
+    return render_template('NiceAdminhtml/index_niceadmin.html')
 
 
 @app.route('/_update')
