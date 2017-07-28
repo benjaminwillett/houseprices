@@ -120,6 +120,27 @@ def niceadmin():
     return render_template('NiceAdminhtml/index_niceadmin.html')
 
 
+@app.route('/nicedocumentation' , methods=['GET','POST'])
+def nicedoc():
+    return render_template('NiceAdminhtml/documentation.html')
+
+
+@app.route('/nicelogin' , methods=['GET','POST'])
+def nicelogin():
+    return render_template('NiceAdminhtml/login.html')
+
+
+@app.route('/niceform_component' , methods=['GET','POST'])
+def nicecomp():
+    return render_template('NiceAdminhtml/form_component.html')
+
+
+@app.route('/niceform_validation' , methods=['GET','POST'])
+def nicevalid():
+    return render_template('NiceAdminhtml/form_validation.html')
+
+
+
 @app.route('/free' , methods=['GET','POST'])
 def free():
     return render_template('Free/index.html')
