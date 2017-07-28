@@ -121,7 +121,7 @@ def niceadmin():
 
 
 @app.route('/free' , methods=['GET','POST'])
-def niceadmin():
+def free():
     return render_template('Free/index.html')
 
 
