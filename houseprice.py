@@ -120,6 +120,11 @@ def niceadmin():
     return render_template('NiceAdminhtml/index_niceadmin.html')
 
 
+@app.route('/free' , methods=['GET','POST'])
+def niceadmin():
+    return render_template('Free/index.html')
+
+
 @app.route('/_update')
 def add_pricing():
     letsThread()
