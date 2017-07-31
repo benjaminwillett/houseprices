@@ -3,6 +3,8 @@ from BeautifulSoup import BeautifulSoup
 import urllib3
 import time
 import threading
+import requests
+import json
 
 
 app = Flask(__name__)
@@ -70,8 +72,7 @@ def getContent():
 
 
     getBtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
-
-
+    print(getBtc.json())
 
 
 def letsThread():
