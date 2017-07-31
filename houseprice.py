@@ -76,8 +76,8 @@ def getContent():
 
 
     for each in soupBtc:
-        if each == "result":
-            print(each)
+        print "BTC last price = %s %" % (each.result)
+
 
 
 def letsThread():
