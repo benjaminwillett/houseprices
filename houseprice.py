@@ -72,7 +72,8 @@ def getContent():
 
 
     getBtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
-    print(getBtc.json())
+    soupBtc = BeautifulSoup(getBTC)
+    print(soupBtc)
 
 
 def letsThread():
