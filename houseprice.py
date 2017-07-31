@@ -16,6 +16,7 @@ refinedPark = []
 refinedBeau = []
 priceHistory = []
 soupBtc = []
+soupSc = []
 change = 0
 http = urllib3.PoolManager()
 
@@ -39,6 +40,7 @@ def getContent():
     global refinedPark
     global refinedBeau
     global soupBtc
+    global soupSc
 
     urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
     urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
@@ -76,6 +78,8 @@ def getContent():
     getbtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
     soupBtc = [BeautifulSoup(getbtc)]
 
+    getsc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-SC", preload_content=False)
+    soupSc = [BeautifulSoup(getsc)]
 
 
 
@@ -100,7 +104,9 @@ def default():
     global refinedPark
     global refinedBeau
     global soupBtc
-    return render_template('main.html', SOUPBTC=soupBtc,REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK \
+    global soupSc
+    return render_template('main.html',SOUPSC=soupSc,SOUPBTC=soupBtc,REFINEDCHELT=refinedChelt,
+                           REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau)
 
 
