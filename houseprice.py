@@ -77,8 +77,8 @@ def getContent():
 
     for each in soupBtc:
         if each["result"]:
-            print(each)
-    
+            print(str(each))
+
 
 def letsThread():
     thread1 = myThread(1, "Thread-1", 1)
