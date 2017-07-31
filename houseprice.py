@@ -97,7 +97,8 @@ def default():
     global refinedMent
     global refinedPark
     global refinedBeau
-    return render_template('main.html', SOUPBTC=soupbtc, REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK \
+    global soupBTC
+    return render_template('main.html', SOUPBTC=soupbtc,REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau)
 
 
