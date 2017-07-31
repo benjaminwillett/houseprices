@@ -75,8 +75,7 @@ def getContent():
     soupBtc = BeautifulSoup(getBtc)
 
 
-    for each in soupBtc:
-        print("BTC last price = %s %" % (each(str(['result']))))
+
 
 
 
@@ -98,7 +97,8 @@ def default():
     global refinedMent
     global refinedPark
     global refinedBeau
-    return render_template('main.html', REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK =refinedPark,REFINEDBEAU=refinedBeau)
+    return render_template('main.html', SOUPBTC=soupbtc, REFINEDCHELT=refinedChelt,REFINEDMENT=refinedMent,REFINEDPARK \
+        =refinedPark,REFINEDBEAU=refinedBeau)
 
 
 @app.route('/index_one' , methods=['GET','POST'])

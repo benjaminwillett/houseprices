@@ -67,6 +67,20 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <H4>{{ each }}</H4></b></p>
 
 {% endfor %}
+
+    </div>
+         </div>
+</div>
+
+<div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h5 class="w3-text-grey w3-padding-16"><i
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>BTC last price = </H5>
+<div class="w3-container"><p><b id="update5">{% for each in SOUPBTC %}
+    <H4>{{ each }}</H4></b></p>
+
+{% endfor %}
   </div>
 </div>
 </div>
@@ -85,6 +99,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           $("#update2").text(data.result2);
           $("#update3").text(data.result3);
           $("#update4").text(data.result4);
+          $("#update5").text(data.result5);
       });
             setTimeout(updatePage, 10000);
         return false;
