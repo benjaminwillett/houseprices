@@ -76,6 +76,8 @@ def getContent():
     print(soupBtc)
     print(len(soupBtc))
 
+    for each in soupBtc:
+        print(each)
 
 
 def letsThread():
