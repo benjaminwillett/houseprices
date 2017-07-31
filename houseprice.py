@@ -15,6 +15,7 @@ refinedMent = []
 refinedPark = []
 refinedBeau = []
 priceHistory = []
+soupBtc = []
 change = 0
 http = urllib3.PoolManager()
 
@@ -37,6 +38,7 @@ def getContent():
     global refinedMent
     global refinedPark
     global refinedBeau
+    global soupBtc
 
     urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
     urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
@@ -71,8 +73,8 @@ def getContent():
     print(str(change) + " is the change")
 
 
-    getBtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
-    soupBtc = ["$3500"] #BeautifulSoup(getBtc)
+    getbtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
+    soupBtc = ["$3500"] #BeautifulSoup(getbtc)
 
 
 
