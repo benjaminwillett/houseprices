@@ -76,7 +76,7 @@ def getContent():
 
 
     for each in soupBtc:
-        print("BTC last price = %s %" % (each['result']))
+        print("BTC last price = %s %" % (each(str(['result']))))
 
 
 
