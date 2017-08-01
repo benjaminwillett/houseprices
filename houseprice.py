@@ -84,7 +84,7 @@ def getContent():
     print(str(change) + " is the change")
 
 
-    getusd = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTCXXX", preload_content=False)
+    getusd = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC", preload_content=False)
     soupUsd = [BeautifulSoup(getusd)]
 
     geteth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
