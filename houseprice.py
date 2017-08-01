@@ -15,9 +15,12 @@ refinedMent = []
 refinedPark = []
 refinedBeau = []
 priceHistory = []
-soupBtc = []
+soupUsd = []
+soupEth = []
 soupSc = []
 soupStrat = []
+soupLsk = []
+soupLbc = []
 change = 0
 http = urllib3.PoolManager()
 
@@ -40,9 +43,13 @@ def getContent():
     global refinedMent
     global refinedPark
     global refinedBeau
-    global soupBtc
+    global soupUsd
+    global soupEth
     global soupSc
     global soupStrat
+    global soupLsk
+    global soupLbc
+
 
     urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
     urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
@@ -77,8 +84,11 @@ def getContent():
     print(str(change) + " is the change")
 
 
-    getbtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
-    soupBtc = [BeautifulSoup(getbtc)]
+    getusd = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-USD", preload_content=False)
+    soupUsd = [BeautifulSoup(getusd)]
+
+    geteth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
+    soupEth = [BeautifulSoup(geteth)]
 
     getsc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-SC", preload_content=False)
     soupSc = [BeautifulSoup(getsc)]
@@ -87,6 +97,12 @@ def getContent():
                             preload_content=False)
     soupStrat = [BeautifulSoup(getstrat)]
 
+    getlsk = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LSK", preload_content=False)
+    soupLsk = [BeautifulSoup(getlsk)]
+
+    getlbc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LBC",
+                            preload_content=False)
+    soupLbc = [BeautifulSoup(getlbc)]
 
 
 
@@ -108,10 +124,16 @@ def default():
     global refinedMent
     global refinedPark
     global refinedBeau
-    global soupBtc
+    global soupUsd
+    global soupEth
     global soupSc
     global soupStrat
-    return render_template('main.html',SOUPSTRAT=soupStrat,SOUPSC=soupSc,SOUPBTC=soupBtc,REFINEDCHELT=refinedChelt,
+    global soupLsk
+    global soupLbc
+    return render_template('main.html',SOUPUSD=soupUsd,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
+                           SOUPSC=soupSc,\
+                                                                                                  SOUPETH=soupEth,
+                           REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau)
 

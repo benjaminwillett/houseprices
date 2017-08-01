@@ -76,8 +76,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i
-                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>BTC last price = </H5>
-<div class="w3-container"><p><b id="update5">{% for item in SOUPBTC %}</b></p>
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>BTC-USD last price = </H5>
+<div class="w3-container"><p><b id="update5">{% for item in SOUPUSD %}</b></p>
     <H4>{{ item }}</H4></b></p>
 
 {% endfor %}
@@ -86,13 +86,27 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 </div>
 
+
+      <div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h5 class="w3-text-grey w3-padding-16"><i
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Eth last price = </H5>
+<div class="w3-container"><p><b id="update6">{% for item in SOUPETH %}</b></p>
+    <H4>{{ item }}</H4></b></p>
+
+{% endfor %}
+
+  </div>
+</div>
+</div>
 
       <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i
                 class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>SIA last price = </H5>
-<div class="w3-container"><p><b id="update6">{% for item in SOUPSC %}</b></p>
+<div class="w3-container"><p><b id="update7">{% for item in SOUPSIA %}</b></p>
     <H4>{{ item }}</H4></b></p>
 
 {% endfor %}
@@ -101,12 +115,40 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 </div>
 
-      <div class="w3-container">
+            <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i
                 class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>STRAT last price = </H5>
-<div class="w3-container"><p><b id="update6">{% for item in SOUPSTRAT %}</b></p>
+<div class="w3-container"><p><b id="update8">{% for item in SOUPSTRAT %}</b></p>
+    <H4>{{ item }}</H4></b></p>
+
+{% endfor %}
+
+  </div>
+</div>
+</div>
+
+            <div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h5 class="w3-text-grey w3-padding-16"><i
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>LISK last price = </H5>
+<div class="w3-container"><p><b id="update9">{% for item in SOUPLSK %}</b></p>
+    <H4>{{ item }}</H4></b></p>
+
+{% endfor %}
+
+  </div>
+</div>
+</div>
+
+            <div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h5 class="w3-text-grey w3-padding-16"><i
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Library last price = </H5>
+<div class="w3-container"><p><b id="update10">{% for item in SOUPLBC %}</b></p>
     <H4>{{ item }}</H4></b></p>
 
 {% endfor %}
@@ -126,6 +168,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           $("#update2").text(data.result2);
           $("#update3").text(data.result3);
           $("#update4").text(data.result4);
+          $("#update5").text(data.result5);
+          $("#update6").text(data.result6);
+          $("#update7").text(data.result7);
+          $("#update8").text(data.result8);
+          $("#update9").text(data.result9);
+          $("#update10").text(data.result10);
       });
             setTimeout(updatePage, 10000);
         return false;
