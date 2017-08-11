@@ -197,15 +197,17 @@ def add_pricing():
     global refinedPark
     global refinedBeau
     type(refinedChelt)
+    type(refinedMent)
     print(str(refinedChelt) + " this is refinedChelt in /_update")
+    print(str(refinedMent) + " this is refinedMent in /_update")
     for each in refinedChelt:
-        return jsonify(result1=(str(refinedMent[1])))
+        return jsonify(result1=(str(refinedChelt)))
     for each in refinedMent:
-        return jsonify(result2=(str(refinedMent[1])))
+        return jsonify(result2=(str(refinedMent)))
     for each in refinedPark:
-        return jsonify(result3=(str(refinedPark[1])))
+        return jsonify(result3=(str(refinedPark)))
     for each in refinedBeau:
-        return jsonify(result4=(str(refinedBeau[1])))
+        return jsonify(result4=(str(refinedBeau)))
 
 
 if __name__ == '__main__':
