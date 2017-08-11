@@ -10,10 +10,10 @@ import json
 app = Flask(__name__)
 
 loop = True
-refinedChelt = 0
-refinedMent = 0
-refinedPark = 0
-refinedBeau = 0
+refinedChelt = "Fetching Data"
+refinedMent = "Fetching Data"
+refinedPark = "Fetching Data"
+refinedBeau = "Fetching Data"
 priceHistory = []
 soupUsd = []
 soupEth = []
