@@ -139,8 +139,9 @@ def default():
     usddict = json.loads(response.data.decode('utf-8'))
     usdmain = usddict['result']
     usdlast = usdmain['Last']
+    usdfloat = (str(usdlast))
 
-    return render_template('main.html',SOUPUSD=usdlast,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
+    return render_template('main.html',SOUPUSD=usdfloat,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
                            SOUPSC=soupSc,\
                                                                                                   SOUPETH=soupEth,
                            REFINEDCHELT=refinedChelt,
