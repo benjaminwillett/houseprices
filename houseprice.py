@@ -86,6 +86,9 @@ def getContent():
 
     getusd = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC", preload_content=False)
     soupUsd = [BeautifulSoup(getusd)]
+    usddict = json.loads(soupUsd)
+    usdmain = usddict['result']
+    usdlast = usdmain['Last']
 
     geteth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
     soupEth = [BeautifulSoup(geteth)]
@@ -203,6 +206,7 @@ def add_pricing():
     global soupStrat
     global soupLsk
     global soupLbc
+    usdlast = usdmain['Last']
     type(refinedChelt)
     type(refinedMent)
     print(str(refinedChelt) + " this is refinedChelt in /_update")
@@ -211,7 +215,7 @@ def add_pricing():
     for each in refinedChelt:
         return jsonify(result1=(str(refinedChelt)),result2=(str(refinedMent)),result3=(str(refinedPark)),
                        result4=(str(refinedBeau)),result5=(str(soupUsd)),result6=(str(soupEth)),result7=(str(
-                soupSc)),result8=(str(soupStrat)),result9=(str(soupLsk)),result10=(str(soupLbc)))
+                soupSc)),result8=(str(soupStrat)),result9=(str(soupLsk)),result10=(str(soupLbc))),float(usdlast)
 
 
 
