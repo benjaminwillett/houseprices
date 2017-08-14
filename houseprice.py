@@ -192,10 +192,10 @@ def free():
 @app.route('/_update')
 def add_pricing():
     letsThread()
-    global refinedChelt[2]
-    global refinedMent[2]
-    global refinedPark[2]
-    global refinedBeau[2]
+    global refinedChelt
+    global refinedMent
+    global refinedPark
+    global refinedBeau
     type(refinedChelt)
     type(refinedMent)
     print(str(refinedChelt) + " this is refinedChelt in /_update")
