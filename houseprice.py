@@ -135,7 +135,12 @@ def default():
     global soupLsk
     global soupLbc
 
-    return render_template('main.html',SOUPUSD=soupUsd,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
+    response = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
+    usddict = json.loads(response.data.decode('utf-8'))
+    usdmain = usddict['result']
+    usdlast = usdmain['Last']
+
+    return render_template('main.html',SOUPUSD=usdlast,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
                            SOUPSC=soupSc,\
                                                                                                   SOUPETH=soupEth,
                            REFINEDCHELT=refinedChelt,
