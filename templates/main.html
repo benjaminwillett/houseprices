@@ -162,7 +162,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       setTimeout(updatePage, 5000)
   });
     function updatePage() {
-      $.getJSON($SCRIPT_ROOT + '/', {
+      $.getJSON($SCRIPT_ROOT + '/_update', {
       }, function(data) {
           $("#update1").text(data.result1);
           $("#update2").text(data.result2);
