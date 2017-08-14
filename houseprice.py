@@ -90,7 +90,6 @@ def getContent():
     usddict = json.loads(response.data.decode('utf-8'))
     usdmain = usddict['result']
     usdlast = usdmain['Last']
-    print(usdlast + "Is the usdlast value")
 
     geteth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
     soupEth = [BeautifulSoup(geteth)]
