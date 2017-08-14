@@ -87,7 +87,7 @@ def getContent():
     # getusd = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC", preload_content=False)
     # soupUsd = [BeautifulSoup(getusd)]
     response = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
-    usddict = json.loads(response)
+    usddict = json.loads(response.data.decode('utf-8'))
     usdmain = usddict['result']
     usdlast = usdmain['Last']
     print(usdlast + "Is the usdlast value")
