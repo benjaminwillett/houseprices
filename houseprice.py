@@ -130,14 +130,7 @@ def default():
     global soupStrat
     global soupLsk
     global soupLbc
-    for each in refinedChelt:
-            return jsonify(result1=(str(refinedChelt)))
-    for each in refinedMent:
-            return jsonify(result2=(str(refinedMent)))
-    for each in refinedPark:
-            return jsonify(result3=(str(refinedPark)))
-    for each in refinedBeau:
-            return jsonify(result4=(str(refinedBeau)))
+
     return render_template('main.html',SOUPUSD=soupUsd,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
                            SOUPSC=soupSc,\
                                                                                                   SOUPETH=soupEth,
@@ -197,26 +190,22 @@ def free():
     return render_template('Free/index.html')
 
 
-# @app.route('/_update')
-# def add_pricing():
-#     letsThread()
-#     global refinedChelt
-#     global refinedMent
-#     global refinedPark
-#     global refinedBeau
-#     type(refinedChelt)
-#     type(refinedMent)
-#     print(str(refinedChelt) + " this is refinedChelt in /_update")
-#     print(str(refinedMent) + " this is refinedMent in /_update")
-#     for each in refinedChelt:
-#         return jsonify(result1=(str(refinedChelt)))
-#     for each in refinedMent:
-#         return jsonify(result2=(str(refinedMent)))
-#     for each in refinedPark:
-#         return jsonify(result3=(str(refinedPark)))
-#     for each in refinedBeau:
-#         return jsonify(result4=(str(refinedBeau)))
-#
+@app.route('/_update')
+def add_pricing():
+    letsThread()
+    global refinedChelt
+    global refinedMent
+    global refinedPark
+    global refinedBeau
+    type(refinedChelt)
+    type(refinedMent)
+    print(str(refinedChelt) + " this is refinedChelt in /_update")
+    print(str(refinedMent) + " this is refinedMent in /_update")
+
+    for each in refinedChelt:
+        return jsonify(result1=(str(refinedChelt)),result2=(str(refinedMent)),result3=(str(refinedPark)),result4=(str(refinedBeau)))
+
+
 
 if __name__ == '__main__':
     app.run()
