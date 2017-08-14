@@ -197,6 +197,12 @@ def add_pricing():
     global refinedMent
     global refinedPark
     global refinedBeau
+    global soupUsd
+    global soupEth
+    global soupSc
+    global soupStrat
+    global soupLsk
+    global soupLbc
     type(refinedChelt)
     type(refinedMent)
     print(str(refinedChelt) + " this is refinedChelt in /_update")
@@ -204,7 +210,8 @@ def add_pricing():
 
     for each in refinedChelt:
         return jsonify(result1=(str(refinedChelt)),result2=(str(refinedMent)),result3=(str(refinedPark)),
-                       result4=(str(refinedBeau)))
+                       result4=(str(refinedBeau)),result5=(str(soupUsd)),result6=(str(soupEth)),result7=(str(
+                soupSc)),result8=(str(soupStrat)),result9=(str(soupLsk)),result10=(str(soupLbc)))
 
 
 
