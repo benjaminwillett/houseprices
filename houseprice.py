@@ -76,12 +76,12 @@ def getContent():
     print(str(refinedPark) + "is refinedPark")
     print(str(refinedBeau) + "is refinedBeau")
 
-    priceHistory.append(refinedChelt)
-    print(str(priceHistory) + "is price history")
-
-    if refinedChelt > priceHistory[0]:
-        change = ((int(refinedChelt) - (int(priceHistory[0]))))
-    print(str(change) + " is the change")
+    # priceHistory.append(refinedChelt)
+    # print(str(priceHistory) + "is price history")
+    #
+    # if refinedChelt > priceHistory[0]:
+    #     change = ((int(refinedChelt) - (int(priceHistory[0]))))
+    # print(str(change) + " is the change")
 
 
     # getusd = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC", preload_content=False)
