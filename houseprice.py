@@ -130,6 +130,14 @@ def default():
     global soupStrat
     global soupLsk
     global soupLbc
+    for each in refinedChelt:
+            return jsonify(result1=(str(refinedChelt)))
+    for each in refinedMent:
+            return jsonify(result2=(str(refinedMent)))
+    for each in refinedPark:
+            return jsonify(result3=(str(refinedPark)))
+    for each in refinedBeau:
+            return jsonify(result4=(str(refinedBeau)))
     return render_template('main.html',SOUPUSD=soupUsd,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
                            SOUPSC=soupSc,\
                                                                                                   SOUPETH=soupEth,
