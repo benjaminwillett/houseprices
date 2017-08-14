@@ -203,7 +203,8 @@ def add_pricing():
     print(str(refinedMent) + " this is refinedMent in /_update")
 
     for each in refinedChelt:
-        return jsonify(result1=(str(refinedChelt)),result2=(str(refinedMent)),result3=(str(refinedPark)),result4=(str(refinedBeau)))
+        return jsonify(result1=(str(refinedChelt[25:])),result2=(str(refinedMent[25:])),result3=(str(refinedPark[25:])),
+                       result4=(str(refinedBeau[25:])))
 
 
 
