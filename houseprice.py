@@ -135,11 +135,41 @@ def default():
     global soupLsk
     global soupLbc
 
-    responsebtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
+responsebtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
     usddictbtc = json.loads(responsebtc.data.decode('utf-8'))
     usdmainbtc = usddictbtc['result']
     usdlastbtc = usdmainbtc['Last']
     usdfloatbtc = (str(usdlastbtc))
+
+    responseeth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH")
+    usddicteth = json.loads(responseeth.data.decode('utf-8'))
+    usdmaineth = usddicteth['result']
+    usdlasteth = usdmaineth['Last']
+    usdfloateth = (str(usdlasteth))
+
+    responsesc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-SC")
+    usddictsc = json.loads(responsesc.data.decode('utf-8'))
+    usdmainsc = usddictsc['result']
+    usdlastsc = usdmainsc['Last']
+    usdfloatsc = (str(usdlastsc))
+
+    responsestrat = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-STRAT")
+    usddictstrat = json.loads(responsestrat.data.decode('utf-8'))
+    usdmainstrat = usddictstrat['result']
+    usdlaststrat = usdmainstrat['Last']
+    usdfloatstrat = (str(usdlaststrat))
+
+    responselsk = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LSK")
+    usddictlsk = json.loads(responselsk.data.decode('utf-8'))
+    usdmainlsk = usddictlsk['result']
+    usdlastlsk = usdmainlsk['Last']
+    usdfloatlsk = (str(usdlastlsk))
+
+    responselbc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LBC")
+    usddictlbc = json.loads(responselbc.data.decode('utf-8'))
+    usdmainlbc = usddictlbc['result']
+    usdlastlbc = usdmainlbc['Last']
+    usdfloatlbc = (str(usdlastlbc))
 
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
