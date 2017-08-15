@@ -135,15 +135,15 @@ def default():
     global soupLsk
     global soupLbc
 
-    response = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
-    usddict = json.loads(response.data.decode('utf-8'))
-    usdmain = usddict['result']
-    usdlast = usdmain['Last']
-    usdfloat = (str(usdlast))
+    responsebtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
+    usddictbtc = json.loads(responsebtc.data.decode('utf-8'))
+    usdmainbtc = usddictbtc['result']
+    usdlastbtc = usdmainbtc['Last']
+    usdfloatbtc = (str(usdlastbtc))
 
-    return render_template('main.html',SOUPUSD=usdfloat,SOUPLSK=soupLsk,SOUPLBC=soupLbc,SOUPSTRAT=soupStrat,
-                           SOUPSC=soupSc,\
-                                                                                                  SOUPETH=soupEth,
+    return render_template('main.html',SOUPUSD=usdfloatbtc,SOUPLSK=sdfloatlsk,SOUPLBC=sdfloatlbc,SOUPSTRAT=sdfloatstrat,
+                           SOUPSC=sdfloatsc,\
+                                                                                                  SOUPETH=sdfloateth,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau)
@@ -214,10 +214,41 @@ def add_pricing():
     global soupLsk
     global soupLbc
 
-    response = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
-    usddict = json.loads(response.data.decode('utf-8'))
-    usdmain = usddict['result']
-    usdlast = usdmain['Last']
+    responsebtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
+    usddictbtc = json.loads(responsebtc.data.decode('utf-8'))
+    usdmainbtc = usddictbtc['result']
+    usdlastbtc = usdmainbtc['Last']
+    usdfloatbtc = (str(usdlastbtc))
+
+    responseeth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH")
+    usddicteth = json.loads(responseeth.data.decode('utf-8'))
+    usdmaineth = usddicteth['result']
+    usdlasteth = usdmaineth['Last']
+    usdfloateth = (str(usdlasteth))
+
+    responsesc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-SC")
+    usddictsc = json.loads(responsesc.data.decode('utf-8'))
+    usdmainsc = usddictsc['result']
+    usdlastsc = usdmainsc['Last']
+    usdfloatsc = (str(usdlastsc))
+
+    responsestrat = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-STRAT")
+    usddictstrat = json.loads(responsestrat.data.decode('utf-8'))
+    usdmainstrat = usddictstrat['result']
+    usdlaststrat = usdmainstrat['Last']
+    usdfloatstrat = (str(usdlaststrat))
+
+    responselsk = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LSK")
+    usddictlsk = json.loads(responselsk.data.decode('utf-8'))
+    usdmainlsk = usddictlsk['result']
+    usdlastlsk = usdmainlsk['Last']
+    usdfloatlsk = (str(usdlastlsk))
+
+    responselbc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LBC")
+    usddictlbc = json.loads(responselbc.data.decode('utf-8'))
+    usdmainlbc = usddictlbc['result']
+    usdlastlbc = usdmainlbc['Last']
+    usdfloatlbc = (str(usdlastlbc))
 
     type(refinedChelt)
     type(refinedMent)
@@ -225,7 +256,10 @@ def add_pricing():
     print(str(refinedMent) + " this is refinedMent in /_update")
 
     for each in refinedChelt:
-        return float(result1=(str(usdlast))),jsonify(result2=(str(refinedMent)),result3=(str(refinedPark)),
+        return float(result1=(str(usdlastbtc))),float(result1=(str(usdlasteth))),float(result1=(str(usdlastsc))),\
+               float(result1=(str(usdlaststrat))),float(result1=(str(usdlastlsk))),float(result1=(str(usdlastlbc))),\
+               jsonify(result2=(str(refinedMent)),
+                                                                                   result3=(str(refinedPark)),
                        result4=(str(refinedBeau)),result5=(str(soupUsd)),result6=(str(soupEth)),result7=(str(
                 soupSc)),result8=(str(soupStrat)),result9=(str(soupLsk)),result10=(str(soupLbc)))
 
