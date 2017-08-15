@@ -141,9 +141,10 @@ def default():
     usdlastbtc = usdmainbtc['Last']
     usdfloatbtc = (str(usdlastbtc))
 
-    return render_template('main.html',SOUPUSD=usdfloatbtc,SOUPLSK=sdfloatlsk,SOUPLBC=sdfloatlbc,SOUPSTRAT=sdfloatstrat,
-                           SOUPSC=sdfloatsc,\
-                                                                                                  SOUPETH=sdfloateth,
+    return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
+                           SOUPSTRAT=usdfloatstrat,
+                           SOUPSC=usdfloatsc,\
+                                                                                                  SOUPETH=usdfloateth,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau)
