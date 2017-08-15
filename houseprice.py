@@ -135,7 +135,7 @@ def default():
     global soupLsk
     global soupLbc
 
-responsebtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
+    responsebtc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
     usddictbtc = json.loads(responsebtc.data.decode('utf-8'))
     usdmainbtc = usddictbtc['result']
     usdlastbtc = usdmainbtc['Last']
