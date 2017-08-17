@@ -23,6 +23,26 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- The Grid -->
   <div class="w3-row-padding">
 
+      <div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
+        <h5 class="w3-text-black w3-padding-16"><i
+                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>USD =<b id="update11">USD
+            {{ FIXERUSD }}</b></H5>
+
+</div>
+</div>
+
+      <div class="w3-container">
+
+         <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
+        <h5 class="w3-text-black w3-padding-16"><i
+                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>AUS =<b id="update12">AUS
+            {{ FIXERAUS }}</b></H5>
+
+</div>
+</div>
+
        <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
@@ -134,17 +154,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 </div>
 </div>
-
-                 <div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-brown w3-margin-bottom">
-        <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>USD =<b id="update11">USD
-            {{ FIXERUSD }}</b></H5>
-
-</div>
-</div>
-      </div>
+  </div>
 
 <script type=text/javascript>
   $(function () {
@@ -164,6 +174,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           $("#update9").text(data.result9);
           $("#update10").text(data.result10);
           $("#update11").text(data.result11);
+          $("#update12").text(data.result12);
       });
             setTimeout(updatePage, 5000);
         return false;

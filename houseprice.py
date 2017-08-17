@@ -171,11 +171,17 @@ def default():
     usdlastlbc = usdmainlbc['Last']
     usdfloatlbc = (str(usdlastlbc))
 
-    responsefixeraus = http.request("GET", "http://api.fixer.io/latest?symbols=USD,GBP")
-    usddictfixeraus = json.loads(responsefixeraus.data.decode('utf-8'))
-    usdmainfixeraus = usddictfixeraus['rates']
-    usdlastfixeraus = usdmainfixeraus['USD']
-    usdfloatfixeraus = (str(usdlastfixeraus))
+    responsefixer = http.request("GET", "http://api.fixer.io/latest?symbols=USD,GBP")
+    usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
+    usdmainfixer = usddictfixer['rates']
+    usdlastfixer = usdmainfixer['USD']
+    usdfloatfixer = (str(usdlastfixer))
+
+    responsefixer = http.request("GET", "http://api.fixer.io/latest?symbols=USD,AUS")
+    usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
+    usdmainfixer = usddictfixer['rates']
+    usdlastfixer = usdmainfixer['AUS']
+    usdfloatfixer = (str(usdlastfixer))
 
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
@@ -183,7 +189,7 @@ def default():
                                                                                                   SOUPETH=usdfloateth,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
-        =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixeraus)
+        =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixer,FIXERAUS=usdfloatfixeraus)
 
 
 @app.route('/index_one' , methods=['GET','POST'])
