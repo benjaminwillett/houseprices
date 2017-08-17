@@ -173,9 +173,9 @@ def default():
 
     responsefixeraus = http.request("GET", "http://api.fixer.io/latest?symbols=USD,GBP")
     usddictfixeraus = json.loads(responsefixeraus.data.decode('utf-8'))
-    # usdmainfixeraus = usddictfixeraus['rates']
-    # usdlastfixeraus = usdmainfixeraus['USD']
-    # usdfloatfixeraus = (str(usdlastfixeraus))
+    usdmainfixeraus = usddictfixeraus['rates']
+    usdlastfixeraus = usdmainfixeraus['USD']
+    usdfloatfixeraus = (str(usdlastfixeraus))
 
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
