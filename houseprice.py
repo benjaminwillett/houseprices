@@ -177,11 +177,11 @@ def default():
     usdlastfixer = usdmainfixer['USD']
     usdfloatfixer = (str(usdlastfixer))
 
-    responsefixer = http.request("GET", "http://api.fixer.io/latest?symbols=USD,AUS")
-    usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
-    usdmainfixer = usddictfixer['rates']
-    usdlastfixer = usdmainfixer['AUS']
-    usdfloatfixer = (str(usdlastfixer))
+    responsefixeraus = http.request("GET", "http://api.fixer.io/latest?symbols=USD,AUS")
+    usddictfixeraus = json.loads(responsefixeraus.data.decode('utf-8'))
+    usdmainfixeraus = usddictfixeraus['rates']
+    usdlastfixeraus = usdmainfixeraus['AUS']
+    usdfloatfixeraus = (str(usdlastfixeraus))
 
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
