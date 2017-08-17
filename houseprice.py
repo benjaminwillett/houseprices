@@ -171,11 +171,11 @@ def default():
     usdlastlbc = usdmainlbc['Last']
     usdfloatlbc = (str(usdlastlbc))
 
-    responsefixeraus = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LBC")
+    responsefixeraus = http.request("GET", "http://api.fixer.io/latest?symbols=USD,GBP")
     usddictfixeraus = json.loads(responsefixeraus.data.decode('utf-8'))
-    usdmainfixeraus = usddictfixeraus['rates']
-    usdlastfixeraus = usdmainfixeraus['AUS']
-    usdfloatfixeraus = (str(usdlastfixeraus))
+    # usdmainfixeraus = usddictfixeraus['rates']
+    # usdlastfixeraus = usdmainfixeraus['USD']
+    # usdfloatfixeraus = (str(usdlastfixeraus))
 
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
