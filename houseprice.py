@@ -183,7 +183,7 @@ def default():
                                                                                                   SOUPETH=usdfloateth,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
-        =refinedPark,REFINEDBEAU=refinedBeau,FIXER=usdfloatfixeraus)
+        =refinedPark,REFINEDBEAU=refinedBeau,)
 
 
 @app.route('/index_one' , methods=['GET','POST'])
