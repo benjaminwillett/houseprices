@@ -171,13 +171,19 @@ def default():
     usdlastlbc = usdmainlbc['Last']
     usdfloatlbc = (str(usdlastlbc))
 
+    responsefixerusd = http.request("GET", "https://api.fixer.io/latest?symbols=USD,AUD")
+    usddictfixerusd = json.loads(responsefixerusd.data.decode('utf-8'))
+    usdmainfixerusd = usddictfixerusd['result']
+    usdlastfixerusd = usdmainfixerusd['Last']
+    usdfloatfixerusd = (str(usdlastfixerusd))
+
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
                            SOUPSC=usdfloatsc,\
                                                                                                   SOUPETH=usdfloateth,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
-        =refinedPark,REFINEDBEAU=refinedBeau)
+        =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixerusd)
 
 
 @app.route('/index_one' , methods=['GET','POST'])
@@ -281,6 +287,12 @@ def add_pricing():
     usdlastlbc = usdmainlbc['Last']
     usdfloatlbc = (str(usdlastlbc))
 
+    responsefixerusd = http.request("GET", "https://api.fixer.io/latest?symbols=USD,AUD")
+    usddictfixerusd = json.loads(responsefixerusd.data.decode('utf-8'))
+    usdmainfixerusd = usddictfixerusd['result']
+    usdlastfixerusd = usdmainfixerusd['Last']
+    usdfloatfixerusd = (str(usdlastfixerusd))
+
     type(refinedChelt)
     type(refinedMent)
     print(str(refinedChelt) + " this is refinedChelt in /_update")
@@ -289,6 +301,7 @@ def add_pricing():
     # for each in refinedChelt:
     return float(result5=(str(usdlastbtc))),float(result6=(str(usdlasteth))),float(result7=(str(usdlastsc))),\
                float(result8=(str(usdlaststrat))),float(result9=(str(usdlastlsk))),float(result10=(str(usdlastlbc))),\
+           float(result11=(str(usdlastfixerusd))),\
                jsonify(result1=(str(refinedChelt)),result2=(str(refinedMent)),
                                                                                    result3=(str(refinedPark)),
                        result4=(str(refinedBeau)))
