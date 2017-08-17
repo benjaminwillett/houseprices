@@ -173,14 +173,14 @@ def default():
 
     responsefixerusd = http.request("GET", "https://api.fixer.io/latest?symbols=USD,AUD")
     usddictfixerusd = json.loads(responsefixerusd.data.decode('utf-8'))
-    usdmainfixerusd = usddictfixerusd['result']
-    usdlastfixerusd = usdmainfixerusd['Last']
+    usdmainfixerusd = usddictfixerusd['rates']
+    usdlastfixerusd = usdmainfixerusd['AUS']
     usdfloatfixerusd = (str(usdlastfixerusd))
 
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
                            SOUPSC=usdfloatsc,\
-                                                                                                  SOUPETH=usdfloateth,
+                        SOUPETH=usdfloateth,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixerusd)
