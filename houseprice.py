@@ -181,6 +181,9 @@ def default():
     usdlastfixergbp = usdmainfixer['GBP']
     usdfloatfixergbp = (str(usdlastfixergbp))
 
+    usdlastfixereur = usdmainfixer['EUR']
+    usdfloatfixereur = (str(usdlastfixereur))
+
 
     return render_template('main.html',SOUPBTC=usdfloatbtc,SOUPLSK=usdfloatlsk,SOUPLBC=usdfloatlbc,
                            SOUPSTRAT=usdfloatstrat,
@@ -188,7 +191,7 @@ def default():
                                                                                                   SOUPETH=usdfloateth,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
-        =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixer,FIXERGBP=usdfloatfixergbp)
+        =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixer,FIXERGBP=usdfloatfixergbp,FIXEREUR=usdfloatfixereur)
 
 
 @app.route('/index_one' , methods=['GET','POST'])
