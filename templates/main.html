@@ -15,24 +15,25 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
-< class="w3-light-grey">
+<>
+<div class="w3-light-grey">
 
 <!-- Page Container -->
-< class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
-  < class="w3-row-padding">
+  <div class="w3-row-padding">
 
       <div class="w3-container">
 
       <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
-        <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+        < class="w3-text-black w3-padding-16">
+            <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             {% for each in CURRENCY %}
-            <b>AUS = {{ each }} {{ CURRENCY[each] }}</b></H5>
+            <H5><b>AUS = {{ each }} {{ CURRENCY[each] }}</b></H5>
             {% endfor %}
-          </div>
-          </div>
+      </div>
+      </div>
 
        <div class="w3-container">
 
@@ -95,6 +96,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 </div>
       {% endfor %}
+      </div>
+    </div>
+    </div>
 </body>
 </html>
 
