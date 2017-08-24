@@ -62,7 +62,7 @@ def getContent():
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             refined = links[2]
-            postcode[item][each]["price"] = (str(refined))
+            postcode[0][each]["price"] = (str(refined))
 
 
 
@@ -133,7 +133,7 @@ def default():
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             refined = links[2]
-            postcode[item][each]["price"] = (str(refined))
+            postcode[0][each]["price"] = (str(refined))
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
