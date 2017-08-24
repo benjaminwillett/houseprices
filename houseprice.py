@@ -45,7 +45,7 @@ def getContent():
 
     for item in postcode:
         for each in item:
-
+            print(realestateurl + item[each]["suburb"] + "-" + (str(each))  + "-vic")
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",
                                     preload_content=False)
             print(priceurl)
@@ -109,7 +109,7 @@ def default():
 
     for item in postcode:
         for each in item:
-
+            print(realestateurl + item[each]["suburb"] + "-" + (str(each))  + "-vic")
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each))  + "-vic",
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
