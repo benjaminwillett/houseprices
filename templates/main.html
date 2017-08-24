@@ -43,50 +43,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Cheltenham</H5>
-<div class="w3-container"><p><b id="update1">{% for each in REFINEDCHELT %}
-    <H4>{{ each }}</H4></b>Price has changed by</p>
+<div class="w3-container"><p><b id="update1">{% for item in POSTCODE %}{% for each in item %}
+    <H4>{{ POSTCODE[item][each]["suburb"] }}  {{ POSTCODE[item][each]["price"] }}</H4></b>Price has changed by</p>
 
 {% endfor %}
+    {% endfor %}
 </div>
          </div>
        </div>
 
-       <div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Mentone</H5>
-<div class="w3-container"><p><b id="update2">{% for each in REFINEDMENT %}
-    <H4>{{ each }}</H4></b>Price has changed by</p>
-
-{% endfor %}
-</div>
-         </div>
-       </div>
-
-<div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Parkdale</H5>
-<div class="w3-container"><p><b id="update3">{% for each in REFINEDPARK %}
-    <H4>{{ each }}</H4></b>Price has changed by</p>
-
-{% endfor %}
-</div>
-         </div>
-</div>
-
-<div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Beaumaris</H5>
-<div class="w3-container"><p><b id="update4">{% for each in REFINEDBEAU %}
-    <H4>{{ each }}</H4></b>Price has changed by</p>
-
-{% endfor %}
-
-    </div>
-         </div>
-</div>
 
       {% for each in TICKERS %}
       <div class="w3-container">

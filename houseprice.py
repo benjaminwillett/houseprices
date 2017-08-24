@@ -50,31 +50,21 @@ def getContent():
     global soupLsk
     global soupLbc
 
+    realestateurl = "https://www.realestate.com.au/neighbourhoods/"
+    postcode = [{3192:{"price":0,"suburb":"cheltenham"},3195:{"price":0,"suburb":"mentone"},3193:{"price":0, "suburb"
+                                                                                                    "parkdale"}}]
 
-    urlChelt = http.request("GET", "https://www.realestate.com.au/neighbourhoods/cheltenham-3192-vic", preload_content=False)
-    urlMent = http.request("GET", "https://www.realestate.com.au/neighbourhoods/mentone-3194-vic", preload_content=False)
-    urlPark = http.request("GET", "https://www.realestate.com.au/neighbourhoods/parkdale-3195-vic", preload_content=False)
-    urlBeau = http.request("GET", "https://www.realestate.com.au/neighbourhoods/beaumaris-3193-vic", preload_content=False)
+    for item in postcode:
+        for each in item:
 
-    soupChelt = BeautifulSoup(urlChelt)
-    soupMent = BeautifulSoup(urlMent)
-    soupPark = BeautifulSoup(urlPark)
-    soupBeau = BeautifulSoup(urlBeau)
+        priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + item  + "-vic",
+                                preload_content=False)
+        soup = BeautifulSoup(priceurl)
+        links = soup.findAll("div", {"class": "price strong"})
+        refined = links[2]
+        postcode[item][each]["price"] = (str(refined))
 
-    linksChelt = soupChelt.findAll("div", {"class": "price strong"})
-    linksMent = soupMent.findAll("div", {"class": "price strong"})
-    linksPark = soupPark.findAll("div", {"class": "price strong"})
-    linksBeau = soupBeau.findAll("div", {"class": "price strong"})
 
-    refinedChelt = linksChelt[2]
-    refinedMent = linksMent[2]
-    refinedPark = linksPark[2]
-    refinedBeau = linksBeau[2]
-
-    print(str(refinedChelt) + "is refinedChelt")
-    print(str(refinedMent) + "is refinedMent")
-    print(str(refinedPark) + "is refinedPark")
-    print(str(refinedBeau) + "is refinedBeau")
 
     # priceHistory.append(refinedChelt)
     # print(str(priceHistory) + "is price history")
@@ -82,31 +72,6 @@ def getContent():
     # if refinedChelt > priceHistory[0]:
     #     change = ((int(refinedChelt) - (int(priceHistory[0]))))
     # print(str(change) + " is the change")
-
-
-    # getusd = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC", preload_content=False)
-    # soupUsd = [BeautifulSoup(getusd)]
-    # response = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC")
-    # usddict = json.loads(response.data.decode('utf-8'))
-    # usdmain = usddict['result']
-    # usdlast = usdmain['Last']
-
-    geteth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH", preload_content=False)
-    soupEth = [BeautifulSoup(geteth)]
-
-    getsc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-SC", preload_content=False)
-    soupSc = [BeautifulSoup(getsc)]
-
-    getstrat = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-STRAT",
-                            preload_content=False)
-    soupStrat = [BeautifulSoup(getstrat)]
-
-    getlsk = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LSK", preload_content=False)
-    soupLsk = [BeautifulSoup(getlsk)]
-
-    getlbc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LBC",
-                            preload_content=False)
-    soupLbc = [BeautifulSoup(getlbc)]
 
 
 
@@ -156,13 +121,24 @@ def default():
         usdmainfixer = usddictfixer['rates']
         usdratefixer = usdmainfixer[each]
         currency[each] = (str(usdratefixer))
-        print("currency dictionary value is now" + currency[each])
+
+    realestateurl = "https://www.realestate.com.au/neighbourhoods/"
+    postcode = [{3192:{"price":0,"suburb":"cheltenham"},3195:{"price":0,"suburb":"mentone"},3193:{"price":0, "suburb"
+                                                                                                    "parkdale"}}]
+
+    for item in postcode:
+        for each in item:
+
+        priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + item  + "-vic",
+                                preload_content=False)
+        soup = BeautifulSoup(priceurl)
+        links = soup.findAll("div", {"class": "price strong"})
+        refined = links[2]
+        postcode[item][each]["price"] = (str(refined))
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
-                           REFINEDCHELT=refinedChelt,
-                           REFINEDMENT=refinedMent,REFINEDPARK \
-        =refinedPark,REFINEDBEAU=refinedBeau)
+                           POSTCODE=postcode)
 
 
 @app.route('/index_one' , methods=['GET','POST'])
