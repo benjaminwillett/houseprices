@@ -118,7 +118,7 @@ def default():
             # refined = links[15]
             postcode[0][each]["price"] = (str(links))
 
-    print(postcode)
+    print(postcode[0])
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode)
