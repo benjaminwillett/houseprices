@@ -57,12 +57,12 @@ def getContent():
     for item in postcode:
         for each in item:
 
-        priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + item  + "-vic",
-                                preload_content=False)
-        soup = BeautifulSoup(priceurl)
-        links = soup.findAll("div", {"class": "price strong"})
-        refined = links[2]
-        postcode[item][each]["price"] = (str(refined))
+            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + item  + "-vic",
+                                    preload_content=False)
+            soup = BeautifulSoup(priceurl)
+            links = soup.findAll("div", {"class": "price strong"})
+            refined = links[2]
+            postcode[item][each]["price"] = (str(refined))
 
 
 
@@ -128,12 +128,12 @@ def default():
     for item in postcode:
         for each in item:
 
-        priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + item  + "-vic",
-                                preload_content=False)
-        soup = BeautifulSoup(priceurl)
-        links = soup.findAll("div", {"class": "price strong"})
-        refined = links[2]
-        postcode[item][each]["price"] = (str(refined))
+            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + item  + "-vic",
+                                    preload_content=False)
+            soup = BeautifulSoup(priceurl)
+            links = soup.findAll("div", {"class": "price strong"})
+            refined = links[2]
+            postcode[item][each]["price"] = (str(refined))
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
