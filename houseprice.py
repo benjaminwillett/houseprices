@@ -114,8 +114,8 @@ def default():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            refined = links[0]
-            postcode[0][each]["price"] = (str(refined))
+            # refined = links[15]
+            # postcode[0][each]["price"] = (str(refined))
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
