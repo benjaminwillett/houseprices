@@ -134,6 +134,7 @@ def default():
     global soupStrat
     global soupLsk
     global soupLbc
+
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
     tickers = {"USDT-BTC":0,"BTC-ETH":0,"BTC-SC":0,"BTC-STRAT":0,"BTC-LSK":0,"BTC-LBC":0}
 
@@ -145,51 +146,18 @@ def default():
         usdlast = usdmain['Last']
         tickers[each] = (str(usdlast))
 
-    # responseeth = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-ETH")
-    # usddicteth = json.loads(responseeth.data.decode('utf-8'))
-    # usdmaineth = usddicteth['result']
-    # usdlasteth = usdmaineth['Last']
-    # usdfloateth = (str(usdlasteth))
-    #
-    # responsesc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-SC")
-    # usddictsc = json.loads(responsesc.data.decode('utf-8'))
-    # usdmainsc = usddictsc['result']
-    # usdlastsc = usdmainsc['Last']
-    # usdfloatsc = (str(usdlastsc))
-    #
-    # responsestrat = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-STRAT")
-    # usddictstrat = json.loads(responsestrat.data.decode('utf-8'))
-    # usdmainstrat = usddictstrat['result']
-    # usdlaststrat = usdmainstrat['Last']
-    # usdfloatstrat = (str(usdlaststrat))
-    #
-    # responselsk = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LSK")
-    # usddictlsk = json.loads(responselsk.data.decode('utf-8'))
-    # usdmainlsk = usddictlsk['result']
-    # usdlastlsk = usdmainlsk['Last']
-    # usdfloatlsk = (str(usdlastlsk))
-    #
-    # responselbc = http.request("GET", "https://bittrex.com/api/v1.1/public/getticker?market=BTC-LBC")
-    # usddictlbc = json.loads(responselbc.data.decode('utf-8'))
-    # usdmainlbc = usddictlbc['result']
-    # usdlastlbc = usdmainlbc['Last']
-    # usdfloatlbc = (str(usdlastlbc))
+    fixer = "http://api.fixer.io/latest?base=AUD"
+    currency = {'USD':0,'GBP':0,'EUR':0}
 
-    responsefixer = http.request("GET", "http://api.fixer.io/latest?base=AUD")
-    usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
-    usdmainfixer = usddictfixer['rates']
+    for each in currency:
 
-    usdlastfixer = usdmainfixer['USD']
-    usdfloatfixer = (str(usdlastfixer))
-
-    usdlastfixergbp = usdmainfixer['GBP']
-    usdfloatfixergbp = (str(usdlastfixergbp))
-
-    usdlastfixereur = usdmainfixer['EUR']
-    usdfloatfixereur = (str(usdlastfixereur))
+        responsefixer = http.request("GET", fixer)
+        usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
+        usdmainfixer = usddictfixer['rates']
+        currency[each] = (str(usdmainfixer))
 
 
-    return render_template('main.html',TICKERS=tickers,
+    return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixer,FIXERGBP=usdfloatfixergbp,FIXEREUR=usdfloatfixereur)
