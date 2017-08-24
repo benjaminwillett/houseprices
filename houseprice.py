@@ -45,11 +45,10 @@ def getContent():
 
     for item in postcode:
         for each in item:
-            print(realestateurl + item[each]["suburb"] + "-" + (str(each))  + "-vic")
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",
                                     preload_content=False)
-            print(priceurl)
-            # soup = BeautifulSoup(priceurl)
+            soup = BeautifulSoup(priceurl)
+            print(soup)
             # links = soup.findAll("div", {"class": "price strong"})
             # print(len(links))
             # print("type of links is above")
