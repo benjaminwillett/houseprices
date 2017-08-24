@@ -51,7 +51,7 @@ def getContent():
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             print(len(links))
-            print(type(links))
+            # print(type(links))
             print("type of links is above")
             refined = links[0]
             postcode[0][each]["price"] = (str(refined))
