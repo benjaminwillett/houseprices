@@ -15,7 +15,7 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
-<body class="w3-light-grey">
+< class="w3-light-grey">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -89,11 +89,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
          <div class="w3-container w3-card-2 w3-orange w3-margin-bottom">
         <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>{{ each }} =<b id="update5">$</b></H5>
+                class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>{{ each }} =<b id="update5">${{
+            TICKERS[each] }}
+        </b></H5>
 
 </div>
 </div>
       {% endfor %}
     </div>
-
 </div>
+</body>
+</html>
+
