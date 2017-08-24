@@ -37,7 +37,7 @@ class myThread (threading.Thread):
         print "Exiting " + self.name
 
 def getContent():
-
+    links = []
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
     postcode = [{3192:{"price":"100000","suburb":"cheltenham"},3195:{"price":"500000","suburb":"mentone"},
@@ -51,8 +51,8 @@ def getContent():
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             print(links)
-            # refined = links[15]
-            postcode[0][each]["price"] = (str(links[0]))
+            refined = links[2]
+            postcode[0][each]["price"] = (str(refined))
 
 
 def letsThread():
@@ -79,6 +79,7 @@ def default():
     global soupStrat
     global soupLsk
     global soupLbc
+    links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
     tickers = {"USDT-BTC":0,"BTC-ETH":0,"BTC-SC":0,"BTC-STRAT":0,"BTC-LSK":0,"BTC-LBC":0}
@@ -115,8 +116,8 @@ def default():
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             print(links)
-            # refined = links[15]
-            postcode[0][each]["price"] = (str(links[0]))
+            refined = links[2]
+            postcode[0][each]["price"] = (str(refined))
 
     print(postcode[0])
 
