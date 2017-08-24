@@ -104,15 +104,15 @@ def default():
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
     postcode = [{3192:{"price":0,"suburb":"cheltenham"},3195:{"price":0,"suburb":"mentone"},3193:{"price":0,"suburb":"parkdale"}}]
 
-    for item in postcode:
+for item in postcode:
         for each in item:
-            print(realestateurl + item[each]["suburb"] + "-" + (str(each))  + "-vic")
-            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each))  + "-vic",
+            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
+            print(links)
             # refined = links[15]
-            # postcode[0][each]["price"] = (str(refined))
+            postcode[0][each]["price"] = (str(links))
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
