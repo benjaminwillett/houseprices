@@ -189,7 +189,7 @@ def default():
     usdfloatfixereur = (str(usdlastfixereur))
 
 
-    return render_template('main.html',Tickers=tickers,
+    return render_template('main.html',TICKERS=tickers,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
         =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixer,FIXERGBP=usdfloatfixergbp,FIXEREUR=usdfloatfixereur)
