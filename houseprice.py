@@ -50,8 +50,10 @@ def getContent():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            type(links)
-            print(links)
+
+            for div in links:
+                print(div)
+
             refined = links[0]
             postcode[0][each]["price"] = (str(refined))
 
