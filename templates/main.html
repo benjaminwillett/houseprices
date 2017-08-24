@@ -28,7 +28,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
          <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
         <h5 class="w3-text-black w3-padding-16"><i
                 class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
-            USD =<b id="update11">AUS {{ FIXERUSD }}</b>  GBP =<b id="update12"> AUS
+            AUS =<b id="update11">USD {{ FIXERUSD }}</b>  AUS =<b id="update12"> GBP
             {{ FIXERGBP }}</b></H5>
 
 
@@ -84,92 +84,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
          </div>
 </div>
 
+      {% for each in TICKERS %}
       <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-orange w3-margin-bottom">
         <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>BTC-USD =<b id="update5">$ {{ SOUPBTC }}</b></H5>
-
-
+                class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>{{ each }} =<b id="update5">$</b></H5>
 
 </div>
 </div>
-
-
-      <div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-blue w3-margin-bottom">
-        <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Eth =<b id="update6">btc {{ SOUPETH }}</b></H5>
-
-
-</div>
-</div>
-
-      <div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
-        <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>SIA =<b
-                id="update7">btc {{ SOUPSC }}</b></H5>
-
-
-</div>
-</div>
-
-            <div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-red w3-margin-bottom">
-        <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>STRAT =<b
-                id="update8">btc {{ SOUPSTRAT }}</b></H5>
-
-</div>
-</div>
-
-            <div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-yellow w3-margin-bottom">
-        <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>LISK =<b
-                id="update9">btc {{ SOUPLSK }}</b></H5>
-
-</div>
-</div>
-
-            <div class="w3-container">
-
-         <div class="w3-container w3-card-2 w3-brown w3-margin-bottom">
-        <h5 class="w3-text-black w3-padding-16"><i
-                class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Library =<b id="update10">btc
-            {{ SOUPETH }}</b></H5>
-
-</div>
-</div>
+      {% endfor %}
   </div>
 
-<script type=text/javascript>
-  $(function () {
-      setTimeout(updatePage, 5000)
-  });
-    function updatePage() {
-      $.getJSON($SCRIPT_ROOT + '/_update', {
-      }, function(data) {
-          $("#update1").text(data.result1);
-          $("#update2").text(data.result2);
-          $("#update3").text(data.result3);
-          $("#update4").text(data.result4);
-          $("#update5").text(data.result5);
-          $("#update6").text(data.result6);
-          $("#update7").text(data.result7);
-          $("#update8").text(data.result8);
-          $("#update9").text(data.result9);
-          $("#update10").text(data.result10);
-          $("#update11").text(data.result11);
-          $("#update12").text(data.result12);
-      });
-            setTimeout(updatePage, 5000);
-        return false;
-  }
-</script>
-    </div>
+</div>
