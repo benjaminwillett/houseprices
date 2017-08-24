@@ -53,7 +53,7 @@ def getContent():
             print(len(links))
             # print(type(links))
             print("type of links is above")
-            refined = links[0]
+            refined = links[15]
             postcode[0][each]["price"] = (str(refined))
 
 
