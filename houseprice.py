@@ -52,7 +52,7 @@ def getContent():
             links = soup.findAll("div", {"class": "price strong"})
             print(len(links))
             print(type(links))
-            print(len(links))
+            print("type of links is above")
             refined = links[0]
             postcode[0][each]["price"] = (str(refined))
 
