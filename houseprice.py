@@ -50,10 +50,8 @@ def getContent():
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             print(links)
-            # print(len(links))
-            # print("type of links is above")
             # refined = links[15]
-            # postcode[0][each]["price"] = (str(refined))
+            postcode[0][each]["price"] = (str(links))
 
 
 def letsThread():
