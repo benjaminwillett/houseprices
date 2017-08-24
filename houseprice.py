@@ -52,7 +52,7 @@ def getContent():
             links = soup.findAll("div", {"class": "price strong"})
             print(links)
             # refined = links[15]
-            postcode[0][each]["price"] = (str(links))
+            postcode[0][each]["price"] = (str(links[0]))
 
 
 def letsThread():
@@ -116,7 +116,7 @@ def default():
             links = soup.findAll("div", {"class": "price strong"})
             print(links)
             # refined = links[15]
-            postcode[0][each]["price"] = (str(links))
+            postcode[0][each]["price"] = (str(links[0]))
 
     print(postcode[0])
 
