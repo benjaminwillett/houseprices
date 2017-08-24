@@ -154,7 +154,8 @@ def default():
         responsefixer = http.request("GET", fixer)
         usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
         usdmainfixer = usddictfixer['rates']
-        currency[each] = (str(usdmainfixer))
+        usdratefixer = usdmainfixer[each]
+        currency[each] = (str(usdratefixer))
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
