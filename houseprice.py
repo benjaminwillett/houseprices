@@ -48,8 +48,8 @@ def getContent():
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
-            print(soup)
-            # links = soup.findAll("div", {"class": "price strong"})
+            links = soup.findAll("div", {"class": "price strong"})
+            print(links)
             # print(len(links))
             # print("type of links is above")
             # refined = links[15]
