@@ -40,19 +40,17 @@ def getContent():
     links = []
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
-    postcode = [{3192:{"price":"100000","suburb":"cheltenham"},3195:{"price":"500000","suburb":"mentone"},
-                 3193:{"price":"777777",
-                                                                                                  "suburb":"parkdale"}}]
+    postcode = [{3192: {"price": "100000", "suburb": "cheltenham"}, 3195: {"price": "500000", "suburb": "mentone"},
+                 3193: {"price": "777777",
+                                                                                                  "suburb":
+                                                                                                      "parkdale"}}]
 
     for item in postcode:
         for each in item:
-            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",
-                                    preload_content=False)
+            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            print(links)
-            refined = links[0]
-            postcode[0][each]["price"] = (str(refined))
+            postcode[0][each]["price"] = links
 
 
 def letsThread():
@@ -115,9 +113,7 @@ def default():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            print(links)
-            refined = links[2]
-            postcode[0][each]["price"] = (str(refined))
+            postcode[0][each]["price"] = links
 
     print(postcode[0])
 
