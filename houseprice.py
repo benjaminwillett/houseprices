@@ -103,8 +103,10 @@ def default():
         currency[each] = (str(usdratefixer))
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
-    postcode = [{3192:{"price":"100","suburb":"cheltenham"},3195:{"price":"200","suburb":"mentone"},3193:{"price":"300",
-                                                                                                    "suburb":"parkdale"}}]
+    postcode = [{3192: {"price": "100", "suburb": "cheltenham"}, 3195: {"price": "200", "suburb": "mentone"},
+                 3193: {"price": "300",
+                                                                                                     "suburb":
+                                                                                                        "parkdale"}}]
 
     for item in postcode:
         for each in item:
@@ -116,6 +118,7 @@ def default():
             # refined = links[15]
             postcode[0][each]["price"] = (str(links))
 
+    print(postcode)
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode)
