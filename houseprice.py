@@ -50,7 +50,7 @@ def getContent():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            print(type(links) + "is the type of object now winnnnnnn")
+            print((type(links)) + "is the type of object now winnnnnnn")
             print()
             print(len(links))
             refined = links[0]
