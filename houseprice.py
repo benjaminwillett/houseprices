@@ -37,18 +37,7 @@ class myThread (threading.Thread):
         print "Exiting " + self.name
 
 def getContent():
-    global change
-    global loop
-    global refinedChelt
-    global refinedMent
-    global refinedPark
-    global refinedBeau
-    global soupUsd
-    global soupEth
-    global soupSc
-    global soupStrat
-    global soupLsk
-    global soupLbc
+
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
     postcode = [{3192:{"price":0,"suburb":"cheltenham"},3195:{"price":0,"suburb":"mentone"},3193:{"price":0,
@@ -61,19 +50,9 @@ def getContent():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            print(links[0])
-            refined = links[0]
+            print(links["price strong"])
+            refined = links["price strong"]
             postcode[0][each]["price"] = (str(refined))
-
-
-
-    # priceHistory.append(refinedChelt)
-    # print(str(priceHistory) + "is price history")
-    #
-    # if refinedChelt > priceHistory[0]:
-    #     change = ((int(refinedChelt) - (int(priceHistory[0]))))
-    # print(str(change) + " is the change")
-
 
 
 def letsThread():
