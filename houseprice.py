@@ -156,6 +156,7 @@ def default():
         usdmainfixer = usddictfixer['rates']
         usdratefixer = usdmainfixer[each]
         currency[each] = (str(usdratefixer))
+        print("currency dictionary value is now" + currency[each])
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
