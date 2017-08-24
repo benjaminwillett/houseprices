@@ -162,7 +162,7 @@ def default():
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
                            REFINEDCHELT=refinedChelt,
                            REFINEDMENT=refinedMent,REFINEDPARK \
-        =refinedPark,REFINEDBEAU=refinedBeau,FIXERUSD=usdfloatfixer,FIXERGBP=usdfloatfixergbp,FIXEREUR=usdfloatfixereur)
+        =refinedPark,REFINEDBEAU=refinedBeau)
 
 
 @app.route('/index_one' , methods=['GET','POST'])
