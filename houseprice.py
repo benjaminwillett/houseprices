@@ -54,6 +54,9 @@ def getContent():
             # replacedstring = links.replace('<div class="price strong">$', '$')
             postcode[0][each]["price"] = links[2]
             # postcode[0][each]["price"] = links[2]
+            string = postcode[0][each]["price"]
+            replacedstring = string.replace('<div class="price strong">$', '$')
+            postcode[0][each]["price"] = replacedstring
 
 
 def letsThread():
@@ -112,13 +115,15 @@ def default():
 
     for item in postcode:
         for each in item:
-            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",
-                                    preload_content=False)
+            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             # replacedstring = links.replace('<div class="price strong">$', '$')
             postcode[0][each]["price"] = links[2]
             # postcode[0][each]["price"] = links[2]
+            string = postcode[0][each]["price"]
+            replacedstring = string.replace('<div class="price strong">$', '$')
+            postcode[0][each]["price"] = replacedstring
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
