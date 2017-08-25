@@ -50,7 +50,7 @@ def getContent():
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            postcode[0][each]["price"] = links[2]
+            postcode[0][each]["price"][20:] = links[2]
 
 
 def letsThread():
@@ -113,7 +113,7 @@ def default():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            postcode[0][each]["price"] = links[2]
+            postcode[0][each]["price"][20:] = links[2]
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
