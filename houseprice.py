@@ -51,7 +51,7 @@ def getContent():
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            replacedstring = links.replace('<div class="price strong">$', '$')
+            # replacedstring = links.replace('<div class="price strong">$', '$')
             postcode[0][each]["price"] = replacedstring[2]
             # postcode[0][each]["price"] = links[2]
 
@@ -116,7 +116,7 @@ def default():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            replacedstring = links.replace('<div class="price strong">$', '$')
+            # replacedstring = links.replace('<div class="price strong">$', '$')
             postcode[0][each]["price"] = replacedstring[2]
             # postcode[0][each]["price"] = links[2]
 
