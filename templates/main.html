@@ -46,7 +46,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
              {% for item in POSTCODE %}{% for each in item %}
              <h5 class="w3-text-grey w3-padding-16"><i
                 class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median
-            Price in {{ POSTCODE[0][each]["suburb"] }} is <b>{{ POSTCODE[0][each]["price"] }}</b></H5>
+            Price in {{ POSTCODE[0][each]["suburb"] }} is <b>{{ POSTCODE[0][each]["price"[23:]] }}</b></H5>
 
 {% endfor %}
     {% endfor %}
