@@ -9,7 +9,6 @@ import json
 
 app = Flask(__name__)
 
-loop = True"
 http = urllib3.PoolManager()
 
 
