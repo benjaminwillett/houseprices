@@ -9,11 +9,7 @@ import json
 
 app = Flask(__name__)
 
-loop = True
-refinedChelt = "$"
-refinedMent = "$"
-refinedPark = "$"
-refinedBeau = "$"
+loop = True"
 http = urllib3.PoolManager()
 
 
@@ -68,10 +64,6 @@ letsThread()
 @app.route('/' , methods=['GET','POST'])
 def default():
     letsThread()
-    global refinedChelt
-    global refinedMent
-    global refinedPark
-    global refinedBeau
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
