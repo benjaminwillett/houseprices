@@ -53,8 +53,9 @@ def getContent():
             links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
-            replacedstring = string.replace('<div class="price strong">$', '$')
-            postcode[0][each]["price"] = replacedstring
+            repstr1 = string.replace('<div class="price strong">$', '$')
+            repstr2 = repstr1.replace('</div>', '')
+            postcode[0][each]["price"] = repstr2
 
 
 def letsThread():
@@ -118,8 +119,9 @@ def default():
             links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
-            replacedstring = string.replace('<div class="price strong">$', '$')
-            postcode[0][each]["price"] = replacedstring
+            repstr1 = string.replace('<div class="price strong">$', '$')
+            repstr2 = repstr1.replace('</div>', '')
+            postcode[0][each]["price"] = repstr2
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
