@@ -113,7 +113,7 @@ def default():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            postcode[0][each]["price"] = links
+            postcode[item][each]["price"] = links[2]
 
     print(postcode[0])
 
