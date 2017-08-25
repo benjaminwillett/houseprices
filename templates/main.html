@@ -42,9 +42,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
        <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h5 class="w3-text-grey w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median Price in Cheltenham</H5>
-<div class="w3-container">{% for item in POSTCODE %}{% for each in item %}<p><b id="update1">
-    <H4>{{ POSTCODE[0][each]["suburb"] }}  {{ POSTCODE[0][each]["price"] }}</H4></b></p>
+
+             {% for item in POSTCODE %}{% for each in item %}
+             <h5 class="w3-text-grey w3-padding-16"><i
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current 4 Bedroom House Median
+            Price in {{ POSTCODE[0][each]["suburb"] }} is </H5>
+<div class="w3-container"><p><b id="update1">
+    <H4>{{ POSTCODE[0][each]["price"] }}</H4></b></p>
 
 {% endfor %}
     {% endfor %}
