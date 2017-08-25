@@ -40,8 +40,8 @@ def getContent():
     links = []
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
-    postcode = [{3192: {"price": "100000", "suburb": "cheltenham"}, 3195: {"price": "500000", "suburb": "mentone"},
-                 3193: {"price": "777777",
+    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"}, "3195": {"price": "500000", "suburb": "mentone"},
+                 "3193": {"price": "777777",
                                                                                                   "suburb":
                                                                                                       "parkdale"}}]
 
