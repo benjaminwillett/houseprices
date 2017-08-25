@@ -5,6 +5,7 @@ import time
 import threading
 import requests
 import json
+import re
 
 
 app = Flask(__name__)
@@ -50,7 +51,10 @@ def getContent():
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            postcode[0][each]["price"] = links[2]
+            string = links[2]
+            replacedstring = string.replace('<div class="price strong">$', '$')
+            postcode[0][each]["price"] = replacedstring
+            # postcode[0][each]["price"] = links[2]
 
 
 def letsThread():
@@ -113,7 +117,10 @@ def default():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
-            postcode[0][each]["price"] = links[2]
+            string = links[2]
+            replacedstring = string.replace('<div class="price strong">$', '$')
+            postcode[0][each]["price"] = replacedstring
+            # postcode[0][each]["price"] = links[2]
 
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
