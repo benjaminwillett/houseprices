@@ -40,10 +40,10 @@ def getContent():
     links = []
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
-    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"}, "3195": {"price": "500000", "suburb": "mentone"},
-                 "3193": {"price": "777777",
+    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"}, "3193": {"price": "100000", "suburb":
+        "beaumaris"}, "3195": {"price": "500000", "suburb": "parkdale"}, "3194": {"price": "777777",
                                                                                                   "suburb":
-                                                                                                      "parkdale"}}]
+                                                                                                      "mentone"}}]
 
     for item in postcode:
         for each in item:
@@ -102,10 +102,10 @@ def default():
         currency[each] = (str(usdratefixer))
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
-    postcode = [{3192: {"price": "100", "suburb": "cheltenham"}, 3195: {"price": "200", "suburb": "mentone"},
-                 3193: {"price": "300",
-                                                                                                     "suburb":
-                                                                                                        "parkdale"}}]
+    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"}, "3193": {"price": "100000", "suburb":
+        "beaumaris"}, "3195": {"price": "500000", "suburb": "parkdale"}, "3194": {"price": "777777",
+                                                                                                  "suburb":
+                                                                                                      "mentone"}}]
 
     for item in postcode:
         for each in item:
