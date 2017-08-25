@@ -5,7 +5,6 @@ import time
 import threading
 import requests
 import json
-import re
 
 
 app = Flask(__name__)
@@ -15,14 +14,6 @@ refinedChelt = "$"
 refinedMent = "$"
 refinedPark = "$"
 refinedBeau = "$"
-priceHistory = []
-soupUsd = []
-soupEth = []
-soupSc = []
-soupStrat = []
-soupLsk = []
-soupLbc = []
-change = 0
 http = urllib3.PoolManager()
 
 
@@ -81,12 +72,6 @@ def default():
     global refinedMent
     global refinedPark
     global refinedBeau
-    global soupUsd
-    global soupEth
-    global soupSc
-    global soupStrat
-    global soupLsk
-    global soupLbc
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
