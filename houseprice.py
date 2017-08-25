@@ -55,6 +55,7 @@ def getContent():
             postcode[0][each]["price"] = links[2]
             # postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
+            print("The String Starts Here Ladyboy:" + string)
             replacedstring = string.replace('<div class="price strong">$', '$')
             postcode[0][each]["price"] = replacedstring
 
