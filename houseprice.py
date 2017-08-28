@@ -40,16 +40,12 @@ def getContent():
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
+                print("starting replace method")
+                string.replace('<div class="price strong">$', '$')
+                print("replace method worked!!")
+                string.replace('</div>', '')
                 postcode[0][each]["price"] = string
-                A = postcode[0][each]["price"]
-                a = A.replace('<div class="price strong">$', '$')
-                postcode[0][each]["price"] = a
-                print("string a works as I have got past it!!")
-                postcode[0][each]["price"] = string
-                A = postcode[0][each]["price"]
-                a = A.replace('</div>', '')
-                postcode[0][each]["price"] = a
-                print("string b works as I have got past it!!")
+                print("stringworks as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
@@ -111,16 +107,12 @@ def default():
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
+                print("starting replace method")
+                string.replace('<div class="price strong">$', '$')
+                print("replace method worked!!")
+                string.replace('</div>', '')
                 postcode[0][each]["price"] = string
-                A = postcode[0][each]["price"]
-                a = A.replace('<div class="price strong">$', '$')
-                postcode[0][each]["price"] = a
-                print("string a works as I have got past it!!")
-                postcode[0][each]["price"] = string
-                A = postcode[0][each]["price"]
-                a = A.replace('</div>', '')
-                postcode[0][each]["price"] = a
-                print("string b works as I have got past it!!")
+                print("stringworks as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
