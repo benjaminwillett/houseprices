@@ -37,13 +37,13 @@ def getContent():
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
+            a = links.replace('<div class="price strong">$', '$')
+            print("string a works as I have got past it!!")
+            b = a.replace('</div>', '')
+            print("string b works as I have got past it!!")
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
-                a = string.replace('<div class="price strong">$', '$')
-                print("string a works as I have got past it!!")
-                b = a.replace('</div>', '')
-                print("string b works as I have got past it!!")
                 postcode[0][each]["price"] = b
             except:
                 postcode[0][each]["price"] = "No DATA!"
@@ -99,18 +99,17 @@ def default():
         for each in item:
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
-            links = soup.findAll("div", {"class": "price strong"})
+            a = links.replace('<div class="price strong">$', '$')
+            print("string a works as I have got past it!!")
+            b = a.replace('</div>', '')
+            print("string b works as I have got past it!!")
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
-                a = string.replace('<div class="price strong">$', '$')
-                print("string a works as I have got past it!!")
-                b = a.replace('</div>', '')
-                print("string b works as I have got past it!!")
                 postcode[0][each]["price"] = b
             except:
                 postcode[0][each]["price"] = "No DATA!"
-
+                
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode)
