@@ -40,12 +40,11 @@ def getContent():
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
-                print("repstr1 is about to be tried!!")
-                repstr1 = string.replace('<div class="price strong">$', '$')
-                print("repstr1 works as I have got past it!!")
-                repstr2 = repstr1.replace('</div>', '')
-                print("repstr2 works as I have got past it!!")
-                postcode[0][each]["price"] = repstr2
+                a = string.replace('<div class="price strong">$', '$')
+                print("string a works as I have got past it!!")
+                b = string.replace('</div>', '')
+                print("string b works as I have got past it!!")
+                postcode[0][each]["price"] = b
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
@@ -104,9 +103,11 @@ def default():
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
-                repstr1 = string.replace('<div class="price strong">$', '$')
-                repstr2 = repstr1.replace('</div>', '')
-                postcode[0][each]["price"] = repstr2
+                a = string.replace('<div class="price strong">$', '$')
+                print("string a works as I have got past it!!")
+                b = string.replace('</div>', '')
+                print("string b works as I have got past it!!")
+                postcode[0][each]["price"] = b
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
