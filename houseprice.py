@@ -42,7 +42,7 @@ def getContent():
             try:
                 a = string.replace('<div class="price strong">$', '$')
                 print("string a works as I have got past it!!")
-                b = string.replace('</div>', '')
+                b = a.replace('</div>', '')
                 print("string b works as I have got past it!!")
                 postcode[0][each]["price"] = b
             except:
@@ -105,7 +105,7 @@ def default():
             try:
                 a = string.replace('<div class="price strong">$', '$')
                 print("string a works as I have got past it!!")
-                b = string.replace('</div>', '')
+                b = a.replace('</div>', '')
                 print("string b works as I have got past it!!")
                 postcode[0][each]["price"] = b
             except:
