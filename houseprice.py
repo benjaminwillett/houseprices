@@ -42,7 +42,7 @@ def getContent():
             string = postcode[0][each]["price"]
             try:
                 print("starting replace method")
-                p = re.compile('<div class="price strong">$')
+                p = re.compile('<div class="price strong">')
                 print("RE compile worked")
                 print(string)
                 print("now going to run replace p.sub against string. Content of string variable is " + string)
@@ -113,7 +113,7 @@ def default():
             string = postcode[0][each]["price"]
             try:
                 print("starting replace method")
-                p = re.compile('<div class="price strong">$')
+                p = re.compile('<div class="price strong">')
                 print("RE compile worked")
                 print(string)
                 print("now going to run replace p.sub against string. Content of string variable is " + string)
