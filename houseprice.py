@@ -5,6 +5,7 @@ import time
 import threading
 import requests
 import json
+import re
 
 
 app = Flask(__name__)
@@ -41,11 +42,12 @@ def getContent():
             string = postcode[0][each]["price"]
             try:
                 print("starting replace method")
-                string.replace('<div class="price strong">$', '$')
-                print("replace method worked!!")
-                string.replace('</div>', '')
-                postcode[0][each]["price"] = string
-                print("stringworks as I have got past it!!")
+                p = re.compile('<div class="price strong">$')
+                a = p.sub(string)
+                print("finished replace method")
+                print("inserting string to dictionary")
+                postcode[0][each]["price"] = a
+                print("string works as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
@@ -108,11 +110,12 @@ def default():
             string = postcode[0][each]["price"]
             try:
                 print("starting replace method")
-                string.replace('<div class="price strong">$', '$')
-                print("replace method worked!!")
-                string.replace('</div>', '')
-                postcode[0][each]["price"] = string
-                print("stringworks as I have got past it!!")
+                p = re.compile('<div class="price strong">$')
+                a = p.sub(string)
+                print("finished replace method")
+                print("inserting string to dictionary")
+                postcode[0][each]["price"] = a
+                print("string works as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
