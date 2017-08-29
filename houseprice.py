@@ -43,6 +43,7 @@ def getContent():
             try:
                 print("starting replace method")
                 p = re.compile('<div class="price strong">$')
+                print("RE compile worked")
                 a = p.sub("$", string)
                 print("finished replace method")
                 print("inserting string to dictionary")
