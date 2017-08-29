@@ -24,10 +24,6 @@ class myThread (threading.Thread):
         getContent()
         print "Exiting " + self.name
 
-blah = "123456789"
-print("old blah =" + blah)
-newblah = blah.replace("9", "$")
-print("new blah =" + newblah)
 
 def getContent():
     links = []
@@ -46,14 +42,13 @@ def getContent():
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
-                print("starting replace method")
-                p = re.compile('<div class="price strong">')
-                print("RE compile worked")
-                a = p.sub("$", string)
-                print(string)
+                blah = string
+                print("old blah =" + blah)
+                newblah = blah.replace('<div class="price strong">', "$")
+                print("new blah =" + newblah)
                 print("finished replace method")
                 print("inserting string to dictionary")
-                postcode[0][each]["price"] = a
+                postcode[0][each]["price"] = newblah
                 print("string works as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
@@ -116,14 +111,13 @@ def default():
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
-                print("starting replace method")
-                p = re.compile('<div class="price strong">')
-                print("RE compile worked")
-                a = p.sub("$", string)
-                print(string)
+                blah = string
+                print("old blah =" + blah)
+                newblah = blah.replace('<div class="price strong">', "$")
+                print("new blah =" + newblah)
                 print("finished replace method")
                 print("inserting string to dictionary")
-                postcode[0][each]["price"] = a
+                postcode[0][each]["price"] = newblah
                 print("string works as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
