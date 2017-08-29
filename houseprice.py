@@ -41,7 +41,7 @@ def getContent():
             links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
-            print("String variable =" + string)
+            print("String variable =" + (str(string)))
             try:
                 blah = string
                 print("old blah =" + blah)
