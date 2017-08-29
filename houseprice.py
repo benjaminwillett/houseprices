@@ -43,7 +43,7 @@ def getContent():
             try:
                 print("starting replace method")
                 p = re.compile('<div class="price strong">$')
-                a = p.sub(string)
+                a = p.sub("$", string)
                 print("finished replace method")
                 print("inserting string to dictionary")
                 postcode[0][each]["price"] = a
@@ -111,7 +111,7 @@ def default():
             try:
                 print("starting replace method")
                 p = re.compile('<div class="price strong">$')
-                a = p.sub(string)
+                a = p.sub("$", string)
                 print("finished replace method")
                 print("inserting string to dictionary")
                 postcode[0][each]["price"] = a
