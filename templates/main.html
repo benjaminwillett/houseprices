@@ -41,12 +41,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
        <div class="w3-container">
 
-         < class="w3-container w3-card-2 w3-white w3-margin-bottom">
+         <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
 
-             {% for item in POSTCODE %}{% for each in item %}
              <h5 class="w3-text-grey w3-padding-16"><i
                 class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>4 Bedroom House Median
-            <ul><li>{{ POSTCODE[0][each]["suburb"] }} is <b>{{ POSTCODE[0][each]["price"] }}</b></li></ul></H5>
+            {% for item in POSTCODE %}{% for each in item %}
+                 <ul><li>{{ POSTCODE[0][each]["suburb"] }} is <b>{{ POSTCODE[0][each]["price"] }}</b></li></ul></H5>
 
 {% endfor %}
     {% endfor %}
