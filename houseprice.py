@@ -24,6 +24,11 @@ class myThread (threading.Thread):
         getContent()
         print "Exiting " + self.name
 
+blah = "123456789"
+print("old blah =" + blah)
+blah.replace("9", "$")
+print("new blah =" + blah)
+
 def getContent():
     links = []
 
