@@ -104,10 +104,7 @@ def default():
         for each in item:
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
             soup = BeautifulSoup(priceurl)
-            a = links.replace('<div class="price strong">$', '$')
-            print("string a works as I have got past it!!")
-            b = a.replace('</div>', '')
-            print("string b works as I have got past it!!")
+            links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             try:
