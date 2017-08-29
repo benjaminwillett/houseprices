@@ -43,7 +43,7 @@ def getContent():
             string = postcode[0][each]["price"]
             print("String variable =" + (str(string)))
             try:
-                blah = string
+                blah = (str(string))
                 print("old blah =" + blah)
                 newblah = blah.replace('<div class="price strong">', "$")
                 print("new blah =" + newblah)
