@@ -41,17 +41,11 @@ def getContent():
             links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
-            print("String variable =" + (str(string)))
             try:
                 blah = (str(string))
-                print("old blah =" + blah)
                 newblah = blah.replace('<div class="price strong">$', "$")
                 finalblah = newblah.replace('</div>', "")
-                print("new blah =" + finalblah)
-                print("finished replace method")
-                print("inserting string to dictionary")
                 postcode[0][each]["price"] = finalblah
-                print("string works as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
@@ -109,17 +103,11 @@ def default():
             links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
-            print("String variable =" + (str(string)))
             try:
                 blah = (str(string))
-                print("old blah =" + blah)
                 newblah = blah.replace('<div class="price strong">$', "$")
                 finalblah = newblah.replace('</div>', "")
-                print("new blah =" + finalblah)
-                print("finished replace method")
-                print("inserting string to dictionary")
                 postcode[0][each]["price"] = finalblah
-                print("string works as I have got past it!!")
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
