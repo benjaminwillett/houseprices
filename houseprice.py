@@ -44,7 +44,7 @@ def getContent():
                 print("starting replace method")
                 p = re.compile('<div class="price strong">$')
                 print("RE compile worked")
-                print("now going to run replace p.sub against string. Content of string variable is " + string
+                print("now going to run replace p.sub against string. Content of string variable is " + string)
                 a = p.sub("$", string)
                 print("finished replace method")
                 print("inserting string to dictionary")
