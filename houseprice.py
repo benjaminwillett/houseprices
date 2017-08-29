@@ -26,8 +26,8 @@ class myThread (threading.Thread):
 
 blah = "123456789"
 print("old blah =" + blah)
-blah.replace("9", "$")
-print("new blah =" + blah)
+newblah = blah.replace("9", "$")
+print("new blah =" + newblah)
 
 def getContent():
     links = []
