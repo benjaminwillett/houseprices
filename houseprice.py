@@ -114,7 +114,7 @@ def default():
 
     cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=1000&aggregate=3&e=CCCAGG"
     cryptoresponse = http.request("GET", cryptocompare)
-    # cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
+    cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     # daycount = (len(cryptodict))
     # print("The cryptocompare history day has " + (str(daycount)) + "entries")
 
