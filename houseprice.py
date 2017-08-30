@@ -116,7 +116,7 @@ def default():
     cryptoresponse = http.request("GET", cryptocompare)
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     # daycount = (len(cryptodict))
-    # print("The cryptocompare history day has " + (str(daycount)) + "entries")
+    print("The cryptocompare history day has " + (str(cryptodict)) + "entries")
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode)
