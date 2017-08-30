@@ -114,15 +114,15 @@ def default():
 
     cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=1000&aggregate=3&e=CCCAGG"
     cryptoresponse = http.request("GET", cryptocompare)
-    cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
-    daycount = (len(cryptodict))
-    print("The cryptocompare history day has " + (str(daycount)) + "entries")
+    # cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
+    # daycount = (len(cryptodict))
+    # print("The cryptocompare history day has " + (str(daycount)) + "entries")
 
     return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode)
 
 
-@app.route('/index_one' , methods=['GET','POST'])
+@app.route('/index_one' , methods=['GET', 'POST'])
 def login_one():
     return render_template('index_one.html')
 
