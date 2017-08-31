@@ -118,8 +118,8 @@ def default():
     daycount = (len(cryptodict))
     print("The cryptocompare history day has " + (str(daycount)) + "entries")
 
-    return render_template('main.html',TICKERS=tickers,CURRENCY=currency,
-                           POSTCODE=postcode)
+    return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
+                           POSTCODE=postcode, DAYCOUNT=daycount)
 
 
 @app.route('/index_one' , methods=['GET', 'POST'])
