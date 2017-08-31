@@ -112,11 +112,12 @@ def default():
                 postcode[0][each]["price"] = "No DATA!"
 
 
-    cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=1000&aggregate=3&e=CCCAGG"
+    cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
     cryptoresponse = http.request("GET", cryptocompare)
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
-    daycount = cryptodict[0]
-    print("The cryptocompare history day has " + (str(daycount)) + "entries")
+    daycount = cryptodict
+    k = daycount["Data"]
+    print("The cryptocompare history day has " + (str(k)) + "entries")
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount)
