@@ -150,7 +150,7 @@ def default():
                   "CC": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
                                     "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}}]},
+                                    "payment type": "Coles CC"}}]}}]
 
 
 @app.route('/index_one' , methods=['GET', 'POST'])
