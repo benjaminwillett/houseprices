@@ -43,8 +43,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             {% for item in UTILITIES %}{% for key in item %}
             <ul><li><b>{{ key }} </b></li>
-                {% for value in key %}
-                <ul><li><b>{{ key[value] }} VALUE</b></li>
+                <ul>
+                    {% for value in key %}
+                    <li><b>{{ key[value] }} VALUE</b></li>
                 </ul>
             </ul>
             {% endfor %}
