@@ -123,6 +123,36 @@ def default():
                            POSTCODE=postcode, DAYCOUNT=daycount)
 
 
+    utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "HOM 612 476 223", "contact": "123213",
+                                  "payment type": "Coles " \
+                                                                                                            "CC"},
+                  "Gas": {"Provider": "Origin", "ID": "HOM 612 476 223", "contact": "13 RACV", "payment type": "Coles "
+                                                                                                              "CC"},
+                  "Water": {"Provider": "South East Water", "ID": "HOM 612 476 223", "contact": "13 RACV", \
+                                                                                              "payment type": "Coles "
+                                                                                                              "CC"},
+
+                  "Insurance": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
+                                                                                                    "223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}, "Life": {"Provider": "RACV", "ID": "HOM 612 476 "
+                                                                                                    "223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}, "Private Medical": {"Provider": "RACV", "ID": "HOM "
+                                                                                                               "612 476 "
+                                                                                                    "223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}}]},
+
+                  "Loans": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
+                                                                                                    "223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}}]},
+
+                  "CC": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
+                                                                                                    "223", "contact": "13 RACV",
+                                    "payment type": "Coles CC"}}]},
+
+
 @app.route('/index_one' , methods=['GET', 'POST'])
 def login_one():
     return render_template('index_one.html')
