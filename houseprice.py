@@ -121,33 +121,31 @@ def default():
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "HOM 612 476 223", "contact": "123213",
-                                  "payment type": "Coles " \
-                                                                                                            "CC"},
-                  "Gas": {"Provider": "Origin", "ID": "HOM 612 476 223", "contact": "13 RACV", "payment type": "Coles "
-                                                                                                              "CC"},
+                                  "payment type": "BPAY"},
+                  "Gas": {"Provider": "Origin", "ID": "300008171641", "contact": "13 24 61", "payment type": "BPAY"},
                   "Water": {"Provider": "South East Water", "ID": "HOM 612 476 223", "contact": "13 RACV", \
-                                                                                              "payment type": "Coles "
-                                                                                                              "CC"},
+                                                                                              "payment type": "BPAY"},
 
                   "Insurance": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
+                                    "payment type": "Direct Debit"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}, "Life": {"Provider": "RACV", "ID": "HOM 612 476 "
+                                    "payment type": "Direct Debit"}, "Life": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}, "Private Medical": {"Provider": "RACV", "ID": "HOM "
+                                    "payment type": "Direct Debit"}, "Private Medical": {"Provider": "RACV",
+                                                                                         "ID": "HOM "
                                                                                                                "612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}}]},
+                                    "payment type": "Direct Debit"}}]},
 
                   "Loans": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
+                                    "payment type": "Direct Debit"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}}]},
+                                    "payment type": "Direct Debit"}}]},
 
-                  "CC": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
+                  "CC": {"Type": [{"Personal":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
+                                    "payment type": "Blank"}, "Business": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Coles CC"}}]}}]
+                                    "payment type": "Blank"}}]}}]
 
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
