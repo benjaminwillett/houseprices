@@ -41,10 +41,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
                 <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
         <div class="w3-text-black w3-padding-16">
             <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
-            {% for item in UTILITIES %}{% for each in item %}
-            <ul><li><b>{{ each }} = {{ UTILITIES[0][each]["Provider"] }}</b></li>
-                <ul><li><b>{{ UTILITIES[0][each]["ID"] }}</b></li>
-                    <li><b>{{ UTILITIES[0][each]["contact"] }}</b></li></ul></ul>
+            {% for item in UTILITIES %}{% for key, value in item %}
+            <ul><li><b>{{ key }} = {{ value }}</b></li>
+                {{% for each in value %}}
+                <ul><li><b>{{ each }} {{ value }}</b></li>
+                </ul></ul>
+            {% endfor %}
             {% endfor %}
             {% endfor %}
       </div>
