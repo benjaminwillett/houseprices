@@ -119,9 +119,6 @@ def default():
     k = daycount["Data"]
     print("The cryptocompare history day has " + (str(k)) + "entries")
 
-    return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
-                           POSTCODE=postcode, DAYCOUNT=daycount)
-
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "HOM 612 476 223", "contact": "123213",
                                   "payment type": "Coles " \
@@ -151,6 +148,12 @@ def default():
                                     "payment type": "Coles CC"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
                                     "payment type": "Coles CC"}}]}}]
+
+
+    return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
+                           POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities)
+
+
 
 
 @app.route('/index_one' , methods=['GET', 'POST'])
