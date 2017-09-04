@@ -45,7 +45,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
                     {% for each in key %}
-                    <li><b>{{ UTILITIES[key]["Provider"] }}</b></li>
+                    <li><b>KEY</b></li>
                     {% endfor %}
                 </ul>
             </ul>
@@ -55,7 +55,58 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       </div>
       </div>
 
+                          <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
+        <div class="w3-text-black w3-padding-16">
+            <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            {% for item in INSURANCES %}{% for key in item %}
+            <ul><li><b>{{ key }} </b></li>
+                <ul>
+                    {% for each in key %}
+                    <li><b>KEY</b></li>
+                    {% endfor %}
+                </ul>
+            </ul>
+            {% endfor %}
+            {% endfor %}
 
+      </div>
+      </div>
+
+                <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
+        <div class="w3-text-black w3-padding-16">
+            <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            {% for item in LOANS %}{% for key in item %}
+            <ul><li><b>{{ key }} </b></li>
+                <ul>
+                    {% for each in key %}
+                    <li><b>KEY</b></li>
+                    {% endfor %}
+                </ul>
+            </ul>
+            {% endfor %}
+            {% endfor %}
+
+      </div>
+      </div>
+
+                          <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
+        <div class="w3-text-black w3-padding-16">
+            <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            {% for item in CC %}{% for key in item %}
+            <ul><li><b>{{ key }} </b></li>
+                <ul>
+                    {% for each in key %}
+                    <li><b>KEY</b></li>
+                    {% endfor %}
+                </ul>
+            </ul>
+            {% endfor %}
+            {% endfor %}
+
+      </div>
+      </div>
+
+          
        <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">

@@ -124,9 +124,10 @@ def default():
                                   "payment type": "BPAY"},
                   "Gas": {"Provider": "Origin", "ID": "300008171641", "contact": "13 24 61", "payment type": "BPAY"},
                   "Water": {"Provider": "South East Water", "ID": "HOM 612 476 223", "contact": "13 RACV", \
-                                                                                              "payment type": "BPAY"},
+                                                                                              "payment type": "BPAY"}}]
 
-                  "Insurance": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
+    insurances = [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact":
+        "13 RACV",
                                     "payment type": "Direct Debit"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
                                     "payment type": "Direct Debit"}, "Life": {"Provider": "RACV", "ID": "HOM 612 476 "
@@ -135,21 +136,22 @@ def default():
                                                                                          "ID": "HOM "
                                                                                                                "612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}}]},
+                                    "payment type": "Direct Debit"}}]
 
-                  "Loans": {"Type": [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
+    loans = [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
                                     "payment type": "Direct Debit"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}}]},
+                                    "payment type": "Direct Debit"}}]
 
-                  "CC": {"Type": [{"Personal":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
+    cc = [{"Personal":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
                                     "payment type": "Blank"}, "Business": {"Provider": "RACV", "ID": "HOM 612 476 "
                                                                                                     "223", "contact": "13 RACV",
-                                    "payment type": "Blank"}}]}}]
+                                    "payment type": "Blank"}}]
 
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
-                           POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities)
+                           POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
+                           LOANS=loans, CC=cc)
 
 
 
