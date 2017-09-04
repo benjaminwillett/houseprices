@@ -45,10 +45,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
                     {% for value in key %}
-                    <li><b>{{ key[value] }} VALUE</b></li>
+                    <li><b>{{ value }}</b></li>
+                    {% endfor %}
                 </ul>
             </ul>
-            {% endfor %}
             {% endfor %}
             {% endfor %}
 
