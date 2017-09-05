@@ -42,12 +42,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <div class="w3-text-black w3-padding-16">
             <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Utilities</b>
-            {% for item in UTILITIES %}{% for key in item %}
+            {% for item in UTILITIES %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-                    {% for key,value in key.items() %}
+
                     <li><b>{{ value }}</b></li>
-                    {% endfor %}
+
                 </ul>
             </ul>
             {% endfor %}
