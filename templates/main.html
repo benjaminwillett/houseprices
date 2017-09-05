@@ -60,12 +60,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <div class="w3-text-black w3-padding-16">
             <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Insurances</b>
-            {% for item in INSURANCES %}{% for key in item %}
+            {% for item in INSURANCES %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-                    {% for each in key %}
-                    <li><b>KEY</b></li>
-                    {% endfor %}
+
+                    <li><b>{{ value }}</b></li>
+
                 </ul>
             </ul>
             {% endfor %}
@@ -78,12 +78,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <div class="w3-text-black w3-padding-16">
             <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Loans</b>
-            {% for item in LOANS %}{% for key in item %}
+            {% for item in LOANS %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-                    {% for each in key %}
-                    <li><b>KEY</b></li>
-                    {% endfor %}
+
+                    <li><b>{{ value }}</b></li>
+
                 </ul>
             </ul>
             {% endfor %}
@@ -96,12 +96,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <div class="w3-text-black w3-padding-16">
             <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Credit Cards</b>
-            {% for item in CC %}{% for key in item %}
+            {% for item in CC %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-                    {% for each in key %}
-                    <li><b>KEY</b></li>
-                    {% endfor %}
+
+                    <li><b>{{ value }}</b></li>
+
                 </ul>
             </ul>
             {% endfor %}
