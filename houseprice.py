@@ -120,32 +120,30 @@ def default():
     print("The cryptocompare history day has " + (str(k)) + "entries")
 
 
-    utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "HOM 612 476 223", "contact": "123213",
+    utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
                   "Gas": {"Provider": "Origin", "ID": "300008171641", "contact": "13 24 61", "payment type": "BPAY"},
-                  "Water": {"Provider": "South East Water", "ID": "HOM 612 476 223", "contact": "13 RACV", \
+                  "Water": {"Provider": "South East Water", "ID": "Need Data", "contact": "Need Data", \
                                                                                               "payment type": "BPAY"}}]
 
     insurances = [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact":
         "13 RACV",
-                                    "payment type": "Direct Debit"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
-                                                                                                    "223", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}, "Life": {"Provider": "RACV", "ID": "HOM 612 476 "
-                                                                                                    "223", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}, "Private Medical": {"Provider": "RACV",
-                                                                                         "ID": "HOM "
-                                                                                                               "612 476 "
-                                                                                                    "223", "contact": "13 RACV",
+                                    "payment type": "Direct Debit"}, "Car": {"Provider": "YOUI", "ID": "Need Data", "contact": "13 RACV",
+                                    "payment type": "Direct Debit"}, "Life": {"Provider": "OnePath", "ID": "Need Data", "contact": "13 RACV",
+                                    "payment type": "Direct Debit"}, "Private Medical": {"Provider": "MediBank",
+                                                                                         "ID": "Need Data",
+                                                                                         "contact": "Need Data",
+                                                                                         "payment type": "Direct Debit"}}]
+
+    loans = [{"Home":{"Provider": "ANZ", "ID": "HNeed Data", "contact": "Need Data",
+                                    "payment type": "BPAY"}, "Car": {"Provider": "Alphera", "ID": "Need Data",
+                                                                     "contact":
+        "Need Data",
                                     "payment type": "Direct Debit"}}]
 
-    loans = [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}, "Car": {"Provider": "RACV", "ID": "HOM 612 476 "
-                                                                                                    "223", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}}]
-
-    cc = [{"Personal":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact": "13 RACV",
-                                    "payment type": "Blank"}, "Business": {"Provider": "RACV", "ID": "HOM 612 476 "
-                                                                                                    "223", "contact": "13 RACV",
+    cc = [{"Personal":{"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
+                                    "payment type": "Blank"}, "Business": {"Provider": "Bank of Melbourne",
+                                                                           "ID": "Need Data", "contact": "Need Data",
                                     "payment type": "Blank"}}]
 
 
