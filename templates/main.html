@@ -45,9 +45,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             {% for item in UTILITIES %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-
-                    <li><b>{{ value }}</b></li>
-
+                    {{% for each,value in key.items() %}}
+                    <li><b>{{ each }}  {{ value }}</b></li>
+                    {% endfor %}
                 </ul>
             </ul>
             {% endfor %}
