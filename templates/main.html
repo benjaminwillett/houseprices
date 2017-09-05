@@ -63,9 +63,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             {% for item in INSURANCES %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-
-                    <li><b>{{ value }}</b></li>
-
+                    {% for each,data in value.items() %}
+                    <li><b>{{ each }}  {{ data }}</b></li>
+                    {% endfor %}
                 </ul>
             </ul>
             {% endfor %}
@@ -81,9 +81,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             {% for item in LOANS %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-
-                    <li><b>{{ value }}</b></li>
-
+                    {% for each,data in value.items() %}
+                    <li><b>{{ each }}  {{ data }}</b></li>
+                    {% endfor %}
                 </ul>
             </ul>
             {% endfor %}
@@ -99,9 +99,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             {% for item in CC %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
                 <ul>
-
-                    <li><b>{{ value }}</b></li>
-
+                    {% for each,data in value.items() %}
+                    <li><b>{{ each }}  {{ data }}</b></li>
+                    {% endfor %}
                 </ul>
             </ul>
             {% endfor %}
