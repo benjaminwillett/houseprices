@@ -32,6 +32,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
         <div class="w3-text-black w3-padding-16">
             <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            <b>Exchange Rates</b>
             {% for each in CURRENCY %}
             <b>AUS = {{ each }} {{ CURRENCY[each] }}</b>
             {% endfor %}
@@ -40,7 +41,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
                 <div class="w3-container w3-card-2 w3-red w3-margin-bottom">
         <div class="w3-text-black w3-padding-16">
-            <i class="fa fa-pig fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            <i class="fa fa-flash fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Utilities</b>
             {% for item in UTILITIES %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
@@ -58,7 +59,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
                           <div class="w3-container w3-card-2 w3-grey w3-margin-bottom">
         <div class="w3-text-black w3-padding-16">
-            <i class="fa fa-pig fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            <i class="fa fa-automobile fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Insurances</b>
             {% for item in INSURANCES %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
@@ -76,7 +77,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
                 <div class="w3-container w3-card-2 w3-blue w3-margin-bottom">
         <div class="w3-text-black w3-padding-16">
-            <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            <i class="fa fa-university fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Loans</b>
             {% for item in LOANS %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
@@ -94,7 +95,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
                           <div class="w3-container w3-card-2 w3-yellow w3-margin-bottom">
         <div class="w3-text-black w3-padding-16">
-            <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            <i class="fa fa-credit-card fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             <b>Credit Cards</b>
             {% for item in CC %}{% for key,value in item.items() %}
             <ul><li><b>{{ key }} </b></li>
@@ -112,7 +113,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
         <div class="w3-container w3-card-2 w3-green w3-margin-bottom">
             <div class="w3-text-black w3-padding-16">
-                <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+                <i class="fa fa-bank fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
                 <b>Bank Accounts</b>
                 {% for item in BANKAC %}{% for key,value in item.items() %}
                 <ul><li><b>{{ key }} </b></li>
@@ -130,7 +131,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
           <div class="w3-container w3-card-2 w3-blue w3-margin-bottom">
             <div class="w3-text-black w3-padding-16">
-                <i class="fa fa-money fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+                <i class="fa fa-bar-chart fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
                 <b>Superannuation</b>
                 {% for item in SUPER %}{% for key,value in item.items() %}
                 <ul><li><b>{{ key }} </b></li>
