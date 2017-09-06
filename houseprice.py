@@ -126,7 +126,7 @@ def default():
                   "Water": {"Provider": "South East Water", "ID": "Need Data", "contact": "Need Data", \
                                                                                               "payment type": "BPAY"}}]
 
-    insurances = [{"Home":{"Provider": "RACV", "ID": "HOM 612 476 223", "contact":
+    insurances = [{"Home": {"Provider": "RACV", "ID": "HOM 612 476 223", "contact":
         "13 RACV",
                                     "payment type": "Direct Debit"}, "Car": {"Provider": "YOUI", "ID": "Need Data", "contact": "13 RACV",
                                     "payment type": "Direct Debit"}, "Life": {"Provider": "OnePath", "ID": "Need Data", "contact": "13 RACV",
@@ -135,21 +135,36 @@ def default():
                                                                                          "contact": "Need Data",
                                                                                          "payment type": "Direct Debit"}}]
 
-    loans = [{"Home":{"Provider": "ANZ", "ID": "HNeed Data", "contact": "Need Data",
+    loans = [{"Home": {"Provider": "ANZ", "ID": "HNeed Data", "contact": "Need Data",
                                     "payment type": "BPAY"}, "Car": {"Provider": "Alphera", "ID": "Need Data",
                                                                      "contact":
         "Need Data",
                                     "payment type": "Direct Debit"}}]
 
-    cc = [{"Personal":{"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
+    cc = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
                                     "payment type": "Blank"}, "Business": {"Provider": "Bank of Melbourne",
                                                                            "ID": "Need Data", "contact": "Need Data",
                                     "payment type": "Blank"}}]
 
+    bankac = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
+                                    "payment type": "Blank"}, "Business": {"Provider": "Bank of Melbourne",
+                                                                           "ID": "Need Data", "contact": "Need Data",
+                                    "payment type": "Blank"}}]
+
+    super = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
+                                    "payment type": "Blank"}}]
+
+    gov = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
+                                    "payment type": "Blank"}}]
+
+    savings = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
+                                    "payment type": "Blank"}, "Business": {"Provider": "Bank of Melbourne",
+                                                                           "ID": "Need Data", "contact": "Need Data",
+                                    "payment type": "Blank"}}]
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
-                           LOANS=loans, CC=cc)
+                           LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings)
 
 
 
