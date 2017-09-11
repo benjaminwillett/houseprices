@@ -162,9 +162,12 @@ def default():
                                                                            "ID": "Need Data", "contact": "Need Data",
                                     "payment type": "Blank"}}]
 
+    metals = [{"Gold": {"AMOUNT": "10oz"}, "Silver": {"AMOUNT": "10oz"}, "Platinum": {"AMOUNT": "10oz"}}]
+
+
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
-                           LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings)
+                           LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals)
 
 
 

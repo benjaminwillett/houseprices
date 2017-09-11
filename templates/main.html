@@ -47,6 +47,22 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       </div>
       </div>
 
+
+                <div class="w3-container w3-card-2 w3-red w3-margin-bottom">
+        <div class="w3-text-black w3-padding-16">
+            <i class="fa fa-gold fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            <h5><b>Metals</b></h5>
+            {% for item in METALS %}{% for key,value in item.items() %}
+            <ul><li><b>{{ key }} </b></li>
+                <ul>
+                    {% for each,data in value.items() %}
+                    <li><b>{{ each }} = {{ data }}</b></li>
+                    {% endfor %}
+                </ul>
+            </ul>
+            {% endfor %}
+            {% endfor %}
+
                 <div class="w3-container w3-card-2 w3-red w3-margin-bottom">
         <div class="w3-text-black w3-padding-16">
             <i class="fa fa-flash fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
