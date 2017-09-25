@@ -166,7 +166,7 @@ def default():
 
     legend = 'Monthly Data'
     labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
-    values = k
+    values = k["close"]
     print(values)
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
