@@ -117,7 +117,6 @@ def default():
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     daycount = cryptodict
     k = daycount["Data"]
-    print("The cryptocompare history day has " + (str(k)) + "entries")
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
@@ -167,7 +166,7 @@ def default():
     legend = 'Monthly Data'
     labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
     values = k["close"]
-    print(values)
+    print(daycount)
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
