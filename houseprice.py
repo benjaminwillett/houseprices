@@ -117,8 +117,7 @@ def default():
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     daycount = cryptodict
     k = daycount["Data"]
-    l = k([0]["close"])
-    print(l)
+
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
