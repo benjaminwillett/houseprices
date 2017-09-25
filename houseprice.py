@@ -117,11 +117,14 @@ def default():
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     daycount = cryptodict
     k = daycount["Data"]
-    price = []
+    legend = 'Monthly Data'
+    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
+    values = []
 
     for each in k:
         new = each["close"]
-        print(new)
+        values.append(new)
+
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
@@ -168,9 +171,6 @@ def default():
 
     metals = [{"Gold": {"AMOUNT": "10oz"}, "Silver": {"AMOUNT": "10oz"}, "Platinum": {"AMOUNT": "10oz"}}]
 
-    legend = 'Monthly Data'
-    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
-    values = [1,2,3,4,5,6,7,8]
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
