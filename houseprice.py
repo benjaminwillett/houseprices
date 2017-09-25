@@ -118,7 +118,7 @@ def default():
     daycount = cryptodict
     k = daycount["Data"]
     l = k
-    print(l["open"])
+    print(l[0])
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
