@@ -117,6 +117,11 @@ def default():
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     daycount = cryptodict
     k = daycount["Data"]
+    price = []
+
+    for each in k:
+        new = each["close"]
+        print(new)
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
