@@ -118,13 +118,14 @@ def default():
     daycount = cryptodict
     k = daycount["Data"]
     legend = 'Monthly Data'
-    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
+    labels = []
     values = []
 
     for each in k:
-        new = each["close"]
-        values.append(new)
-
+        close = each["close"]
+        values.append(close)
+        time = each["time"]
+        labels.append(time)
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
