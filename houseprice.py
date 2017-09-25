@@ -164,10 +164,13 @@ def default():
 
     metals = [{"Gold": {"AMOUNT": "10oz"}, "Silver": {"AMOUNT": "10oz"}, "Platinum": {"AMOUNT": "10oz"}}]
 
+    legend = 'Monthly Data'
+    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
+    values = [10, 9, 8, 7, 6, 4, 7, 8]
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
-                           LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals)
+                           LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals, values=values, labels=labels, legend=legend)
 
 
 
