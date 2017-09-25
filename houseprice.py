@@ -116,9 +116,8 @@ def default():
     cryptoresponse = http.request("GET", cryptocompare)
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     daycount = cryptodict
-    print(daycount)
     k = daycount["Data"]
-
+    l = k[["close"]]
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
@@ -166,7 +165,7 @@ def default():
 
     legend = 'Monthly Data'
     labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
-    values = k["close"]
+    values = l
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
