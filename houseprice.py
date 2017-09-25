@@ -116,6 +116,7 @@ def default():
     cryptoresponse = http.request("GET", cryptocompare)
     cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
     daycount = cryptodict
+    print(daycount)
     k = daycount["Data"]
 
 
@@ -166,7 +167,6 @@ def default():
     legend = 'Monthly Data'
     labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
     values = k["close"]
-    print(daycount)
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
