@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/main.html" afterPath="$PROJECT_DIR$/templates/main.html" />
-    </list>
+    <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="" />
     <ignored path="housepricecheltenham.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,16 +113,6 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Chart.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../houseprice/static/Chart.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="156853" selection-start-line="10" selection-start-column="156853" selection-end-line="10" selection-end-column="156853" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -883,7 +871,7 @@
     <entry file="file://$PROJECT_DIR$/../houseprice/static/Chart.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="156853" selection-start-line="10" selection-start-column="156853" selection-end-line="10" selection-end-column="156853" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
