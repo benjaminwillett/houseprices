@@ -11,6 +11,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
 <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+    <script src='static/Chart.min.js'></script>
 
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
@@ -213,8 +214,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
          <div class="w3-container w3-card-2 w3-orange w3-margin-bottom">
         <h5 class="w3-text-black w3-padding-16"><i
                 class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
-            {{ each }} =<b id="update5">${{TICKERS[each] }} Market History over {{ DAYCOUNT }} days.
+            {{ each }} =<b id="update5">${{TICKERS[each] }}
         </b></H5>
+
+             <h1>Simple Line Chart</h1>
+<!-- bar chart canvas element -->
+<canvas id="myChart" width="600" height="400"></canvas>
+<p id="caption">The chart is displaying a simple line chart.</p>
+
 
 </div>
 </div>
