@@ -126,14 +126,14 @@ def default():
 
 
         for each in k:
-            print(str(each) + " this is each in k")
+            print((str(each)) + " this is each in k")
             close = each["close"]
             values.append(close)
             time = each["time"]
             labels.append(time)
 
-    print(str(labels) + " is labels")
-    print(str(values) + " is values")
+    print((str(labels)) + " is labels")
+    print((str(values)) + " is values")
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
