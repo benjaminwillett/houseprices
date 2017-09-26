@@ -69,8 +69,8 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = {"BTC": 0, "ETH": 0, "SC": 0, "STRAT": 0, "LSK": 0,
-               "LBC": 0}
+    tickers = {"BTC": "0", "ETH": "0", "SC": "0", "STRAT": "0", "LSK": "0",
+               "LBC": "0"}
 
     for each in tickers:
 
@@ -115,7 +115,6 @@ def default():
     legend = 'Monthly Data'
 
     for key,value in tickers.items():
-        print(key)
         print("building URL to retrieve ")
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
