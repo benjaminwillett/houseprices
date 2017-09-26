@@ -115,7 +115,7 @@ def default():
     legend = 'Monthly Data'
 
     for key,value in tickers.items():
-        print("building URL to retrieve " + value)
+        print("building URL to retrieve " + key)
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + key + \
                         "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
@@ -127,7 +127,6 @@ def default():
         print(str(k) + "is K")
         labels = []
         values = []
-
 
         for each in k:
             print(each)
