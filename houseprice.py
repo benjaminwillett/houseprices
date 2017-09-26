@@ -113,8 +113,6 @@ def default():
                 postcode[0][each]["price"] = "No DATA!"
 
     legend = 'Monthly Data'
-    labels = []
-    values = []
 
     for key,value in tickers.items():
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + value + "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
@@ -131,6 +129,8 @@ def default():
             time = each["time"]
             labels.append(time)
 
+    print(labels)
+    print(values)
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
