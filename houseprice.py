@@ -126,7 +126,7 @@ def default():
 
 
         for each in k:
-            print(each)
+            print(str(each) + " this is each in k")
             close = each["close"]
             values.append(close)
             time = each["time"]
