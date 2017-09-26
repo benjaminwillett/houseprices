@@ -69,8 +69,8 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = {"BTC": "0", "ETH": "0", "SC": "0", "STRAT": "0", "LSK": "0",
-               "LBC": "0"}
+    tickers = {"USDT-BTC": 0, "BTC-ETH": 0, "BTC-SC": 0, "BTC-STRAT": 0, "BTC-LSK": 0,
+               "BTC-LBC": 0}
 
     for each in tickers:
 
@@ -115,8 +115,8 @@ def default():
     legend = 'Monthly Data'
 
     for key,value in tickers.items():
-        print("building URL to retrieve ")
-        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+        print("building URL to retrieve " + value)
+        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + value + "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
@@ -126,6 +126,7 @@ def default():
         print(str(k) + "is K")
         labels = []
         values = []
+
 
         for each in k:
             print(each)
