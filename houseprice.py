@@ -126,18 +126,16 @@ def default():
         print(str(daycount) + " is daycount")
         k = daycount["Data"]
         # print(str(k) + "is K")
-        labels = {}
-        values = {}
+        labels = []
+        values = []
 
 
         for each in k:
             print(each)
             close = each["close"]
-            values["values"] = [close]
-            # values.append(close)
+            values.append(close)
             time = each["time"]
-            labels["labels"] = [time]
-            # labels.append(time)
+            labels.append(time)
 
     # print((str(labels)) + " is labels")
     # print((str(values)) + " is values")
