@@ -118,6 +118,7 @@ def default():
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
         daycount = cryptodict
         k = daycount["Data"]
+        print(k)
         legend = 'Monthly Data'
         labels = []
         values = []
