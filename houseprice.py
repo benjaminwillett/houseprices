@@ -112,20 +112,21 @@ def default():
                 postcode[0][each]["price"] = "No DATA!"
 
 
-    cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
-    cryptoresponse = http.request("GET", cryptocompare)
-    cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
-    daycount = cryptodict
-    k = daycount["Data"]
-    legend = 'Monthly Data'
-    labels = []
-    values = []
+    for each in tickers:
+        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+        cryptoresponse = http.request("GET", cryptocompare)
+        cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
+        daycount = cryptodict
+        k = daycount["Data"]
+        legend = 'Monthly Data'
+        labels = []
+        values = []
 
-    for each in k:
-        close = each["close"]
-        values.append(close)
-        time = each["time"]
-        labels.append(time)
+        for each in k:
+            close = each["close"]
+            values.append(close)
+            time = each["time"]
+            labels.append(time)
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
