@@ -115,8 +115,9 @@ def default():
     legend = 'Monthly Data'
 
     for key,value in tickers.items():
+        print(key)
         print("building URL to retrieve ")
-        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + key + "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
