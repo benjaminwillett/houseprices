@@ -69,8 +69,8 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = {"USDT-BTC": 0, "BTC-ETH": 0, "BTC-SC": 0, "BTC-STRAT": 0, "BTC-LSK": 0,
-               "BTC-LBC": 0}
+    tickers = {"BTC": 0, "ETH": 0, "SC": 0, "STRAT": 0, "LSK": 0,
+               "LBC": 0}
 
     for each in tickers:
 
