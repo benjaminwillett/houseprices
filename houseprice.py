@@ -119,7 +119,7 @@ def default():
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
         daycount = cryptodict
-        print(daycount + " is daycount")
+        print(str(daycount) + " is daycount")
         k = daycount["Data"]
         print(str(k) + "is K")
         labels = []
