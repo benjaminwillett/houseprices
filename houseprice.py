@@ -115,7 +115,9 @@ def default():
     legend = 'Monthly Data'
 
     for key,value in tickers.items():
+        print("building URL to retrieve " + value)
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + value + "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+        print(cryptocompare)
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
         daycount = cryptodict
