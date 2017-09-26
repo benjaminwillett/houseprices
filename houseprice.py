@@ -120,13 +120,13 @@ def default():
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
         daycount = cryptodict
         k = daycount["Data"]
-        print(k)
+        print(str(k) + "is K")
         labels = []
         values = []
 
 
         for each in k:
-            print((str(each)) + " this is each in k")
+            print(each)
             close = each["close"]
             values.append(close)
             time = each["time"]
