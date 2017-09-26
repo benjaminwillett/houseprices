@@ -69,8 +69,8 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = {"USDT-BTC": "BTC", "BTC-ETH": "ETH", "BTC-SC": "SC", "BTC-STRAT": "STRAT", "BTC-LSK": "LSK",
-               "BTC-LBC": "LBC"}
+    tickers = {"BTC": 0, "ETH": 0, "SC": 0, "STRAT": 0, "LSK": 0,
+               "LBC": 0}
 
     for each in tickers:
 
@@ -116,7 +116,8 @@ def default():
 
     for key,value in tickers.items():
         print("building URL to retrieve " + value)
-        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + value + "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + key + \
+                        "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
