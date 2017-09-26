@@ -69,7 +69,8 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = {"USDT-BTC":0,"BTC-ETH":0,"BTC-SC":0,"BTC-STRAT":0,"BTC-LSK":0,"BTC-LBC":0}
+    tickers = {"USDT-BTC": "BTC", "BTC-ETH": "ETH", "BTC-SC": "SC", "BTC-STRAT": "STRAT", "BTC-LSK": "LSK",
+               "BTC-LBC": "LBC"}
 
     for each in tickers:
 
@@ -111,9 +112,8 @@ def default():
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
-
-    for each in tickers:
-        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+    for key,value in tickers.items():
+        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + value + "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
         daycount = cryptodict
