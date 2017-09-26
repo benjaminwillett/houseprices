@@ -131,8 +131,8 @@ def default():
             time = each["time"]
             labels.append(time)
 
-    print(labels)
-    print(values)
+    print(str(labels) + " is labels")
+    print(str(values) + " is values")
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
