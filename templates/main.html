@@ -263,7 +263,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       var ctx = document.getElementById("{{ each }}").getContext("2d");
 
       // create the chart using the chart canvas
-      var {{ each }} = new Chart(ctx, {
+      var myChart = new Chart(ctx, {
         type: 'line',
         data: chartData,
       });
