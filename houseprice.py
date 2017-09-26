@@ -121,6 +121,8 @@ def default():
         daycount = cryptodict
         k = daycount["Data"]
         print(k)
+        labels = []
+        values = []
 
 
         for each in k:
