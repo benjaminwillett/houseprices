@@ -69,22 +69,24 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = [{"USDT-BTC": {"url": "BTC", "labels": [], "values": []}, "BTC-ETH": {"url": "ETH", "labels": [],
+    tickers = [{"USDT-BTC": {"Last": 0, "url": "BTC", "labels": [], "values": []}, "BTC-ETH": {"Last": 0, "url": "ETH", "
+                                                                                                         ""labels": [],
                                                                                                  "values": []},
                 "BTC-SC": {
-        "url": "SC", "labels": [], "values": []}, "BTC-STRAT": {"url": "STRAT", "labels": [], "values": []},
-                "BTC-LSK": {"url": "LSK", "labels": [], "values": []},
-               "BTC-LBC": {"url": "LBC", "labels": [], "values": []}}]
+        "Last": 0, "url": "SC", "labels": [], "values": []}, "BTC-STRAT": {"Last": 0, "url": "STRAT", "labels": [],
+                                                                           "values": []},
+                "BTC-LSK": {"Last": 0, "url": "LSK", "labels": [], "values": []},
+               "BTC-LBC": {"Last": 0, "url": "LBC", "labels": [], "values": []}}]
 
     print("loaded tickers dictionary")
 
-    for each in tickers:
+    for each in tickers[0]:
 
         response = http.request("GET", bittick + each)
         usddict = json.loads(response.data.decode('utf-8'))
         usdmain = usddict['result']
         usdlast = usdmain['Last']
-        tickers[each] = (str(usdlast))
+        tickers[0][each]["Last"] = (str(usdlast))
 
     fixer = "http://api.fixer.io/latest?base=AUD"
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0}
