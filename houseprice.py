@@ -134,12 +134,10 @@ def default():
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
         daycount = cryptodict
-        print(str(daycount) + " is daycount")
         k = daycount["Data"]
         # print(str(k) + "is K")
 
         for each in k:
-            print(each)
             close = each["close"]
             tickers[0][key]["values"].append(close)
             time = each["time"]
