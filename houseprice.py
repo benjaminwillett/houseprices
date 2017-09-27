@@ -100,8 +100,8 @@ def default():
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"}, "3193": {"price": "100000", "suburb":
         "beaumaris"}, "3195": {"price": "500000", "suburb": "parkdale"}, "3194": {"price": "777777",
-                                                                                                  "suburb":
-                                                                                                      "mentone"}}]
+                                                                                                  "suburb": "mentone"}}]
+    print("just loaded postcode successfully")
 
     for item in postcode:
         for each in item:
