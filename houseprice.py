@@ -117,8 +117,6 @@ def default():
                 postcode[0][each]["price"] = "No DATA!"
 
     legend = 'Monthly Data'
-    urlBuild = {"USDT-BTC": "BTC", "BTC-ETH": "ETH", "BTC-SC": "SC", "BTC-STRAT": "STRAT", "BTC-LSK": "LSK",
-               "BTC-LBC": "LBC"}
 
     for key in tickers[0]:
         print("building URL to retrieve " + key)

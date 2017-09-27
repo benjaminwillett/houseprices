@@ -209,13 +209,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
        </div>
 
 
-      {% for each in TICKERS %}
+      {% for each in TICKERS[0] %}
       <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-black w3-padding-16"><i
                 class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
-            {{ each }} =<b id="update5">${{TICKERS[each] }}
+            {{ each }} =<b id="update5">${{TICKERS[0][each] }}
         </b></H5>
 
                  <h1>{{ each }} Line Chart</h1>
@@ -230,7 +230,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
       // define the chart data
       var chartData = {
-        labels : [{% for item in labels %}
+        labels : [{% for item in tickers[0][key]["labels"] %}
                    "{{item}}",
                   {% endfor %}],
         datasets : [{
@@ -252,7 +252,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data : [{% for item in values %}
+            data : [{% for item in tickers[0][key]["values"] %}
                       {{item}},
                     {% endfor %}],
             spanGaps: false
