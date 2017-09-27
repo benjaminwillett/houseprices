@@ -127,6 +127,7 @@ def default():
     for key in tickers[0]:
         print("building URL to retrieve " + key)
         url = key["url"]
+        print(url)
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + url + \
                         "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
