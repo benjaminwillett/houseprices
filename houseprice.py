@@ -70,7 +70,7 @@ def default():
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
     tickers = [{"USDT-BTC": {"Last": 0, "url": "BTC", "labels": [], "values": []}, "BTC-ETH": {"Last": 0, "url": "ETH", "
-                                                                                                         ""labels": [],
+                                                                                                         "labels": [],
                                                                                                  "values": []},
                 "BTC-SC": {
         "Last": 0, "url": "SC", "labels": [], "values": []}, "BTC-STRAT": {"Last": 0, "url": "STRAT", "labels": [],
