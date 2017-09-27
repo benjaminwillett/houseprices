@@ -76,6 +76,8 @@ def default():
                 "BTC-LSK": {"url": "LSK", "labels": [], "values": []},
                "BTC-LBC": {"url": "LBC", "labels": [], "values": []}}]
 
+    print("loaded tickers dictionary")
+
     for each in tickers:
 
         response = http.request("GET", bittick + each)
@@ -116,13 +118,13 @@ def default():
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
+    print("looping through postcodes")
+
     legend = 'Monthly Data'
 
     for key in tickers[0]:
         print("building URL to retrieve " + key)
         url = key["url"]
-        lab = key["labels"]
-        val = key["values"]
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + url + \
                         "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
@@ -139,6 +141,7 @@ def default():
             tickers[0][key]["values"].append(close)
             time = each["time"]
             tickers[0][key]["labels"].append(time)
+
 
     # print((str(labels)) + " is labels")
     # print((str(values)) + " is values")
@@ -186,7 +189,6 @@ def default():
                                     "payment type": "Blank"}}]
 
     metals = [{"Gold": {"AMOUNT": "10oz"}, "Silver": {"AMOUNT": "10oz"}, "Platinum": {"AMOUNT": "10oz"}}]
-
 
     return render_template('main.html', TICKERS=tickers,CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
