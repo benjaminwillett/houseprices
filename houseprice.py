@@ -69,8 +69,12 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = {"USDT-BTC": 0, "BTC-ETH": 0, "BTC-SC": 0, "BTC-STRAT": 0, "BTC-LSK": 0,
-               "BTC-LBC": 0}
+    tickers = [{"USDT-BTC": {"url": "BTC", "labels": [], "values": []}, "BTC-ETH": {"url": "ETH", "labels": [],
+                                                                                                 "values": []},
+                "BTC-SC": {
+        "url": "SC", "labels": [], "values": []}, "BTC-STRAT": {"url": "STRAT", "labels": [], "values": []},
+                "BTC-LSK": {"url": "LSK", "labels": [], "values": []},
+               "BTC-LBC": {"url": "LBC", "labels": [], "values": []}}]
 
     for each in tickers:
 
@@ -81,7 +85,7 @@ def default():
         tickers[each] = (str(usdlast))
 
     fixer = "http://api.fixer.io/latest?base=AUD"
-    currency = {'USD':0,'GBP':0,'EUR':0}
+    currency = {'USD': 0, 'GBP': 0, 'EUR': 0}
 
     for each in currency:
 
@@ -116,9 +120,13 @@ def default():
     urlBuild = {"USDT-BTC": "BTC", "BTC-ETH": "ETH", "BTC-SC": "SC", "BTC-STRAT": "STRAT", "BTC-LSK": "LSK",
                "BTC-LBC": "LBC"}
 
-    for key,value in urlBuild.items():
-        print("building URL to retrieve " + value)
-        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + value + "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+    for key in tickers[0]:
+        print("building URL to retrieve " + key)
+        url = key["url"]
+        lab = key["labels"]
+        val = key["values"]
+        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + url + \
+                        "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
@@ -126,16 +134,13 @@ def default():
         print(str(daycount) + " is daycount")
         k = daycount["Data"]
         # print(str(k) + "is K")
-        labels = []
-        values = []
-
 
         for each in k:
             print(each)
             close = each["close"]
-            values.append(close)
+            tickers[0][key]["values"].append(close)
             time = each["time"]
-            labels.append(time)
+            tickers[0][key]["labels"].append(time)
 
     # print((str(labels)) + " is labels")
     # print((str(values)) + " is values")
