@@ -230,7 +230,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
       // define the chart data
       var chartData = {
-        labels : [{% for labels in TICKERS[0][key]["labels"] %}
+        labels : [{% for labels in TICKERS[0] %}
                    "{{labels}}",
                   {% endfor %}],
         datasets : [{
@@ -252,7 +252,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data : [{% for values in TICKERS[0][key]["values"] %}
+            data : [{% for values in TICKERS[0] %}
                       {{values}},
                     {% endfor %}],
             spanGaps: false
