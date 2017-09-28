@@ -69,14 +69,28 @@ def default():
     links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
-    tickers = [{"USDT-BTC": {"Last": 0, "url": "BTC", "labels": [], "values": []}, "BTC-ETH": {"Last": 0, "url": "ETH",
-                                                                                                         "labels": [],
-                                                                                                 "values": []},
-                "BTC-SC": {
-        "Last": 0, "url": "SC", "labels": [], "values": []}, "BTC-STRAT": {"Last": 0, "url": "STRAT", "labels": [],
+    tickers = [
+                {"USDT-BTC":
+                     {"pair": "USD",
+                      "Last": 0,
+                      "url": "BTC",
+                      "labels": [],
+                      "values": []
+                      },
+                 "BTC-ETH":
+                     {"pair": "BTC",
+                      "Last": 0,
+                      "url": "ETH",
+                      "labels": [],
+                      "values": []
+                      },
+
+                "BTC-SC": {"pair": "BTC",
+        "Last": 0, "url": "SC", "labels": [], "values": []}, "BTC-STRAT": {"pair": "BTC", "Last": 0, "url": "STRAT",
+                                                                           "labels": [],
                                                                            "values": []},
-                "BTC-LSK": {"Last": 0, "url": "LSK", "labels": [], "values": []},
-               "BTC-LBC": {"Last": 0, "url": "LBC", "labels": [], "values": []}}]
+                "BTC-LSK": {"pair": "BTC", "Last": 0, "url": "LSK", "labels": [], "values": []},
+               "BTC-LBC": {"pair": "BTC", "Last": 0, "url": "LBC", "labels": [], "values": []}}]
 
     print("loaded tickers dictionary")
 
@@ -126,10 +140,12 @@ def default():
 
     for key in tickers[0]:
         print("building URL to retrieve " + key)
-        url = tickers[0][key]["url"]
-        print(url)
-        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + url + \
-                        "&tsym=USD&limit=365&aggregate=3&e=CCCAGG"
+        # url = tickers[0][key]["url"]
+        # pair = tickers[0][key]["pair"]
+        print(tickers[0][key]["url"])
+        print(tickers[0][key]["url"])
+        cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + tickers[0][key]["url"] + \
+                        "&tsym=" + tickers[0][key]["pair"] + "&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
         cryptoresponse = http.request("GET", cryptocompare)
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
