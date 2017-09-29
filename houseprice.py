@@ -152,9 +152,9 @@ def default():
         daycount = cryptodict
         k = daycount["Data"]
         # print(str(k) + "is K")
-        thirtyMa = (sum(tickers[0][key]["values"]))
-        sixtyMa = (sum(tickers[0][key]["values"]))
-        ninetyMa = (sum(tickers[0][key]["values"]))
+        thirtyMa = sum(tickers[0][key]["values"])
+        sixtyMa = sum(tickers[0][key]["values"])
+        ninetyMa = sum(tickers[0][key]["values"])
         print((str(thirtyMa)) + " is the thirtyMa")
         print((str(sixtyMa)) + " is the sixtyMa")
         print((str(ninetyMa)) + " is the ninetyMa")
