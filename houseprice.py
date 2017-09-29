@@ -177,9 +177,10 @@ def default():
             time = each["time"]
             tickers[0][key]["labels"].append(time)
 
-        thirtyMa = sum(tickers[0][key]["values"])
-        sixtyMa = sum(tickers[0][key]["values"])
-        ninetyMa = sum(tickers[0][key]["values"])
+        sumValues = sum(tickers[0][key]["values"])
+        thirtyMa = sumValues[-30:]
+        sixtyMa = sumValues[-60:]
+        ninetyMa = sumValues[-90:]
         print((str(thirtyMa)) + " is the thirtyMa")
         print((str(sixtyMa)) + " is the sixtyMa")
         print((str(ninetyMa)) + " is the ninetyMa")
