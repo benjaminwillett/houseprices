@@ -155,21 +155,24 @@ def default():
         thirtyMa = sum(tickers[0][key]["values"])
         sixtyMa = sum(tickers[0][key]["values"])
         ninetyMa = sum(tickers[0][key]["values"])
+        print((str(thirtyMa)) + " is the thirtyMa")
+        print((str(sixtyMa)) + " is the sixtyMa")
+        print((str(ninetyMa)) + " is the ninetyMa")
 
-        if thirtyMa > (tickers[0][key]["close"]):
-            thirtyMaBreak = False
-        else:
-            thirtyMaBreak = True
-
-        if sixtyMa > (tickers[0][key]["close"]):
-            sixtyMaBreak = False
-        else:
-            sixtyMaBreak = True
-
-        if ninetyMa > (tickers[0][key]["close"]):
-            ninetyMaBreak = False
-        else:
-            ninetyMaBreak = True
+        # if thirtyMa > (tickers[0][key]["close"]):
+        #     thirtyMaBreak = False
+        # else:
+        #     thirtyMaBreak = True
+        #
+        # if sixtyMa > (tickers[0][key]["close"]):
+        #     sixtyMaBreak = False
+        # else:
+        #     sixtyMaBreak = True
+        #
+        # if ninetyMa > (tickers[0][key]["close"]):
+        #     ninetyMaBreak = False
+        # else:
+        #     ninetyMaBreak = True
 
 
 
@@ -230,7 +233,7 @@ def default():
     return render_template('main.html', TICKERS=tickers, CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
                            LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals,
-                           LEGEND=legend, THIRTYMABREAK=thirtyMaBreak, SIXTYMABREAK=sixtyMaBreak)
+                           LEGEND=legend)
 
 
 
