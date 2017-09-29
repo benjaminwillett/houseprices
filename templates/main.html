@@ -217,6 +217,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
                 class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             {{ each }} =<b id="update5">${{ TICKERS[0][each]["Last"] }}
         </b></H5>
+                     <h5 class="w3-text-black w3-padding-16"><i
+                class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+            {{ each }} =<b id="update5">${% if THIRTYMABREAK==True %} 30 Good
+                             {% endif %}
+                             ${% if SIXTYMABREAK==True %} 60 Good
+                             {% endif %}
+                             ${% if NINETYMABREAK==True %} 90 Good
+                             {% endif %}
+        </b></H5>
 
                  <h1>{{ each }} Line Chart</h1>
     <!-- bar chart canvas element -->

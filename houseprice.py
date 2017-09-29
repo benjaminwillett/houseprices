@@ -143,7 +143,7 @@ def default():
         # url = tickers[0][key]["url"]
         # pair = tickers[0][key]["pair"]
         print(tickers[0][key]["url"])
-        print(tickers[0][key]["url"])
+        print(tickers[0][key]["pair"])
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + tickers[0][key]["url"] + \
                         "&tsym=" + tickers[0][key]["pair"] + "&limit=365&aggregate=3&e=CCCAGG"
         print(cryptocompare)
@@ -152,6 +152,26 @@ def default():
         daycount = cryptodict
         k = daycount["Data"]
         # print(str(k) + "is K")
+        thirtyMa = sum(tickers[0][key]["values"])
+        sixtyMa = sum(tickers[0][key]["values"])
+        ninetyMa = sum(tickers[0][key]["values"])
+
+        if thirtyMa > (tickers[0][key]["close"]):
+            thirtyMaBreak = False
+        else:
+            thirtyMaBreak = True
+
+        if sixtyMa > (tickers[0][key]["close"]):
+            sixtyMaBreak = False
+        else:
+            sixtyMaBreak = True
+
+        if ninetyMa > (tickers[0][key]["close"]):
+            ninetyMaBreak = False
+        else:
+            ninetyMaBreak = True
+
+
 
         for each in k:
             close = each["close"]
@@ -210,7 +230,7 @@ def default():
     return render_template('main.html', TICKERS=tickers, CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
                            LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals,
-                           LEGEND=legend)
+                           LEGEND=legend, THIRTYMABREAK=thirtyMaBreak, SIXTYMABREAK=sixtyMaBreak, NINETYMABREAK=ninetyMaBreak)
 
 
 
