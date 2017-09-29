@@ -75,22 +75,36 @@ def default():
                       "Last": 0,
                       "url": "BTC",
                       "labels": [],
-                      "values": []
+                      "values": [],
+                      "30ma": 0,
+                      "60ma": 0,
+                      "90ma": 0
                       },
                  "BTC-ETH":
                      {"pair": "BTC",
                       "Last": 0,
                       "url": "ETH",
                       "labels": [],
-                      "values": []
+                      "values": [],
+                      "30ma": 0,
+                      "60ma": 0,
+                      "90ma": 0
                       },
 
                 "BTC-SC": {"pair": "BTC",
-        "Last": 0, "url": "SC", "labels": [], "values": []}, "BTC-STRAT": {"pair": "BTC", "Last": 0, "url": "STRAT",
+        "Last": 0, "url": "SC", "labels": [], "values": [],                       "30ma": 0,
+                      "60ma": 0,
+                      "90ma": 0}, "BTC-STRAT": {"pair": "BTC", "Last": 0, "url": "STRAT",
                                                                            "labels": [],
-                                                                           "values": []},
-                "BTC-LSK": {"pair": "BTC", "Last": 0, "url": "LSK", "labels": [], "values": []},
-               "BTC-LBC": {"pair": "BTC", "Last": 0, "url": "LBC", "labels": [], "values": []}}]
+                                                                           "values": [],                       "30ma": 0,
+                      "60ma": 0,
+                      "90ma": 0},
+                "BTC-LSK": {"pair": "BTC", "Last": 0, "url": "LSK", "labels": [], "values": [],                       "30ma": 0,
+                      "60ma": 0,
+                      "90ma": 0},
+               "BTC-LBC": {"pair": "BTC", "Last": 0, "url": "LBC", "labels": [], "values": [],                       "30ma": 0,
+                      "60ma": 0,
+                      "90ma": 0}}]
 
     print("loaded tickers dictionary")
 
@@ -178,11 +192,14 @@ def default():
             tickers[0][key]["labels"].append(time)
 
         thirtyMa = sum(tickers[0][key]["values"][-30:])/30
+        tickers[0][key]["30ma"] = thirtyMa
         sixtyMa = sum(tickers[0][key]["values"][-60:])/60
+        tickers[0][key]["60ma"] = sixtyMa
         ninetyMa = sum(tickers[0][key]["values"][-90:])/90
-        print((str(thirtyMa)) + " is the thirtyMa")
-        print((str(sixtyMa)) + " is the sixtyMa")
-        print((str(ninetyMa)) + " is the ninetyMa")
+        tickers[0][key]["90ma"] = ninetyMa
+        print((str(tickers[0][key]["30ma"])) + " is the thirtyMa")
+        print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
+        print((str(tickers[0][key]["90ma"])) + " is the ninetyMa")
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
