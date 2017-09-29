@@ -152,22 +152,22 @@ def default():
         daycount = cryptodict
         k = daycount["Data"]
         # print(str(k) + "is K")
-        thirtyMa = sum(tickers[0][key]["values"])
-        sixtyMa = sum(tickers[0][key]["values"])
-        ninetyMa = sum(tickers[0][key]["values"])
+        thirtyMa = (sum(tickers[0][key]["values"]))
+        sixtyMa = (sum(tickers[0][key]["values"]))
+        ninetyMa = (sum(tickers[0][key]["values"]))
         print((str(thirtyMa)) + " is the thirtyMa")
         print((str(sixtyMa)) + " is the sixtyMa")
         print((str(ninetyMa)) + " is the ninetyMa")
 
-        if thirtyMa > (tickers[0][key]["close"]):
-            thirtyMaBreak = False
-        else:
-            thirtyMaBreak = True
-
-        if sixtyMa > (tickers[0][key]["close"]):
-            sixtyMaBreak = False
-        else:
-            sixtyMaBreak = True
+        # if thirtyMa == (tickers[0][key]["close"]):
+        #     thirtyMaBreak = False
+        # else:
+        #     thirtyMaBreak = True
+        #
+        # if sixtyMa > (tickers[0][key]["close"]):
+        #     sixtyMaBreak = False
+        # else:
+        #     sixtyMaBreak = True
         #
         # if ninetyMa > (tickers[0][key]["close"]):
         #     ninetyMaBreak = False
