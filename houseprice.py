@@ -159,15 +159,15 @@ def default():
         print((str(sixtyMa)) + " is the sixtyMa")
         print((str(ninetyMa)) + " is the ninetyMa")
 
-        # if thirtyMa > (tickers[0][key]["close"]):
-        #     thirtyMaBreak = False
-        # else:
-        #     thirtyMaBreak = True
-        #
-        # if sixtyMa > (tickers[0][key]["close"]):
-        #     sixtyMaBreak = False
-        # else:
-        #     sixtyMaBreak = True
+        if thirtyMa > (tickers[0][key]["close"]):
+            thirtyMaBreak = False
+        else:
+            thirtyMaBreak = True
+
+        if sixtyMa > (tickers[0][key]["close"]):
+            sixtyMaBreak = False
+        else:
+            sixtyMaBreak = True
         #
         # if ninetyMa > (tickers[0][key]["close"]):
         #     ninetyMaBreak = False
@@ -233,7 +233,7 @@ def default():
     return render_template('main.html', TICKERS=tickers, CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
                            LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals,
-                           LEGEND=legend)
+                           LEGEND=legend, THIRTYMABREAK=thirtyMaBreak, SIXTYMABREAK=sixtyMaBreak)
 
 
 
