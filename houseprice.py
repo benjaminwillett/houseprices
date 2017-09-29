@@ -152,12 +152,7 @@ def default():
         daycount = cryptodict
         k = daycount["Data"]
         # print(str(k) + "is K")
-        thirtyMa = sum(tickers[0][key]["values"])
-        sixtyMa = sum(tickers[0][key]["values"])
-        ninetyMa = sum(tickers[0][key]["values"])
-        print((str(thirtyMa)) + " is the thirtyMa")
-        print((str(sixtyMa)) + " is the sixtyMa")
-        print((str(ninetyMa)) + " is the ninetyMa")
+
 
         # if thirtyMa == (tickers[0][key]["close"]):
         #     thirtyMaBreak = False
@@ -182,6 +177,12 @@ def default():
             time = each["time"]
             tickers[0][key]["labels"].append(time)
 
+        thirtyMa = sum(tickers[0][key]["values"])
+        sixtyMa = sum(tickers[0][key]["values"])
+        ninetyMa = sum(tickers[0][key]["values"])
+        print((str(thirtyMa)) + " is the thirtyMa")
+        print((str(sixtyMa)) + " is the sixtyMa")
+        print((str(ninetyMa)) + " is the ninetyMa")
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
