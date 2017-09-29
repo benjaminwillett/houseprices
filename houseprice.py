@@ -183,9 +183,6 @@ def default():
             tickers[0][key]["labels"].append(time)
 
 
-    # print((str(labels)) + " is labels")
-    # print((str(values)) + " is values")
-    print(tickers)
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
                   "Gas": {"Provider": "Origin", "ID": "300008171641", "contact": "13 24 61", "payment type": "BPAY"},
