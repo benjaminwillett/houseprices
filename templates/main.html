@@ -219,11 +219,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </b></H5>
                      <h5 class="w3-text-black w3-padding-16"><i
                 class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
-            {{ each }} =<b id="update5">${% if THIRTYMABREAK==True %} 30 Good
+            {{ each }} =<b id="update5">${% if THIRTYMABREAK %} 30 Good
                              {% endif %}
-                             ${% if SIXTYMABREAK==True %} 60 Good
+                             {% if SIXTYMABREAK %} 60 Good
                              {% endif %}
-                             ${% if NINETYMABREAK==True %} 90 Good
+                             {% if NINETYMABREAK %} 90 Good
                              {% endif %}
         </b></H5>
 
