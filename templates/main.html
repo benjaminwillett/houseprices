@@ -216,9 +216,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h5 class="w3-text-black w3-padding-16"><i
                 class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
             {{ each }} =<b id="update5">${{ TICKERS[0][each]["Last"] }}
-               <p> {{ TICKERS[0][each]["30ma"] }} is 30 day moving average </p>
-                <p>{{ TICKERS[0][each]["60ma"] }} is 60 day moving average </p>
-                <p>{{ TICKERS[0][each]["90ma"] }} is 90 day moving average </p>
         </b></H5>
 
                  <h1>{{ each }} Line Chart</h1>
@@ -263,7 +260,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       }
 
       // get chart canvas
-      var ctx = document.getElementById("{{ each }}" + "d").getContext("2d");
+      var ctx = document.getElementById("{{ each }} + 'd'").getContext("2d");
 
       // create the chart using the chart canvas
       var myChart = new Chart(ctx, {
