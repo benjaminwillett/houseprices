@@ -78,7 +78,8 @@ def default():
                       "values": [],
                       "30ma": 0,
                       "60ma": 0,
-                      "90ma": 0
+                      "90ma": 0,
+                      "quantity": 0
                       },
                  "BTC-ETH":
                      {"pair": "BTC",
@@ -88,23 +89,50 @@ def default():
                       "values": [],
                       "30ma": 0,
                       "60ma": 0,
-                      "90ma": 0
+                      "90ma": 0,
+                      "quantity": 0.94
                       },
-
-                "BTC-SC": {"pair": "BTC",
-        "Last": 0, "url": "SC", "labels": [], "values": [],                       "30ma": 0,
+                 "BTC-SC":
+                     {"pair": "BTC",
+                      "Last": 0,
+                      "url": "SC",
+                      "labels": [],
+                      "values": [],
+                      "30ma": 0,
                       "60ma": 0,
-                      "90ma": 0}, "BTC-STRAT": {"pair": "BTC", "Last": 0, "url": "STRAT",
-                                                                           "labels": [],
-                                                                           "values": [],                       "30ma": 0,
+                      "90ma": 0,
+                      "quantity": 89073},
+                 "BTC-STRAT":
+                     {"pair": "BTC",
+                      "Last": 0,
+                      "url": "STRAT",
+                      "labels": [],
+                      "values": [],
+                      "30ma": 0,
                       "60ma": 0,
-                      "90ma": 0},
-                "BTC-LSK": {"pair": "BTC", "Last": 0, "url": "LSK", "labels": [], "values": [],                       "30ma": 0,
+                      "90ma": 0,
+                      "quantity": 586},
+                 "BTC-LSK":
+                     {"pair": "BTC",
+                      "Last": 0,
+                      "url": "LSK",
+                      "labels": [],
+                      "values": [],
+                      "30ma": 0,
                       "60ma": 0,
-                      "90ma": 0},
-               "BTC-LBC": {"pair": "BTC", "Last": 0, "url": "LBC", "labels": [], "values": [],                       "30ma": 0,
+                      "90ma": 0,
+                      "quantity": 466},
+                 "BTC-LBC":
+                     {"pair": "BTC",
+                      "Last": 0,
+                      "url": "LBC",
+                      "labels": [],
+                      "values": [],
+                      "30ma": 0,
                       "60ma": 0,
-                      "90ma": 0}}]
+                      "90ma": 0,
+                      "quantity": 333}
+                 }]
 
     print("loaded tickers dictionary")
 
