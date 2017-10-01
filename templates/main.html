@@ -209,18 +209,22 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
        </div>
 
 
+      {% for each in TICKERS[0] %}
       <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-black w3-padding-16"><i
                 class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
-            Doughnut =<b id="update6">
+            {{ each }} =<b id="update5">${{ TICKERS[0][each]["Last"] }}
+               <p> {{ TICKERS[0][each]["30ma"] }} is 30 day moving average </p>
+                <p>{{ TICKERS[0][each]["60ma"] }} is 60 day moving average </p>
+                <p>{{ TICKERS[0][each]["90ma"] }} is 90 day moving average </p>
         </b></H5>
 
-                 <h1>Doughnut Chart</h1>
+                 <h1>{{ each }} Line Chart</h1>
     <!-- bar chart canvas element -->
-    <canvas id="Doughnut1" width="600" height="400"></canvas>
-    <p id="caption1">The chart is displaying a simple doughnut chart.</p>
+    <canvas id="{{ each }}" width="600" height="400"></canvas>
+    <p id="caption">The chart is displaying a simple line chart.</p>
 
     <script>
       // Global parameters:
@@ -229,7 +233,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
       // define the chart data
       var chartData = {
-        labels : [{% for item in TICKERS[0][each] %}
+        labels : [{% for item in TICKERS[0][each]["labels"] %}
                    "{{ item }}",
                   {% endfor %}],
         datasets : [{
@@ -251,7 +255,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data : [{% for item in TICKERS[0][each]["quantity"] %}
+            data : [{% for item in TICKERS[0][each]["values"] %}
                       {{ item }},
                     {% endfor %}],
             spanGaps: false
@@ -259,7 +263,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       }
 
       // get chart canvas
-      var ctx = document.getElementById("caption1").getContext("2d");
+      var ctx = document.getElementById("{{ each }}").getContext("2d");
 
       // create the chart using the chart canvas
       var myChart = new Chart(ctx, {
@@ -270,7 +274,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 </div>
 </div>
-
+      {% endfor %}
 
       {% for each in TICKERS[0] %}
       <div class="w3-container">
