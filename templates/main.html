@@ -319,6 +319,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
+            xAxisID: "X Axis",
+            yAxisID: "Y Axis",
             data : [{% for item in TICKERS[0][each]["values"] %}
                       {{ item }},
                     {% endfor %}],
