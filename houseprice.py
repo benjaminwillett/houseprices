@@ -246,7 +246,7 @@ def default():
         print((str(tickers[0][key]["90ma"])) + " is the ninetyMa")
 
         for each in tickers[0]:
-            a = (tickers[0][each]["close"])*(tickers[0][each]["quantity"])
+            a = (tickers[0][each]["Last"])*(tickers[0][each]["quantity"])
             tickers[0][each]["value"] = a
             print(a + " is the total value of " + each)
 
