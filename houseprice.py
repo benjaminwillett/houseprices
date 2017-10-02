@@ -79,7 +79,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": [0]
+                      "quantity": 0
                       },
                  "BTC-ETH":
                      {"pair": "BTC",
@@ -90,7 +90,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": [0.94]
+                      "quantity": 0.94
                       },
                  "BTC-SC":
                      {"pair": "BTC",
@@ -101,7 +101,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": ["89073"]
+                      "quantity": 89073
                       },
                  "BTC-STRAT":
                      {"pair": "BTC",
@@ -123,7 +123,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": ["466"]
+                      "quantity": 466
                       },
                  "BTC-LBC":
                      {"pair": "BTC",
@@ -134,7 +134,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": ["333"]
+                      "quantity": 333
                       }
                  }]
 

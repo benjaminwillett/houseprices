@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/houseprice.py" afterPath="$PROJECT_DIR$/houseprice.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/main.html" afterPath="$PROJECT_DIR$/templates/main.html" />
     </list>
     <ignored path="housepricecheltenham.iws" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="houseprice.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/houseprice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.160714">
-              <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+            <state vertical-scroll-proportion="-1.5178572">
+              <caret line="131" column="35" selection-start-line="131" selection-start-column="35" selection-end-line="137" selection-end-column="23" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -80,8 +81,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5862069">
-              <caret line="233" column="19" selection-start-line="233" selection-start-column="19" selection-end-line="254" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.5603448">
+              <caret line="252" column="53" selection-start-line="252" selection-start-column="53" selection-end-line="252" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -920,8 +921,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/houseprice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.160714">
-          <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+        <state vertical-scroll-proportion="-1.5178572">
+          <caret line="131" column="35" selection-start-line="131" selection-start-column="35" selection-end-line="137" selection-end-column="23" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
@@ -930,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5862069">
-          <caret line="233" column="19" selection-start-line="233" selection-start-column="19" selection-end-line="254" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.5603448">
+          <caret line="252" column="53" selection-start-line="252" selection-start-column="53" selection-end-line="252" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
