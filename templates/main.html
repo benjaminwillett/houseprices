@@ -323,7 +323,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             backgroundColor: [{% for item in TICKERS[0] %}
                    "{{ TICKERS[0][each]["colour"] }}",
             borderColor: "{{ TICKERS[0][each]["colour"] }}",
-                  {% endfor %}]
+                  {% endfor %}],
             borderCapStyle: 'butt',
             borderDash: [],
             borderDashOffset: 0.0,
