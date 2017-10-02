@@ -131,7 +131,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 333}
+                      "quantity": [333]}
                  }]
 
     print("loaded tickers dictionary")
