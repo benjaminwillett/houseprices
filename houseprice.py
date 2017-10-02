@@ -93,7 +93,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 100.94,
+                      "quantity": 0.94,
                       "value": 0,
                       },
                  "BTC-SC":
