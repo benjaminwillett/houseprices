@@ -396,6 +396,27 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
                       {{ item }},
                     {% endfor %}],
             spanGaps: false
+        }, {
+            label: '{{ LEGEND }}',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: "{{ TICKERS[0][each]["colour"] }}",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data : [{{ THIRTYMA }}],
+            spanGaps: false
         }]
       }
 
