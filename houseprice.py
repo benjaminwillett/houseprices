@@ -219,9 +219,9 @@ def default():
 
         for each in k:
             close = each["close"]
-            tickers[0][key]["values"].append(close)
+            float(tickers[0][key]["values"].append(close))
             time = each["time"]
-            tickers[0][key]["labels"].append(time)
+            float(tickers[0][key]["labels"].append(time))
 
         thirtyMa = (float(sum(tickers[0][key]["values"][-30:])/30))
         tickers[0][key]["30ma"] = thirtyMa
