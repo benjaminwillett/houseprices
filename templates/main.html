@@ -237,10 +237,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             fill: true,
             lineTension: 0.1,
             backgroundColor: [{% for item in TICKERS[0] %}
-                   "{{ TICKERS[0][each]["colour"] }}",
+                   "{{ TICKERS[0][item]["colour"] }}",
                    {% endfor %}],
             borderColor: [{% for item in TICKERS[0] %}
-                   "{{ TICKERS[0][each]["colour"] }}",
+                   "{{ TICKERS[0][item]["colour"] }}",
                    {% endfor %}],
             borderCapStyle: 'butt',
             borderDash: [],
