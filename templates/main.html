@@ -229,7 +229,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       Chart.defaults.global.responsive = false;
 
       // define the chart data
-      var chartData = {
+      var chartDataDoughnut = {
         labels : "{{ TICKERS[0][each]["url"] }}",
         datasets : [{
             label: '{{ LEGEND }}',
@@ -261,7 +261,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       // create the chart using the chart canvas
       var myChart = new Chart(ctx, {
         type: 'line',
-        data: chartData,
+        data: chartDataDoughnut,
       });
     </script>
 

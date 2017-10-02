@@ -79,7 +79,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 0
+                      "quantity": 500
                       },
                  "BTC-ETH":
                      {"pair": "BTC",
@@ -90,7 +90,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 0.94
+                      "quantity": 100.94
                       },
                  "BTC-SC":
                      {"pair": "BTC",
