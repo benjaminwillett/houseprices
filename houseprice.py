@@ -157,7 +157,8 @@ def default():
         response = http.request("GET", bittick + each)
         usddict = json.loads(response.data.decode('utf-8'))
         usdmain = usddict['result']
-        usdlast = usdmain['Last']
+        usdlastclean = usdmain
+        usdlast = (float(usdlastclean['Last']))
         tickers[0][each]["Last"] = (str(usdlast))
 
     fixer = "http://api.fixer.io/latest?base=AUD"
