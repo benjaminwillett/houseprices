@@ -80,7 +80,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 500,
+                      "quantity": 0,
                       "value": 0,
                       },
                  "BTC-ETH":
