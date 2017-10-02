@@ -220,7 +220,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
                  <h1>{{ each }} Line Chart</h1>
     <!-- bar chart canvas element -->
-    <canvas id="{{ each }} + 'd'" width="600" height="400"></canvas>
+    <canvas id="{{ each }}doughnut" width="600" height="400"></canvas>
     <p id="caption1">The chart is displaying a simple line chart.</p>
 
     <script>
@@ -256,7 +256,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       }
 
       // get chart canvas
-      var ctx = document.getElementById("{{ each }} + 'd'").getContext("2d");
+      var ctx = document.getElementById("{{ each }}doughnut").getContext("2d");
 
       // create the chart using the chart canvas
       var myChart = new Chart(ctx, {
