@@ -223,11 +223,11 @@ def default():
             time = each["time"]
             float(tickers[0][key]["labels"].append(time))
 
-        thirtyMa = (float(sum(tickers[0][key]["values"][-30:])/30))
+        thirtyMa = (sum(tickers[0][key]["values"][-30:])/30)
         tickers[0][key]["30ma"] = thirtyMa
-        sixtyMa = (float(sum(tickers[0][key]["values"][-60:])/60))
+        sixtyMa = (sum(tickers[0][key]["values"][-60:])/60)
         tickers[0][key]["60ma"] = sixtyMa
-        ninetyMa = (float(sum(tickers[0][key]["values"][-90:])/90))
+        ninetyMa = (sum(tickers[0][key]["values"][-90:])/90)
         tickers[0][key]["90ma"] = ninetyMa
         print((str(tickers[0][key]["30ma"])) + " is the thirtyMa")
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
