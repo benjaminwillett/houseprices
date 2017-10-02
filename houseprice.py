@@ -210,23 +210,7 @@ def default():
         cryptodict = json.loads(cryptoresponse.data.decode('utf-8'))
         daycount = cryptodict
         k = daycount["Data"]
-        # print(str(k) + "is K")
 
-
-        # if thirtyMa == (tickers[0][key]["close"]):
-        #     thirtyMaBreak = False
-        # else:
-        #     thirtyMaBreak = True
-        #
-        # if sixtyMa > (tickers[0][key]["close"]):
-        #     sixtyMaBreak = False
-        # else:
-        #     sixtyMaBreak = True
-        #
-        # if ninetyMa > (tickers[0][key]["close"]):
-        #     ninetyMaBreak = False
-        # else:
-        #     ninetyMaBreak = True
 
         for each in tickers[0]:
             a = (float(tickers[0][each]["Last"]))*(float(tickers[0][each]["quantity"]))
@@ -239,11 +223,11 @@ def default():
             time = each["time"]
             tickers[0][key]["labels"].append(time)
 
-        thirtyMa = sum(tickers[0][key]["values"][-30:])/30
+        thirtyMa = (float(sum(tickers[0][key]["values"][-30:])/30))
         tickers[0][key]["30ma"] = thirtyMa
-        sixtyMa = sum(tickers[0][key]["values"][-60:])/60
+        sixtyMa = (float(sum(tickers[0][key]["values"][-60:])/60))
         tickers[0][key]["60ma"] = sixtyMa
-        ninetyMa = sum(tickers[0][key]["values"][-90:])/90
+        ninetyMa = (float(sum(tickers[0][key]["values"][-90:])/90))
         tickers[0][key]["90ma"] = ninetyMa
         print((str(tickers[0][key]["30ma"])) + " is the thirtyMa")
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
