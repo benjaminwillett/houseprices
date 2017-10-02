@@ -252,9 +252,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data : [{% for item in TICKERS[0][each]["quantity"] %}
-                      {{ item }},
-                    {% endfor %}],
+            data : [{{TICKERS[0][each]["quantity"] }},
             spanGaps: false
         }]
       }
