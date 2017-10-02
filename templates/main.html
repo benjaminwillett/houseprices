@@ -230,9 +230,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
       // define the chart data
       var chartDataDoughnut = {
-        labels : {% for item in TICKERS[0] %}
+        labels : [{% for item in TICKERS[0] %}
                 "{{ item }}",
-                  {% endfor %}],,
+                  {% endfor %}],
         datasets : [{
             label: '{{ LEGEND }}',
             fill: true,
@@ -252,9 +252,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data : {% for each in TICKERS[0] %}
+            data : [{% for each in TICKERS[0] %}
                   "{{ TICKERS[0][each]["quantity"] }}",
-                  {% endfor %},
+                  {% endfor %}],
             spanGaps: false
         }]
       }
