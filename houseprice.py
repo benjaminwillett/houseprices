@@ -219,15 +219,15 @@ def default():
 
         for each in k:
             close = each["close"]
-            float(tickers[0][key]["values"].append(close))
+            tickers[0][key]["values"].append(close)
             time = each["time"]
-            float(tickers[0][key]["labels"].append(time))
+            tickers[0][key]["labels"].append(time)
 
-        thirtyMa = (sum(tickers[0][key]["values"][-30:])/30)
+        thirtyMa = (float(sum(tickers[0][key]["values"][-30:])/30))
         tickers[0][key]["30ma"] = thirtyMa
-        sixtyMa = (sum(tickers[0][key]["values"][-60:])/60)
+        sixtyMa = (float(sum(tickers[0][key]["values"][-60:])/60))
         tickers[0][key]["60ma"] = sixtyMa
-        ninetyMa = (sum(tickers[0][key]["values"][-90:])/90)
+        ninetyMa = (float(sum(tickers[0][key]["values"][-90:])/90))
         tickers[0][key]["90ma"] = ninetyMa
         print((str(tickers[0][key]["30ma"])) + " is the thirtyMa")
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
