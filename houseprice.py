@@ -249,7 +249,7 @@ def default():
         for each in tickers[0]:
             a = (tickers[0][each]["Last"])*(tickers[0][each]["quantity"])
             tickers[0][each]["value"] = a
-            print(format((a, '.8f')) + " is the total value of " + each)
+            print(format((a, '.8f'))
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
