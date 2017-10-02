@@ -182,7 +182,7 @@ def default():
 
     print("looping through postcodes")
 
-    legend = 'Monthly Data'
+    legend = 'Price'
 
     for key in tickers[0]:
         print("building URL to retrieve " + key)
