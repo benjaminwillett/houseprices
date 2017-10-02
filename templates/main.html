@@ -209,19 +209,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
        </div>
 
 
-      {% for each in TICKERS[0] %}
       <div class="w3-container">
 
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h5 class="w3-text-black w3-padding-16"><i
                 class="fa fa-btc fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
-            {{ each }} =<b id="update6">${{ TICKERS[0][each]["Last"] }}
+            <b id="update6">Holdings
         </b></H5>
 
-                 <h1>{{ each }} Line Chart</h1>
+                 <h1>Coi Holdings Doughnut Chart</h1>
     <!-- bar chart canvas element -->
     <canvas id="{{ each }}doughnut" width="600" height="400"></canvas>
-    <p id="caption1">The chart is displaying a simple line chart.</p>
+    <p id="caption1">The chart is displaying a doughnut chart.</p>
 
     <script>
       // Global parameters:
@@ -271,7 +270,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 </div>
 </div>
-      {% endfor %}
+
 
       {% for each in TICKERS[0] %}
       <div class="w3-container">
