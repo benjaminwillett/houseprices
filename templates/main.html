@@ -300,6 +300,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         labels : [{% for item in TICKERS[0][each]["labels"] %}
                    "{{ item }}",
                   {% endfor %}],
+        xAxisID: "x-axis-1",
+        yAxisID: "y-axis-1",
         datasets : [{
             label: '{{ LEGEND }}',
             fill: true,
