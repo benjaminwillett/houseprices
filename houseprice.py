@@ -72,6 +72,7 @@ def default():
     tickers = [
                 {"USDT-BTC":
                      {"pair": "USD",
+                      "colour": "rgba(0, 192, 192, 1)",
                       "Last": 0,
                       "url": "BTC",
                       "labels": [],
@@ -83,6 +84,7 @@ def default():
                       },
                  "BTC-ETH":
                      {"pair": "BTC",
+                      "colour": "rgba(75, 0, 192, 1)",
                       "Last": 0,
                       "url": "ETH",
                       "labels": [],
@@ -94,6 +96,7 @@ def default():
                       },
                  "BTC-SC":
                      {"pair": "BTC",
+                      "colour": "rgba(75, 192, 0, 1)",
                       "Last": 0,
                       "url": "SC",
                       "labels": [],
@@ -105,6 +108,7 @@ def default():
                       },
                  "BTC-STRAT":
                      {"pair": "BTC",
+                      "colour": "rgba(100, 192, 192, 255)",
                       "Last": 0,
                       "url": "STRAT",
                       "labels": [],
@@ -116,6 +120,7 @@ def default():
                       },
                  "BTC-LSK":
                      {"pair": "BTC",
+                      "colour": "rgba(75, 255, 255, 1)",
                       "Last": 0,
                       "url": "LSK",
                       "labels": [],
@@ -127,6 +132,7 @@ def default():
                       },
                  "BTC-LBC":
                      {"pair": "BTC",
+                      "colour": "rgba(75, 192, 192, 1)",
                       "Last": 0,
                       "url": "LBC",
                       "labels": [],
