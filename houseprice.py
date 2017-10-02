@@ -80,7 +80,8 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 500
+                      "quantity": 500,
+                      "value": 0,
                       },
                  "BTC-ETH":
                      {"pair": "BTC",
@@ -92,7 +93,8 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 100.94
+                      "quantity": 100.94,
+                      "value": 0,
                       },
                  "BTC-SC":
                      {"pair": "BTC",
@@ -104,7 +106,8 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 89073
+                      "quantity": 89073,
+                      "value": 0,
                       },
                  "BTC-STRAT":
                      {"pair": "BTC",
@@ -116,7 +119,8 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 586
+                      "quantity": 586,
+                      "value": 0,
                       },
                  "BTC-LSK":
                      {"pair": "BTC",
@@ -128,7 +132,8 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 466
+                      "quantity": 466,
+                      "value": 0,
                       },
                  "BTC-LBC":
                      {"pair": "BTC",
@@ -140,7 +145,8 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 333
+                      "quantity": 333,
+                      "value": 0,
                       }
                  }]
 
@@ -238,6 +244,12 @@ def default():
         print((str(tickers[0][key]["30ma"])) + " is the thirtyMa")
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
         print((str(tickers[0][key]["90ma"])) + " is the ninetyMa")
+
+        for each in tickers[0]:
+            a = (tickers[0][each]["close"])*(tickers[0][each]["quantity"])
+            tickers[0][each]["value"] = a
+            print(a + " is the total value of " + each)
+
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
                                   "payment type": "BPAY"},
