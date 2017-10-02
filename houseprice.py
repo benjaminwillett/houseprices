@@ -228,7 +228,10 @@ def default():
         # else:
         #     ninetyMaBreak = True
 
-
+        for each in tickers[0]:
+            a = (float(tickers[0][each]["Last"]))*(float(tickers[0][each]["quantity"]))
+            tickers[0][each]["value"] = a
+            print(str(format(a, '.8f')))
 
         for each in k:
             close = each["close"]
@@ -246,10 +249,6 @@ def default():
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
         print((str(tickers[0][key]["90ma"])) + " is the ninetyMa")
 
-        for each in tickers[0]:
-            a = (float(tickers[0][each]["Last"]))*(float(tickers[0][each]["quantity"]))
-            tickers[0][each]["value"] = a
-            print(str(format(a, '.8f')))
 
 
     utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
