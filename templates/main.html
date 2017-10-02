@@ -230,7 +230,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
       // define the chart data
       var chartData = {
-        labels : [{% for item in TICKERS[0][each] %}
+        labels : [{% for item in TICKERS[0][each]["labels"] %}
                    "{{ item }}",
                   {% endfor %}],
         datasets : [{
