@@ -212,7 +212,6 @@ def default():
         daycount = cryptodict
         k = daycount["Data"]
 
-
         for each in tickers[0]:
             a = (float(tickers[0][each]["Last"]))*(float(tickers[0][each]["quantity"]))
             tickers[0][each]["value"] = a
@@ -220,7 +219,7 @@ def default():
 
         for each in k:
             close = each["close"]
-            tickers[0][key]["values"].append(close)
+            tickers[0][key]["values"].append(format(close, '.8f'))
             time = each["time"]
             tickers[0][key]["labels"].append(time)
 
@@ -341,7 +340,7 @@ def free():
 
 @app.route("/domain")
 def domain():
-    parsed_uri = urlparse( 'http://stackoverflow.com/questions/1234567/blah-blah-blah-blah' )
+    parsed_uri = urlparse( 'http://snowboard.com.au' )
     domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
     print domain
     return render_template('chart.html', DOMAIN=domain)
