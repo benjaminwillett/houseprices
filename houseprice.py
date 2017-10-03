@@ -214,7 +214,7 @@ def default():
 
         for each in k:
             close = each["close"]
-            tickers[0][key]["values"].append(close)
+            tickers[0][key]["values"].append(float(close))
             time = each["time"]
             tickers[0][key]["labels"].append(time)
 
