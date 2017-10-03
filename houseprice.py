@@ -336,9 +336,7 @@ def free():
 
 @app.route("/domain")
 def domain():
-    url = os.environ["REQUEST_URI"]
-    parsed = urlparse.urlparse(url)
-    domain = urlparse.parse_qs(parsed.query)['param']
+    domain = os.environ["REQUEST_URI"]
     print domain
     return render_template('chart.html', DOMAIN=domain)
 
