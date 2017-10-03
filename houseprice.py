@@ -6,6 +6,7 @@ import threading
 import requests
 import json
 import re
+from urlparse2 import urlparse
 
 
 app = Flask(__name__)
@@ -338,12 +339,12 @@ def free():
     return render_template('Free/index.html')
 
 
-@app.route("/simple_chart")
-def chart():
-    legend = 'Monthly Data'
-    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
-    values = [10, 9, 8, 7, 6, 4, 7, 8]
-    return render_template('chart.html', values=values, labels=labels, legend=legend)
+@app.route("/domain")
+def domain():
+    parsed_uri = urlparse( 'http://stackoverflow.com/questions/1234567/blah-blah-blah-blah' )
+    domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
+    print domain
+    return render_template('chart.html', DOMAIN=domain)
 
 
 if __name__ == '__main__':
