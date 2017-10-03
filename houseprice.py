@@ -7,6 +7,7 @@ import requests
 import json
 import re
 from urlparse2 import urlparse
+import os
 
 
 app = Flask(__name__)
@@ -335,7 +336,9 @@ def free():
 
 @app.route("/domain")
 def domain():
-    domain = request.META.get('PATH_INFO')
+    url = os.environ["REQUEST_URI"]
+    parsed = urlparse.urlparse(url)
+    domain = urlparse.parse_qs(parsed.query)['param']
     print domain
     return render_template('chart.html', DOMAIN=domain)
 
