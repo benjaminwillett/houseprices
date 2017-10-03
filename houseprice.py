@@ -214,7 +214,7 @@ def default():
 
         for each in k:
             close = each["close"]
-            tickers[0][key]["values"].append(str(format(close, '.8f')))
+            tickers[0][key]["values"].append(close)
             time = each["time"]
             tickers[0][key]["labels"].append(time)
 
