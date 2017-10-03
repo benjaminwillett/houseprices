@@ -212,14 +212,9 @@ def default():
         daycount = cryptodict
         k = daycount["Data"]
 
-        for each in tickers[0]:
-            a = (float(tickers[0][each]["Last"]))*(float(tickers[0][each]["quantity"]))
-            tickers[0][each]["value"] = a
-            print(str(format(a, '.8f')))
-
         for each in k:
             close = each["close"]
-            tickers[0][key]["values"].append(format(close, '.8f'))
+            tickers[0][key]["values"].append(str(format(close, '.8f')))
             time = each["time"]
             tickers[0][key]["labels"].append(time)
 
