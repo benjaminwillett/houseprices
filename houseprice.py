@@ -335,8 +335,7 @@ def free():
 
 @app.route("/domain")
 def domain():
-    parsed_uri = urlparse( 'http://snowboard.com.au' )
-    domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
+    domain = request.META.get('PATH_INFO')
     print domain
     return render_template('chart.html', DOMAIN=domain)
 
