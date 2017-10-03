@@ -13,6 +13,7 @@ Jinja2==2.8
 kombu==3.0.36
 MarkupSafe==0.23
 netaddr==0.7.18
+os==0.1
 ply==3.9
 pyasn1==0.1.9
 pydot2==1.0.33
