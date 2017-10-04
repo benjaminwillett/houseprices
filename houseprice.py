@@ -3,10 +3,7 @@ from BeautifulSoup import BeautifulSoup
 import urllib3
 from datetime import time
 import threading
-import requests
 import json
-import re
-from urlparse2 import urlparse
 import os
 
 
@@ -68,7 +65,6 @@ letsThread()
 @app.route('/' , methods=['GET','POST'])
 def default():
     letsThread()
-    links = []
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
     tickers = [
@@ -201,8 +197,6 @@ def default():
 
     for key in tickers[0]:
         print("building URL to retrieve " + key)
-        # url = tickers[0][key]["url"]
-        # pair = tickers[0][key]["pair"]
         print(tickers[0][key]["url"])
         print(tickers[0][key]["pair"])
         cryptocompare = "https://min-api.cryptocompare.com/data/histoday?fsym=" + tickers[0][key]["url"] + \
@@ -337,7 +331,7 @@ def free():
 @app.route("/domain")
 def domain():
     domain = os.environ["REQUEST_URI"]
-    print domain
+    print(domain)
     return render_template('chart.html', DOMAIN=domain)
 
 
