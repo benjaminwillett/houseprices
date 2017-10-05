@@ -224,9 +224,9 @@ def default():
 
     for each in tickers[0]:
         closehol = (float(tickers[0][each]["close"]))
-        print(closehol + " is closehol")
+        print(str(closehol) + " is closehol")
         quantityhol = (float(tickers[0][each]["quantity"]))
-        print(quantityhol + " is quantityhol")
+        print(str(quantityhol) + " is quantityhol")
         h = (int(closehol)) * (int(quantityhol))
         print(h)
 
