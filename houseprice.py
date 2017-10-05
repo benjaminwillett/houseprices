@@ -224,7 +224,9 @@ def default():
 
     for each in tickers[0]:
         lastHol = tickers[0][each]["Last"]
-        print(str(lastHol) + " is LastHol")
+        print(str(lastHol) + " is lastHol")
+        holdVal = (lastHol * tickers[0][each]["quantity"])
+        print(str(holdVal) + " is holdVal")
 
 
     utilities = [{"Electricity":
