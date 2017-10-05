@@ -222,6 +222,12 @@ def default():
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
         print((str(tickers[0][key]["90ma"])) + " is the ninetyMa")
 
+    for each in tickers[0]:
+        closehol = (float(tickers[0][each]["close"]))
+        quantityhol = (float(tickers[0][each]["quantity"]))
+        h = (int(closehol)) * (int(quantityhol))
+        print(h)
+
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
                      "ID": "Need Data",
