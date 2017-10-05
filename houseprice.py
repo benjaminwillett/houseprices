@@ -1,7 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from BeautifulSoup import BeautifulSoup
 import urllib3
-from datetime import time
 import threading
 import json
 import os
@@ -20,22 +19,22 @@ class myThread (threading.Thread):
         self.counter = counter
     def run(self):
         print "Starting " + self.name
-        getContent()
+        getcontent()
         print "Exiting " + self.name
 
 
-def getContent():
-    links = []
+def getcontent():
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
-    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"}, "3193": {"price": "100000", "suburb":
-        "beaumaris"}, "3195": {"price": "500000", "suburb": "parkdale"}, "3194": {"price": "777777",
-                                                                                                  "suburb":
-                                                                                                      "mentone"}}]
+    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
+                 "3193": {"price": "100000", "suburb": "beaumaris"},
+                 "3195": {"price": "500000", "suburb": "parkdale"},
+                 "3194": {"price": "777777", "suburb": "mentone"}}]
 
     for item in postcode:
         for each in item:
-            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
+            priceurl = http.request("GET", realestateurl +
+                                    item[each]["suburb"] + "-" + (str(each)) + "-vic", preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
@@ -49,22 +48,19 @@ def getContent():
                 postcode[0][each]["price"] = "No DATA!"
 
 
-
-
-def letsThread():
+def letsthread():
     thread1 = myThread(1, "Thread-1", 1)
     # Start new Threads
     thread1.start()
 
-
-
 print("Finished collecting all the content mother fuckers!")
 
-letsThread()
+letsthread()
 
-@app.route('/' , methods=['GET','POST'])
+
+@app.route('/', methods=['GET', 'POST'])
 def default():
-    letsThread()
+    letsthread()
 
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
     tickers = [
@@ -171,14 +167,17 @@ def default():
         currency[each] = (str(usdratefixer))
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
-    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"}, "3193": {"price": "100000", "suburb":
-        "beaumaris"}, "3195": {"price": "500000", "suburb": "parkdale"}, "3194": {"price": "777777",
-                                                                                                  "suburb": "mentone"}}]
+    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
+                 "3193": {"price": "100000", "suburb": "beaumaris"},
+                 "3195": {"price": "500000", "suburb": "parkdale"},
+                 "3194": {"price": "777777", "suburb": "mentone"}}]
+
     print("just loaded postcode successfully")
 
     for item in postcode:
         for each in item:
-            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-" + (str(each)) + "-vic",preload_content=False)
+            priceurl = http.request("GET", realestateurl + item[each]["suburb"]
+                                    + "-" + (str(each)) + "-vic", preload_content=False)
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             postcode[0][each]["price"] = links[2]
@@ -223,51 +222,104 @@ def default():
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
         print((str(tickers[0][key]["90ma"])) + " is the ninetyMa")
 
+    utilities = [{"Electricity":
+                    {"Provider": "RED Energy",
+                     "ID": "Need Data",
+                     "contact": "Need Data",
+                     "payment type": "BPAY"},
+                  "Gas":
+                    {"Provider": "Origin",
+                     "ID": "300008171641",
+                     "contact": "13 24 61",
+                     "payment type": "BPAY"},
+                  "Water":
+                    {"Provider": "South East Water",
+                     "ID": "Need Data",
+                     "contact": "Need Data",
+                     "payment type": "BPAY"}}]
 
+    insurances = [{"Home":
+                    {"Provider": "RACV",
+                     "ID": "HOM 612 476 223",
+                     "contact": "13 RACV",
+                     "payment type": "Direct Debit"},
+                   "Car":
+                    {"Provider": "YOUI",
+                     "ID": "Need Data",
+                     "contact": "13 RACV",
+                     "payment type": "Direct Debit"},
+                   "Life":
+                    {"Provider": "OnePath",
+                     "ID": "Need Data",
+                     "contact": "13 RACV",
+                     "payment type": "Direct Debit"},
+                   "Private Medical":
+                    {"Provider": "MediBank",
+                     "ID": "Need Data",
+                     "contact": "Need Data",
+                     "payment type": "Direct Debit"}}]
 
-    utilities = [{"Electricity": {"Provider": "RED Energy", "ID": "Need Data", "contact": "Need Data",
-                                  "payment type": "BPAY"},
-                  "Gas": {"Provider": "Origin", "ID": "300008171641", "contact": "13 24 61", "payment type": "BPAY"},
-                  "Water": {"Provider": "South East Water", "ID": "Need Data", "contact": "Need Data", \
-                                                                                              "payment type": "BPAY"}}]
+    loans = [{"Home":
+                  {"Provider": "ANZ",
+                   "ID": "HNeed Data",
+                   "contact": "Need Data",
+                   "payment type": "BPAY"},
+              "Car":
+                  {"Provider": "Alphera",
+                   "ID": "Need Data",
+                   "contact": "Need Data",
+                   "payment type": "Direct Debit"}}]
 
-    insurances = [{"Home": {"Provider": "RACV", "ID": "HOM 612 476 223", "contact":
-        "13 RACV",
-                                    "payment type": "Direct Debit"}, "Car": {"Provider": "YOUI", "ID": "Need Data", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}, "Life": {"Provider": "OnePath", "ID": "Need Data", "contact": "13 RACV",
-                                    "payment type": "Direct Debit"}, "Private Medical": {"Provider": "MediBank",
-                                                                                         "ID": "Need Data",
-                                                                                         "contact": "Need Data",
-                                                                                         "payment type": "Direct Debit"}}]
+    cc = [{"Personal":
+               {"Provider": "CommonWealth Bank",
+                "ID": "Need Data",
+                "contact": "Need Data",
+                "payment type": "Blank"},
+           "Business":
+               {"Provider": "Bank of Melbourne",
+                "ID": "Need Data",
+                "contact": "Need Data",
+                "payment type": "Blank"}}]
 
-    loans = [{"Home": {"Provider": "ANZ", "ID": "HNeed Data", "contact": "Need Data",
-                                    "payment type": "BPAY"}, "Car": {"Provider": "Alphera", "ID": "Need Data",
-                                                                     "contact":
-        "Need Data",
-                                    "payment type": "Direct Debit"}}]
+    bankac = [{"Personal":
+                   {"Provider": "CommonWealth Bank",
+                    "ID": "Need Data",
+                    "contact": "Need Data",
+                    "payment type": "Blank"},
+               "Business":
+                   {"Provider": "Bank of Melbourne",
+                    "ID": "Need Data",
+                    "contact": "Need Data",
+                    "payment type": "Blank"}}]
 
-    cc = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}, "Business": {"Provider": "Bank of Melbourne",
-                                                                           "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}}]
+    super = [{"Personal":
+                  {"Provider": "CommonWealth Bank",
+                   "ID": "Need Data",
+                   "contact": "Need Data",
+                   "payment type": "Blank"}}]
 
-    bankac = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}, "Business": {"Provider": "Bank of Melbourne",
-                                                                           "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}}]
+    gov = [{"Personal":
+                {"Provider": "CommonWealth Bank",
+                 "ID": "Need Data",
+                 "contact": "Need Data",
+                 "payment type": "Blank"}}]
 
-    super = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}}]
+    savings = [{"Personal":
+                    {"Provider": "CommonWealth Bank",
+                     "ID": "Need Data",
+                     "contact": "Need Data",
+                     "payment type": "Blank"},
+                "Business":
+                    {"Provider": "Bank of Melbourne",
+                     "ID": "Need Data", "contact": "Need Data",
+                     "payment type": "Blank"}}]
 
-    gov = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}}]
-
-    savings = [{"Personal": {"Provider": "CommonWealth Bank", "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}, "Business": {"Provider": "Bank of Melbourne",
-                                                                           "ID": "Need Data", "contact": "Need Data",
-                                    "payment type": "Blank"}}]
-
-    metals = [{"Gold": {"AMOUNT": "10oz"}, "Silver": {"AMOUNT": "10oz"}, "Platinum": {"AMOUNT": "10oz"}}]
+    metals = [{"Gold":
+                   {"AMOUNT": "10oz"},
+               "Silver":
+                   {"AMOUNT": "10oz"},
+               "Platinum":
+                   {"AMOUNT": "10oz"}}]
 
     return render_template('main.html', TICKERS=tickers, CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
