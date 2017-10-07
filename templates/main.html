@@ -353,9 +353,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             {{ each }} =<b id="update5">${{ TICKERS[0][each]["Last"] }}
                 <p> The current value of your {{ TICKERS[0][each]["quantity"] }} {{ each }} holdings is {{
                     TICKERS[0][each]["value"] }} BTC </p>
-               <p> {{ TICKERS[0][each]["30ma"] }} is 30 day moving average </p>
-                <p>{{ TICKERS[0][each]["60ma"] }} is 60 day moving average </p>
-                <p>{{ TICKERS[0][each]["90ma"] }} is 90 day moving average </p>
+                <p> 30 day moving average = {{ TICKERS[0][each]["30ma"] }} </p>
+                <p> 60 day moving average = {{ TICKERS[0][each]["60ma"] }} </p>
+                <p> 90 day moving average = {{ TICKERS[0][each]["90ma"] }} </p>
         </b></H5>
 
                  <h1>{{ each }} Line Chart</h1>
