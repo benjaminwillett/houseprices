@@ -240,7 +240,7 @@ def default():
         totalval = (float(totalval) + val)
         print(str(totalval) + " is the totalval of BTC")
 
-    totaldollar = (float(totalval) * (float(tickers[0]["USDT-BTC"]["Last"])))
+    totaldollar = round(float(totalval) * (float(tickers[0]["USDT-BTC"]["Last"])))
     print("$" + str(totaldollar) + " is the totaldollar value")
     print(str(currency["USD"]) + " is exchange rate")
     conversion = ((float(2) - (float(currency["USD"]))))
