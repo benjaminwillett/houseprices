@@ -240,12 +240,12 @@ def default():
         totalval = (float(totalval) + val)
         print(str(totalval) + " is the totalval of BTC")
 
-    totaldollar = round(float(totalval) * (float(tickers[0]["USDT-BTC"]["Last"])))
+    totaldollar = (float(totalval) * (float(tickers[0]["USDT-BTC"]["Last"])))
     print("$" + str(totaldollar) + " is the totaldollar value")
     print(str(currency["USD"]) + " is exchange rate")
-    conversion = round((float(2) - (float(currency["USD"]))))
+    conversion = ((float(2) - (float(currency["USD"]))))
     print(str(conversion) + " is the conversion rate")
-    austotal = str(totaldollar * conversion)
+    austotal = str(round(totaldollar * conversion))
 
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
