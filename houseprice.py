@@ -234,6 +234,9 @@ def default():
         tickers[0][each]["value"] = holdingsval
         print("BTC " + str(tickers[0][each]["value"]) + " is the value of the portfolio")
 
+    for each in tickers[0]:
+        val = int(tickers[0][each]["value"])
+        totalval = totalval + totalval
 
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
@@ -337,7 +340,7 @@ def default():
     return render_template('main.html', TICKERS=tickers, CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
                            LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals,
-                           LEGEND=legend, THIRTYMA=thirtyMa, SIXTYMA=sixtyMa, NINETYMA=ninetyMa)
+                           LEGEND=legend, THIRTYMA=thirtyMa, SIXTYMA=sixtyMa, NINETYMA=ninetyMa, TOTALVAL=totalval)
 
 
 
