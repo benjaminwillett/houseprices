@@ -231,7 +231,8 @@ def default():
         print(str(type(lastholcon)) + " is lastHolcon")
         # print(str(type(quantityCon)) + " is quantityCon")
         holdingsval = (str(lastholcon * quantity))
-        print("$" + holdingsval + " is the value of the portfolio")
+        tickers[0][each]["value"] = holdingsval
+        print("BTC " + str(tickers[0][each]["value"]) + " is the value of the portfolio")
 
 
     utilities = [{"Electricity":
