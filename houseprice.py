@@ -236,7 +236,7 @@ def default():
 
     for each in tickers[0]:
         val = int(tickers[0][each]["value"])
-        totalval = totalval + totalval
+        totalval = totalval + val
 
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
