@@ -238,7 +238,10 @@ def default():
     for each in tickers[0]:
         val = float(tickers[0][each]["value"])
         totalval = (float(totalval) + val)
-        print(str(totalval) + " is the totalval")
+        print(str(totalval) + " is the totalval of BTC")
+
+    totaldollar = (float(totalval) * (float(tickers[0]["USDT-BTC"]["Last"])))
+    print("$" + str(totaldollar) + " is the totaldollar value")
 
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
@@ -342,7 +345,8 @@ def default():
     return render_template('main.html', TICKERS=tickers, CURRENCY=currency,
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
                            LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals,
-                           LEGEND=legend, THIRTYMA=thirtyMa, SIXTYMA=sixtyMa, NINETYMA=ninetyMa, TOTALVAL=totalval)
+                           LEGEND=legend, THIRTYMA=thirtyMa, SIXTYMA=sixtyMa, NINETYMA=ninetyMa, TOTALVAL=totalval,
+                           TOTALDOLLAR=totaldollar)
 
 
 
