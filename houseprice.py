@@ -234,9 +234,11 @@ def default():
         tickers[0][each]["value"] = holdingsval
         print("BTC " + str(tickers[0][each]["value"]) + " is the value of the portfolio")
 
+    totalval = 0.0
     for each in tickers[0]:
-        val = int(tickers[0][each]["value"])
-        totalval = (int(totalval + val))
+        val = float(tickers[0][each]["value"])
+        totalval = (float(totalval) + val)
+        print(str(totalval) + " is the totalval")
 
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
