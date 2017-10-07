@@ -228,9 +228,10 @@ def default():
         print(str(type(lastHol)) + " is lastHol")
         print(str(type(quantity)) + " is quantity")
         lastHolcon = int(lastHol)
-        quantityCon = int(quantity)
-        print(str(type(lastHolcon)) + " is lastHolcon")
-        print(str(type(quantityCon)) + " is quantityCon")
+        print("thats a wrap")
+        # quantityCon = int(quantity)
+        # print(str(type(lastHolcon)) + " is lastHolcon")
+        # print(str(type(quantityCon)) + " is quantityCon")
 
 
     utilities = [{"Electricity":
