@@ -243,6 +243,8 @@ def default():
     totaldollar = (float(totalval) * (float(tickers[0]["USDT-BTC"]["Last"])))
     print("$" + str(totaldollar) + " is the totaldollar value")
     print(str(currency["USD"]) + " is exchange rate")
+    conversion = 1 - float(currency["USD"])
+    print(conversion + " is the conversion rate")
 
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
