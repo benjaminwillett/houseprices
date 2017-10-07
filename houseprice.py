@@ -228,10 +228,10 @@ def default():
         print(str(type(lastHol)) + " is lastHol " + (str(lastHol)))
         print(str(type(quantity)) + " is quantity" + (str(quantity)))
         lastholcon = float(lastHol)
-        print("thats a wrap")
-        print("thats a wrap")
-        # print(str(type(lastHolcon)) + " is lastHolcon")
+        print(str(type(lastholcon)) + " is lastHolcon")
         # print(str(type(quantityCon)) + " is quantityCon")
+        holdingsval = (str(lastholcon * quantity))
+        print("$" + holdingsval + " is the value of the portfolio")
 
 
     utilities = [{"Electricity":
