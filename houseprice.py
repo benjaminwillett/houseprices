@@ -225,8 +225,8 @@ def default():
     for each in tickers[0]:
         lastHol = tickers[0][each]["Last"]
         quantity = tickers[0][each]["quantity"]
-        print(str(type(lastHol)) + " is lastHol " + (str(lastHol)))
-        print(str(type(quantity)) + " is quantity" + (str(quantity)))
+        print(str(type(lastHol)) + " is " + each + " " + lastHol + " " + (str(lastHol)))
+        print(str(type(quantity)) + " is quantity " + (str(quantity)))
         lastholcon = float(lastHol)
         print(str(type(lastholcon)) + " is lastHolcon")
         # print(str(type(quantityCon)) + " is quantityCon")
