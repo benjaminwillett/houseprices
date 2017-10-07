@@ -225,9 +225,9 @@ def default():
     for each in tickers[0]:
         lastHol = tickers[0][each]["Last"]
         quantity = tickers[0][each]["quantity"]
-        print(str(type(lastHol)) + " is lastHol")
+        print(str(type(lastHol)) + " is lastHol " + (str(lastHol)))
         print(str(type(quantity)) + " is quantity")
-        lastHolcon = int(lastHol)
+        lastholcon = int(lastHol)
         print("thats a wrap")
         # quantityCon = int(quantity)
         # print(str(type(lastHolcon)) + " is lastHolcon")
