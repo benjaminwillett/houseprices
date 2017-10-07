@@ -245,6 +245,7 @@ def default():
     print(str(currency["USD"]) + " is exchange rate")
     conversion = (float(2) - (float(currency["USD"])))
     print(str(conversion) + " is the conversion rate")
+    austotal = str(totaldollar * conversion)
 
     utilities = [{"Electricity":
                     {"Provider": "RED Energy",
@@ -349,7 +350,7 @@ def default():
                            POSTCODE=postcode, DAYCOUNT=daycount, UTILITIES=utilities, INSURANCES=insurances,
                            LOANS=loans, CC=cc, BANKAC=bankac, SUPER=super, SAVINGS=savings, METALS=metals,
                            LEGEND=legend, THIRTYMA=thirtyMa, SIXTYMA=sixtyMa, NINETYMA=ninetyMa, TOTALVAL=totalval,
-                           TOTALDOLLAR=totaldollar)
+                           TOTALDOLLAR=totaldollar, AUSTOTAL=austotal)
 
 
 
