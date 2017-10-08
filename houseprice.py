@@ -490,7 +490,7 @@ def anime():
 
 
 @app.route("/granim")
-def anime():
+def granim():
     return render_template('granim/granim.html')
 
 if __name__ == '__main__':
