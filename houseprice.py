@@ -6,7 +6,7 @@ import json
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
 
 app = Flask(__name__)
-
+http = urllib3.PoolManager()
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "login"
@@ -21,10 +21,6 @@ class User(UserMixin):
 
     def __repr__(self):
         return "%d/%s/%s" % (self.id, self.name, self.password)
-
-
-
-http = urllib3.PoolManager()
 
 
 class myThread (threading.Thread):
@@ -99,6 +95,12 @@ def login():
         ''')
 
 
+# some protected url
+@app.route('/testlogin')
+@login_required
+def home():
+    return Response("Hello World!")
+
 # somewhere to logout
 @app.route("/logout")
 @login_required
@@ -120,7 +122,6 @@ def load_user(userid):
 
 
 @app.route('/', methods=['GET', 'POST'])
-@login_required
 def default():
     letsthread()
 
