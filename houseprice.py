@@ -474,6 +474,15 @@ def domain():
     return render_template('chart.html', DOMAIN=domain)
 
 
+@app.route("/video")
+def video():
+    return render_template('video/video.html')
+
+
+@app.route("/d3")
+def video():
+    return render_template('d3/d3.html')
+
 if __name__ == '__main__':
     app.run()
 
