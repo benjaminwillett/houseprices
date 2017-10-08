@@ -483,6 +483,11 @@ def video():
 def d3():
     return render_template('d3/d3.html')
 
+
+@app.route("/anime")
+def anime():
+    return render_template('anime/anime.html')
+
 if __name__ == '__main__':
     app.run()
 
