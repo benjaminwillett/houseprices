@@ -488,6 +488,11 @@ def d3():
 def anime():
     return render_template('anime/anime.html')
 
+
+@app.route("/granim")
+def anime():
+    return render_template('granim/granim.html')
+
 if __name__ == '__main__':
     app.run()
 
