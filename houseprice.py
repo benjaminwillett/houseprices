@@ -480,7 +480,7 @@ def video():
 
 
 @app.route("/d3")
-def video():
+def d3():
     return render_template('d3/d3.html')
 
 if __name__ == '__main__':
