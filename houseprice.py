@@ -493,6 +493,76 @@ def anime():
 def granim():
     return render_template('granim/granim.html')
 
+
+@app.route("/scrollreveal")
+def scrollreveal():
+    return render_template('scrollreveal/scrollreveal.html')
+
+
+@app.route("/turntable")
+def turntable():
+    return render_template('turntable/turntable.html')
+
+
+@app.route("/microlight")
+def microlight():
+    return render_template('microlight/microlight.html')
+
+
+@app.route("/choreographer")
+def choreographer():
+    return render_template('choreographer/choreographer.html')
+
+
+@app.route("/leaflet")
+def leaflet():
+    return render_template('leaflet/leaflet.html')
+
+
+@app.route("/shave")
+def shave():
+    return render_template('shave/shave.html')
+
+
+@app.route("/tabulator")
+def tabulator():
+    return render_template('tabulator/tabulator.html')
+
+
+@app.route("/baguettebox")
+def baguettebox():
+    return render_template('baguettebox/baguettebox.html')
+
+
+@app.route("/bricks")
+def bricks():
+    return render_template('bricks/bricks.html')
+
+
+@app.route("/philter")
+def philter():
+    return render_template('philter/philter.html')
+
+
+@app.route("/imageblurr")
+def imageblurr():
+    return render_template('imageblurr/imageblurr.html')
+
+
+@app.route("/force")
+def force():
+    return render_template('force/force.html')
+
+
+@app.route("/velocity")
+def velocity():
+    return render_template('velocity/velocity.html')
+
+
+@app.route("/algoliaplaces")
+def algoliaplaces():
+    return render_template('algoliaplaces/algoliaplaces.html')
+
 if __name__ == '__main__':
     app.run()
 
