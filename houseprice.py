@@ -563,6 +563,41 @@ def velocity():
 def algoliaplaces():
     return render_template('algoliaplaces/algoliaplaces.html')
 
+
+@app.route("/izimodal")
+def izimodal():
+    return render_template('izimodal/izimodal.html')
+
+
+@app.route("/multiply")
+def multiply():
+    return render_template('multiply/multiply.html')
+
+
+@app.route("/flatpicker")
+def flatpicker():
+    return render_template('flatpicker/flatpicker.html')
+
+
+@app.route("/sidebars")
+def sidebars():
+    return render_template('sidebars/sidebars.html')
+
+
+@app.route("/cleave")
+def cleave():
+    return render_template('cleave/cleave.html')
+
+
+@app.route("/skipper")
+def skipper():
+    return render_template('skipper/skipper.html')
+
+
+@app.route("/lightgallery")
+def lightgallery():
+    return render_template('lightgallery/lightgallery.html')
+
 if __name__ == '__main__':
     app.run()
 

@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/baguettebox/baguettebox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bricks/bricks.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/choreographer/choreographer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/force/force.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/imageblurr/imageblurr.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/leaflet/leaflet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/microlight/microlight.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/philter/philter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/scrollreveal/scrollreveal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/shave/shave.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/tabulator/tabulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/turntable/turntable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/velocity/velocity.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/cleave/cleave.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/flatpicker/flatpicker.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/izimodal/izimodal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/lightgallery/lightgallery.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/multiply/multiply.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sidebars/sidebars.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/skipper/skipper.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/houseprice.py" afterPath="$PROJECT_DIR$/houseprice.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/houseprice.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-6.232143">
-              <caret line="563" column="55" selection-start-line="563" selection-start-column="55" selection-end-line="563" selection-end-column="55" />
+              <caret line="595" column="0" selection-start-line="595" selection-start-column="0" selection-end-line="595" selection-end-column="0" />
               <folding>
                 <element signature="e#0#94#0" expanded="true" />
               </folding>
@@ -50,21 +43,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="algoliaplaces.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html">
+      <file leaf-file-name="flatpicker.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/flatpicker/flatpicker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37046006">
+            <state vertical-scroll-proportion="-5.8846154">
               <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="force.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/force/force.html">
+      <file leaf-file-name="sidebars.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sidebars/sidebars.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cleave.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/cleave/cleave.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.576923">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skipper.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/skipper/skipper.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lightgallery.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/lightgallery/lightgallery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20581114">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="izimodal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/izimodal/izimodal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multiply.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/multiply/multiply.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="algoliaplaces.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -75,66 +128,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.230769">
               <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imageblurr.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/imageblurr/imageblurr.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="philter.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/philter/philter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bricks.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baguettebox.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/baguettebox/baguettebox.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tabulator.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/tabulator/tabulator.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shave.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/shave/shave.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -194,8 +187,15 @@
         <option value="$PROJECT_DIR$/templates/imageblurr/imageblurr.html" />
         <option value="$PROJECT_DIR$/templates/force/force.html" />
         <option value="$PROJECT_DIR$/templates/velocity/velocity.html" />
-        <option value="$PROJECT_DIR$/houseprice.py" />
         <option value="$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html" />
+        <option value="$PROJECT_DIR$/houseprice.py" />
+        <option value="$PROJECT_DIR$/templates/multiply/multiply.html" />
+        <option value="$PROJECT_DIR$/templates/izimodal/izimodal.html" />
+        <option value="$PROJECT_DIR$/templates/flatpicker/flatpicker.html" />
+        <option value="$PROJECT_DIR$/templates/sidebars/sidebars.html" />
+        <option value="$PROJECT_DIR$/templates/cleave/cleave.html" />
+        <option value="$PROJECT_DIR$/templates/skipper/skipper.html" />
+        <option value="$PROJECT_DIR$/templates/lightgallery/lightgallery.html" />
       </list>
     </option>
   </component>
@@ -328,116 +328,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PycharmProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="velocity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PycharmProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PycharmProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imageblurr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PycharmProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="force" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PycharmProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="housepricecheltenham" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algoliaplaces" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -730,55 +620,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/assets_one/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.321429">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets_one/font-awesome/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets_one/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4545455">
-          <caret line="34" column="12" selection-start-line="32" selection-start-column="7" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets_one/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_one.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7804878">
-          <caret line="172" column="20" selection-start-line="172" selection-start-column="20" selection-end-line="172" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_two.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3848684">
-          <caret line="164" column="19" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_three.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.423077">
-          <caret line="167" column="45" selection-start-line="167" selection-start-column="45" selection-end-line="167" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/assets_three/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58787876">
@@ -988,7 +829,7 @@
         <state vertical-scroll-proportion="-5.5">
           <caret line="414" column="6" selection-start-line="414" selection-start-column="6" selection-end-line="414" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1113,20 +954,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/multiply/multiply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/izimodal/izimodal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/houseprice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.232143">
-          <caret line="563" column="55" selection-start-line="563" selection-start-column="55" selection-end-line="563" selection-end-column="55" />
+          <caret line="595" column="0" selection-start-line="595" selection-start-column="0" selection-end-line="595" selection-end-column="0" />
           <folding>
             <element signature="e#0#94#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html">
+    <entry file="file://$PROJECT_DIR$/templates/flatpicker/flatpicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37046006">
+        <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sidebars/sidebars.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cleave/cleave.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/skipper/skipper.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lightgallery/lightgallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20581114">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>
