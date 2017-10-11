@@ -23,6 +23,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </head>
 <body>
 <h1>Algoliaplaces Example</h1>
+<h5>Simple Input</h5>
 
 <input type="search" id="address" class="form-control" placeholder="Where are we going?" />
 
@@ -43,6 +44,83 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     $address.textContent = 'none';
   });
 
+})();
+</script>
+<H5>Complete Form</H5>
+<form action="/billing" class="form">
+  <div class="form-group">
+    <label for="form-address">Address*</label>
+    <input type="search" class="form-control" id="form-address" placeholder="Where do you live?" />
+  </div>
+  <div class="form-group">
+    <label for="form-address2">Address 2</label>
+    <input type="text" class="form-control" id="form-address2" placeholder="Street number and name" />
+  </div>
+  <div class="form-group">
+    <label for="form-city">City*</label>
+    <input type="text" class="form-control" id="form-city" placeholder="City">
+  </div>
+  <div class="form-group">
+    <label for="form-zip">ZIP code*</label>
+    <input type="text" class="form-control" id="form-zip" placeholder="ZIP code">
+  </div>
+</form>
+
+<script>
+(function() {
+  var placesAutocomplete = places({
+    container: document.querySelector('#form-address'),
+    type: 'address',
+    templates: {
+      value: function(suggestion) {
+        return suggestion.name;
+      }
+    }
+  });
+  placesAutocomplete.on('change', function resultSelected(e) {
+    document.querySelector('#form-address2').value = e.suggestion.administrative || '';
+    document.querySelector('#form-city').value = e.suggestion.city || '';
+    document.querySelector('#form-zip').value = e.suggestion.postcode || '';
+  });
+})();
+</script>
+
+<h5>City Search</h5>
+<input type="search" id="city" class="form-control" placeholder="In which city do you live?" />
+
+<script>
+(function() {
+  var placesAutocomplete = places({
+    container: document.querySelector('#city'),
+    type: 'city',
+    aroundLatLngViaIP: false,
+    templates: {
+      value: function(suggestion) {
+        return suggestion.name;
+      }
+    }
+  });
+})();
+</script>
+<h5>Country Search</h5>
+<link rel="stylesheet" type="text/css" href="//cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+
+<div class="f16">
+  <input type="search" id="country" class="form-control" placeholder="What's your favorite country?" />
+</div>
+
+<script>
+(function() {
+  var placesAutocomplete = places({
+    container: document.querySelector('#country'),
+    type: 'country',
+    templates: {
+      suggestion: function(suggestion) {
+        return '<i class="flag ' + suggestion.countryCode + '"></i> ' +
+          suggestion.highlight.name;
+      }
+    }
+  });
 })();
 </script>
 
