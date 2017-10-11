@@ -16,7 +16,10 @@
 <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.2/baguetteBox.min.js"></script>
 <script type="text/javascript">
-baguetteBox.run('.gallery');
+baguetteBox.run('.gallery'), {
+    captions:   true,
+    buttons:    'auto',
+    }
 </script>
 
 </head>
@@ -24,10 +27,10 @@ baguetteBox.run('.gallery');
 <h1>Baguettebox Example</h1>
 
 <div class="gallery">
-    <a href="img/2-1.jpg" data-caption="Image caption">
+    <a href="http://via.placeholder.com/350x150" data-caption="Image caption">
         <img src="http://via.placeholder.com/350x150" alt="First image">
     </a>
-    <a href="img/2-2.jpg">
+    <a href="http://via.placeholder.com/350x150">
         <img src="http://via.placeholder.com/350x150" alt="Second image">
     </a>
     ...
