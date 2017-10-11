@@ -328,6 +328,219 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   }
 })();
 </script>
+<h5>Templates</h5>
+<input type="search" id="address-templates" class="form-control" placeholder="Where are we going?" />
+
+<script>
+(function() {
+  var placesAutocomplete = places({
+    container: document.querySelector('#address-templates'),
+    templates: {
+      value: function(suggestion) {
+        return 'Maybe ' + suggestion.name + ' in ' + suggestion.country + '?';
+      },
+      suggestion: function(suggestion) {
+        return '<u>Click here to select ' + suggestion.name + ' from ' + suggestion.country + '</u>';
+      }
+    }
+  });
+})();
+</script>
+<h5>Disable Styling</h5>
+<div id="input-styling-address">
+  <input type="search" placeholder="Where are we going?" />
+</div>
+
+<style>
+#input-styling-address input {
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 1em 0 1em 45px;
+  width: 100%;
+}
+
+#input-styling-address input:focus, #input-styling-address input:active {
+  outline: 0;
+  border-color: #aaaaaa;
+  background: #ffffff;
+}
+
+#input-styling-address .ap-nostyle-dropdown-menu {
+  box-shadow: none;
+  border: 1px solid #dadada;
+  border-radius: 0;
+  background: #fff;
+  width: 100%;
+}
+
+#input-styling-address .ap-nostyle-input-icon {
+  display: block;
+  position: absolute;
+  background: none;
+  border: none;
+}
+
+#input-styling-address .algolia-places-nostyle { width: 50%; }
+#input-styling-address .ap-nostyle-icon-pin { left: 5px;top: 10px; }
+#input-styling-address .ap-nostyle-icon-clear { right: 5px;top: 15px }
+#input-styling-address input:hover { border-color: silver; }
+#input-styling-address input::placeholder { color: #aaaaaa; }
+#input-styling-address .ap-nostyle-suggestion { border-bottom: 1px solid #efefef; }
+</style>
+
+<script>
+(function() {
+  var placesAutocomplete = places({
+    container: document.querySelector('#input-styling-address input'),
+    style: false,
+    debug: true
+  });
+})();
+</script>
+<h5>Automcomplete</h5>
+<input type="search" id="autocomplete-dataset" class="form-control" placeholder="Search for vacation rentals or cities" />
+
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.js"></script>
+<style>
+.algolia-autocomplete {
+  width: 100%;
+}
+.ad-example-dropdown-menu {
+  width: 100%;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 5px;
+  padding: .5em;
+  box-shadow: 1px 1px 32px -10px rgba(0,0,0,0.62);
+}
+.ad-example-dropdown-menu .ad-example-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+}
+.ad-example-dropdown-menu .ad-example-suggestion img {
+  height: 2em;
+  margin-top: .5em;
+  margin-right: 10px;
+  float: left;
+}
+.ad-example-dropdown-menu .ad-example-suggestion small {
+  font-size: .8em;
+  color: #bbb;
+}
+.ad-example-dropdown-menu .ad-example-suggestion.ad-example-cursor {
+  background-color: #B2D7FF;
+}
+.ad-example-dropdown-menu .ad-example-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+.ad-example-header {
+  font-weight: bold;
+  padding: .5em 0;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.4.15/dist/cdn/placesAutocompleteDataset.min.js"></script>
+<script>
+(function() {
+  var client = algoliasearch('latency', '6be0576ff61c053d5f9a3225e2a90f76');
+  var index = client.initIndex('airbnb');
+
+  // create the first autocomplete.js dataset: vacation rentals
+  var rentalsDataset = {
+    source: autocomplete.sources.hits(index, {hitsPerPage: 2}),
+    displayKey: 'name',
+    name: 'rentals',
+    templates: {
+      header: '<div class="ad-example-header">Vacation rentals</div>',
+      suggestion: function(suggestion) {
+        return '<img src="' + suggestion.thumbnail_url + '" />' +
+          '<div>' +
+            suggestion._highlightResult.name.value + '<br />' +
+            '<small>' + suggestion._highlightResult.city.value + '</small>' +
+         '</div>';
+      }
+    }
+  };
+
+  // create the second dataset: places
+  // we automatically inject the default CSS
+  // all the places.js options are available
+  var placesDataset = placesAutocompleteDataset({
+    algoliasearch: algoliasearch,
+    templates: {
+      header: '<div class="ad-example-header">Cities</div>'
+    },
+    hitsPerPage: 3
+  });
+
+  // init
+  var autocompleteInstance = autocomplete(document.querySelector('#autocomplete-dataset'), {
+    hint: false,
+    debug: true,
+    cssClasses: {prefix: 'ad-example'}
+  }, [
+    rentalsDataset,
+    placesDataset
+  ]);
+
+  var autocompleteChangeEvents = ['selected', 'autocompleted'];
+
+  autocompleteChangeEvents.forEach(function(eventName) {
+    autocompleteInstance.on('autocomplete:'+ eventName, function(event, suggestion, datasetName) {
+      console.log(datasetName, suggestion);
+    });
+  });
+})();
+</script>
+<h5>Instant Search</h5>
+<input type="search" id="input-map-instantsearch" class="form-control" placeholder="Where are you looking for a coffee?" />
+<div id="map-instantsearch-container"></div>
+
+<style>
+  #map-instantsearch-container {height: 300px};
+</style>
+
+<script src="https://cdn.jsdelivr.net/instantsearch.js/1.6.0/instantsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.4.15/dist/cdn/placesInstantsearchWidget.min.js"></script>
+<script src="https://cdn.jsdelivr.net/instantsearch-googlemaps/1.2.4/instantsearch-googlemaps.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+(function() {
+var search = instantsearch({
+  appId: 'latency',
+  apiKey: 'ffc36feb6e9df06e1c3c4549b5af2b31',
+  indexName: 'starbucks',
+  searchParameters: {
+    hitsPerPage: 50
+  }
+});
+
+var searchBox = placesInstantsearchWidget({
+  container: document.querySelector('#input-map-instantsearch')
+});
+
+var map = instantsearchGoogleMaps({
+  container: document.querySelector('#map-instantsearch-container'),
+  prepareMarkerData: ({Brand, Name, 'Street Combined': street}) => {
+    return {
+      title: `${Brand} - ${Name}`
+    };
+  },
+  refineOnMapInteraction: true
+});
+
+search.addWidget(searchBox);
+search.addWidget(map);
+search.start();
+})();
+</script>
 
 </body>
 </html>
