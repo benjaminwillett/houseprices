@@ -15,26 +15,8 @@
 <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
 <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.2/baguetteBox.min.js"></script>
-<script type="text/javascript">
-baguetteBox.run('.gallery', {
-        captions: true,
-        buttons: 'auto',
-        fullScreen: false,
-        noScrollbars: false,
-        titleTag: true,
-        async: false,
-        preload: 2,
-        animation: 'fadeIn',
-        afterShow: function() {
-            alert('Thanks');
-        },
-        afterHide: function() {
-            alert('Watch again');
-        },
-        onChange: null,
-        overlayBackgroundColor: 'rgba(113,117,115,0.8)'
-    });
-</script>
+
+
 <style>
     .gallery {
         width: 1300px;
@@ -52,7 +34,7 @@ baguetteBox.run('.gallery', {
 </head>
 <body>
 <h1>Baguettebox Example</h1>
-
+<pre><code class="js">baguetteBox.run('.gallery');</code></pre>
 <div class="gallery">
     <a href="http://via.placeholder.com/350x150" data-caption="Image caption">
         <img src="http://via.placeholder.com/350x150" alt="First image">
