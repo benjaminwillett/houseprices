@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html" afterPath="$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/anime/anime.html" afterPath="$PROJECT_DIR$/templates/anime/anime.html" />
     </list>
     <ignored path="housepricecheltenham.iws" />
@@ -119,8 +118,8 @@
       <file leaf-file-name="anime.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/anime/anime.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91767555">
-              <caret line="239" column="3" selection-start-line="239" selection-start-column="3" selection-end-line="239" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.8232446">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -1081,8 +1080,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/anime/anime.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91767555">
-          <caret line="239" column="3" selection-start-line="239" selection-start-column="3" selection-end-line="239" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.8232446">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
         </state>
       </provider>
