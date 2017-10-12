@@ -9,45 +9,37 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.2/baguetteBox.min.css">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
 <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.2/baguetteBox.min.js"></script>
-
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <style>
-    .gallery {
-        width: 1300px;
-        margin: 50px auto;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    img {
-        width: 23%;
-    }
-    </style>
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+</style>
 </head>
+
 <body>
 <h1>Baguettebox Example</h1>
 
-<div class="gallery">
-    <a href="https://www.pexels.com/photo/nature-red-love-romantic-67636" data-caption="Image caption">
-        <img src="/static/baguettebox/img/3018.jpg" alt="First image">
-    </a>
-    <a href="https://www.pexels.com/photo/red-garden-plant-green-56866" data-caption="Image caption">
-        <img src="/static/baguettebox/img/3019.jpg" alt="Second image">
-    </a>
-    ...
+<div class="grid">
+  <div class="grid-item">...</div>
+  <div class="grid-item grid-item--width2">...</div>
+  <div class="grid-item">...</div>
+  ...
 </div>
+
 <script>
-window.onload = function() {
-    baguetteBox.run('.gallery');
-    }
-    </script>
+
+    $('.grid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+
+</script>
+
 </body>
 </html>
