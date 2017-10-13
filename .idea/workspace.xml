@@ -99,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.91767555">
-              <caret line="86" column="47" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+              <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -973,7 +973,7 @@
     <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.91767555">
-          <caret line="86" column="47" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
           <folding />
         </state>
       </provider>
