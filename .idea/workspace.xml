@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/baguettebox/baguettebox.html" afterPath="$PROJECT_DIR$/templates/baguettebox/baguettebox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bricks/bricks.html" afterPath="$PROJECT_DIR$/templates/bricks/bricks.html" />
     </list>
     <ignored path="housepricecheltenham.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,21 +86,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baguettebox.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="baguettebox.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/baguettebox/baguettebox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91767555">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.3846154">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bricks.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bricks.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.5883777">
+              <caret line="21" column="0" selection-start-line="20" selection-start-column="6" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -165,7 +166,6 @@
         <option value="$PROJECT_DIR$/templates/leaflet/leaflet.html" />
         <option value="$PROJECT_DIR$/templates/shave/shave.html" />
         <option value="$PROJECT_DIR$/templates/tabulator/tabulator.html" />
-        <option value="$PROJECT_DIR$/templates/bricks/bricks.html" />
         <option value="$PROJECT_DIR$/templates/philter/philter.html" />
         <option value="$PROJECT_DIR$/templates/imageblurr/imageblurr.html" />
         <option value="$PROJECT_DIR$/templates/force/force.html" />
@@ -182,6 +182,7 @@
         <option value="$PROJECT_DIR$/templates/algoliaplaces/algoliaplaces.html" />
         <option value="$PROJECT_DIR$/templates/anime/anime.html" />
         <option value="$PROJECT_DIR$/templates/baguettebox/baguettebox.html" />
+        <option value="$PROJECT_DIR$/templates/bricks/bricks.html" />
       </list>
     </option>
   </component>
@@ -962,18 +963,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
+    <entry file="file://$PROJECT_DIR$/templates/baguettebox/baguettebox.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state vertical-scroll-proportion="-7.3846154">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/baguettebox/baguettebox.html">
+    <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91767555">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5883777">
+          <caret line="21" column="0" selection-start-line="20" selection-start-column="6" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
