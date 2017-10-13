@@ -98,22 +98,22 @@
       <file leaf-file-name="bricks.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7820823">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.6997579">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3018.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/baguettebox/img/3018.jpg">
+      <file leaf-file-name="imageone.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/baguettebox/img/imageone.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3019.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/baguettebox/img/3019.jpg">
+      <file leaf-file-name="imagetwo.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/baguettebox/img/imagetwo.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -322,6 +322,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="housepricecheltenham" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PycharmProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="housepricecheltenham" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baguettebox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -934,12 +960,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/baguettebox/img/3018.jpg">
+    <entry file="file://$PROJECT_DIR$/static/baguettebox/img/imageone.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/baguettebox/img/3019.jpg">
+    <entry file="file://$PROJECT_DIR$/static/baguettebox/img/imagetwo.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -972,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bricks/bricks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7820823">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.6997579">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding />
         </state>
       </provider>
