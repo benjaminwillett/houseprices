@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Response, redirect, url_for, request, session, abort
 from BeautifulSoup import BeautifulSoup
+import selenium.webdriver as webdriver
 import urllib3
 import threading
 import json
@@ -597,6 +598,17 @@ def skipper():
 @app.route("/lightgallery")
 def lightgallery():
     return render_template('lightgallery/lightgallery.html')
+
+@app.route("/instagrab")
+def skipper():
+    instaurl = "https://instagram.com/umnpics"
+    driver = webdriver.Firefox()
+    driver.get(instaurl)
+    instasoup = BeautifulSoup(driver.page_source)
+
+    for x in instasoup.findAll('li', {"class": "photo"}):
+        print x
+    return render_template('instagrab/instagrab.html')
 
 if __name__ == '__main__':
     app.run()
