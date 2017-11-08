@@ -52,7 +52,7 @@ def ajaxRequest(url=None):
 access_token = os.getenv("access_token")
 
 # ask for hashtag name
-hashtag = raw_input("What hashtag would you like to download photos of? ")
+hashtag = "snowboarding"
 
 # url to query for pictures
 nextUrl = "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent?access_token="+access_token
