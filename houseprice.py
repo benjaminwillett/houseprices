@@ -600,7 +600,7 @@ def lightgallery():
     return render_template('lightgallery/lightgallery.html')
 
 @app.route("/instagrab")
-def skipper():
+def instagrab():
     instaurl = "https://instagram.com/umnpics"
     driver = webdriver.Firefox()
     driver.get(instaurl)
