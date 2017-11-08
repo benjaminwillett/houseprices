@@ -603,9 +603,6 @@ def lightgallery():
 @app.route("/instagrab")
 def instagrab():
     instaurl = "https://instagram.com/umnpics"
-    driver = webdriver.Firefox()
-    driver.get(instaurl)
-    instasoup = BeautifulSoup(driver.page_source)
 
     return render_template('instagrab/instagrab.html')
 
