@@ -604,7 +604,6 @@ def lightgallery():
 def instagrab():
     instaurl = "https://instagram.com/umnpics"
     driver = webdriver.Firefox()
-    driver.get(instaurl)
 
     return render_template('instagrab/instagrab.html')
 
