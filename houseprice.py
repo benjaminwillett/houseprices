@@ -604,7 +604,11 @@ def lightgallery():
 def instagrab():
     instaurl = "https://instagram.com/umnpics"
     driver = webdriver.Firefox()
+    driver.get(instaurl)
+    instasoup = BeautifulSoup(driver.page_source)
 
+    for x in instasoup.findAll('li', {"class": "photo"}):
+        print x
     return render_template('instagrab/instagrab.html')
 
 if __name__ == '__main__':

@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/houseprice.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5690608">
-              <caret line="606" column="0" selection-start-line="606" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
+              <caret line="606" column="24" selection-start-line="606" selection-start-column="24" selection-end-line="606" selection-end-column="24" />
               <folding>
                 <element signature="e#0#94#0" expanded="true" />
               </folding>
@@ -982,7 +982,7 @@
     <entry file="file://$PROJECT_DIR$/houseprice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5690608">
-          <caret line="606" column="0" selection-start-line="606" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
+          <caret line="606" column="24" selection-start-line="606" selection-start-column="24" selection-end-line="606" selection-end-column="24" />
           <folding>
             <element signature="e#0#94#0" expanded="true" />
           </folding>
