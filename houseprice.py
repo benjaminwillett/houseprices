@@ -38,44 +38,6 @@ class myThread (threading.Thread):
         print "Exiting " + self.name
 
 
-def ajaxRequest(url=None):
-        """
-        Makes an ajax get request.
-        url - endpoint(string)
-        """
-        req = http.Request(url)
-        f = http.urlopen(req)
-        response = f.read()
-        f.close()
-        return response
-
-access_token = os.getenv("access_token")
-
-# ask for hashtag name
-hashtag = "snowboarding"
-
-# url to query for pictures
-nextUrl = "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent?access_token="+access_token
-print nextUrl
-# while there is a next url to go to
-while nextUrl:
-        # request the data at that endpoint
-        instagramJSON = ajaxRequest(nextUrl)
-        instagramDict = json.loads(instagramJSON)
-        # get new  nextUrl
-        nextUrl = instagramDict["pagination"]["next_url"]
-        instagramData = instagramDict["data"]
-        # for every picture
-        for picDict in instagramData:
-            # get the image url and current time
-            print picDict
-            image = picDict["images"]["standard_resolution"]
-            imageUrl = image["url"]
-            print image
-            time = str(datetime.now())
-            # download the photo and save it
-            urllib.urlretrieve(imageUrl, time+".jpg")
-
 def getcontent():
 
     realestateurl = "https://www.realestate.com.au/neighbourhoods/"
@@ -112,6 +74,7 @@ letsthread()
 
 # create some users with ids 1 to 20
 users = [User(id) for id in range(1, 21)]
+
 
 # somewhere to login
 @app.route("/login", methods=["GET", "POST"])
@@ -639,11 +602,6 @@ def skipper():
 def lightgallery():
     return render_template('lightgallery/lightgallery.html')
 
-
-@app.route("/instagrab")
-def instagrab():
-
-    return render_template('instagrab/instagrab.html')
 
 if __name__ == '__main__':
     app.run()
