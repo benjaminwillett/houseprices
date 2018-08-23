@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="First commit">
+    <list default="true" id="8825886a-1c02-44ae-90ad-7be021562984" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="housepricecheltenham.iws" />
@@ -23,14 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="haileyhailey.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="haileyhailey.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../virt-houseprice/hhd/haileyhailey.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.071428575">
+            <state vertical-scroll-proportion="0.0">
               <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding>
                 <element signature="e#241#318#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../virt-houseprice/hhd/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2857143">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/shave/shave.html" />
         <option value="$PROJECT_DIR$/templates/tabulator/tabulator.html" />
         <option value="$PROJECT_DIR$/templates/philter/philter.html" />
         <option value="$PROJECT_DIR$/templates/imageblurr/imageblurr.html" />
@@ -172,6 +181,7 @@
         <option value="$PROJECT_DIR$/../virt-houseprice/hhd/templates/index_two.html" />
         <option value="$PROJECT_DIR$/../virt-houseprice/hhd/templates/admin.html" />
         <option value="$PROJECT_DIR$/../virt-houseprice/hhd/haileyhailey.py" />
+        <option value="$PROJECT_DIR$/../virt-houseprice/hhd/requirements.txt" />
       </list>
     </option>
   </component>
@@ -521,7 +531,13 @@
       <option name="project" value="LOCAL" />
       <updated>1534992953908</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First commit">
+      <created>1534994103840</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534994103840</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -571,13 +587,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../haileyhailey/Vagrantfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2162163">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -930,11 +939,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../virt-houseprice/hhd/haileyhailey.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.071428575">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding>
             <element signature="e#241#318#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../virt-houseprice/hhd/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2857143">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
