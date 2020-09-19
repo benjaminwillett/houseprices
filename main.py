@@ -53,7 +53,7 @@ def getcontent():
             soup = BeautifulSoup(priceurl)
             links = soup.findAll("div", {"class": "price strong"})
             print links
-            postcode[0][each]["price"] = links[2]
+            postcode[0][each]["price"] = links
             string = postcode[0][each]["price"]
             try:
                 blah = (str(string))
