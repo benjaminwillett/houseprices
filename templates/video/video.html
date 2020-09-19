@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<title>Bideo.JS example</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+<script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+    <script src='static/Chart.min.js'></script>
+
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    li1 {float: left;}
+    w3-container1 {float: left; width: 30%;}
+    w3-container2 {float: right; width: 30%;}
+    w3-container3 {float: left; width: 30%;}
+    w3-container4 {float: right; width: 30%;}
+    w3-container5 {float: left; width: 30%;}
+    w3-container6 {float: right; width: 30%;}
+    w3-container7 {float: left; width: 30%;}
+    w3-container8 {float: right; width: 30%;}
+
+* {
+  margin: 0; padding: 0;
+}
+
+#container {
+  overflow: hidden;
+  height: 400px;
+  background: #edeae8;
+  position: relative;
+}
+
+video {
+  position: absolute;
+
+  /* Vertical and Horizontal center*/
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+</head>
+  <body>
+    <h1>Video (Bideo.js) example</h1>
+
+  <div id="container">
+  <video muted loop controls="true">
+    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+  </video>
+</div>
+
+    <script>
+var video = document.querySelector('video')
+  , container = document.querySelector('#container');
+
+var setVideoDimensions = function () {
+  // Video's intrinsic dimensions
+  var w = video.videoWidth
+    , h = video.videoHeight;
+
+  // Intrinsic Ratio
+  // Will be more than 1 if W > H and less if W < H
+  var videoRatio = (w / h).toFixed(2);
+
+  // Get the container's computed styles
+  //
+  // Also calculate the min dimensions required (this will be
+  // the container dimentions)
+  var containerStyles = window.getComputedStyle(container)
+    , minW = parseInt( containerStyles.getPropertyValue('width') )
+    , minH = parseInt( containerStyles.getPropertyValue('height') );
+
+  // What's the min:intrinsic dimensions
+  //
+  // The idea is to get which of the container dimension
+  // has a higher value when compared with the equivalents
+  // of the video. Imagine a 1200x700 container and
+  // 1000x500 video. Then in order to find the right balance
+  // and do minimum scaling, we have to find the dimension
+  // with higher ratio.
+  //
+  // Ex: 1200/1000 = 1.2 and 700/500 = 1.4 - So it is best to
+  // scale 500 to 700 and then calculate what should be the
+  // right width. If we scale 1000 to 1200 then the height
+  // will become 600 proportionately.
+  var widthRatio = minW / w
+    , heightRatio = minH / h;
+
+  // Whichever ratio is more, the scaling
+  // has to be done over that dimension
+  if (widthRatio > heightRatio) {
+    var newWidth = minW;
+    var newHeight = Math.ceil( newWidth / videoRatio );
+  }
+  else {
+    var newHeight = minH;
+    var newWidth = Math.ceil( newHeight * videoRatio );
+  }
+
+  video.style.width = newWidth + 'px';
+  video.style.height = newHeight + 'px';
+};
+
+video.addEventListener('loadedmetadata', setVideoDimensions, false);
+window.addEventListener('resize', setVideoDimensions, false);
+    </script>
+  </body>
+</html>
