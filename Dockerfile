@@ -7,7 +7,7 @@ RUN apt-get update -y && \
 
 RUN git clone https://github.com/benjaminwillett/houseprices.git
 
-WORKDIR /app/raredisease
+WORKDIR /app/houseprices
 
 COPY . /app
 
