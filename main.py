@@ -1,41 +1,11 @@
-from flask import Flask, render_template, Response, redirect, url_for, request, session, abort
+from flask import Flask, render_template
 from BeautifulSoup import BeautifulSoup
-from datetime import datetime
-import urllib
 import urllib3
-import threading
 import json
 import os
-from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
 
 app = Flask(__name__)
 http = urllib3.PoolManager()
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = "login"
-
-# silly user model
-class User(UserMixin):
-
-    def __init__(self, id):
-        self.id = id
-        self.name = "user" + str(id)
-        self.password = self.name + "_secret"
-
-    def __repr__(self):
-        return "%d/%s/%s" % (self.id, self.name, self.password)
-
-
-class myThread (threading.Thread):
-    def __init__(self, threadID, name, counter):
-        threading.Thread.__init__(self)
-        self.threadID = threadID
-        self.name = name
-        self.counter = counter
-    def run(self):
-        print "Starting " + self.name
-        getcontent()
-        print "Exiting " + self.name
 
 
 def getcontent():
@@ -64,20 +34,11 @@ def getcontent():
                 postcode[0][each]["price"] = "No DATA!"
 
 
-def letsthread():
-    thread1 = myThread(1, "Thread-1", 1)
-    # Start new Threads
-    thread1.start()
-
 print("Finished collecting all the content mother fuckers!")
-
-letsthread()
 
 
 @app.route('/', methods=['GET', 'POST'])
 def default():
-    letsthread()
-
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
     tickers = [
                 {"USDT-BTC":
