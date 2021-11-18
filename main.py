@@ -54,7 +54,7 @@ def getcontent():
             print(links)
             print "This is after soup"
             print postcode[0][each]["price"]
-            postcode[0][each]["price"] = links[1]
+            postcode[0][each]["price"] = links[2]
             string = postcode[0][each]["price"]
             print(string)
             try:
