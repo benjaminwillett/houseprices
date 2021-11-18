@@ -25,7 +25,7 @@ class myThread (threading.Thread):
 
 def getcontent():
 
-    realestateurl = "https://www.domain.com.au/suburb-profile/"
+    realestateurl = "https://realestate.com.au/neighbourhoods/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
                  "3193": {"price": "100000", "suburb": "beaumaris"},
                  "3195": {"price": "500000", "suburb": "parkdale"},
@@ -47,19 +47,19 @@ def getcontent():
             soup = BeautifulSoup(priceurl)
             print "This is soup"
             print(soup)
-            pricetable = soup.find_all(class_='css-15k02nu')
+            pricetable = soup.find_all(class_='div.price.strong')
             print(pricetable)
             print "That was pricetable"
-            links = soup.find(class_='css-15k02nu')
+            links = soup.find(class_='div.price.strong')
             print(links)
             print "This is after soup"
             print postcode[0][each]["price"]
-            postcode[0][each]["price"] = links[2]
+            postcode[0][each]["price"] = links[1]
             string = postcode[0][each]["price"]
             print(string)
             try:
                 blah = (str(string))
-                newblah = blah.replace('<td class="css-15k02nu">$', "$")
+                newblah = blah.replace('<td class="div.price.strong">$', "$")
                 finalblah = newblah.replace('</td>', "")
                 postcode[0][each]["price"] = finalblah
             except:
