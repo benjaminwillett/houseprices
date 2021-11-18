@@ -181,31 +181,26 @@ def default():
         usdratefixer = usdmainfixer[each]
         currency[each] = (str(usdratefixer))
 
-    realestateurl = "https://www.realestate.com.au/neighbourhoods/"
+    realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
                  "3193": {"price": "100000", "suburb": "beaumaris"},
                  "3195": {"price": "500000", "suburb": "parkdale"},
                  "3194": {"price": "777777", "suburb": "mentone"}}]
 
-    print("just loaded postcode successfully")
-
     for item in postcode:
         for each in item:
-            priceurl = http.request("GET", realestateurl + item[each]["suburb"]
-                                    + "-" + (str(each)) + "-vic", preload_content=False)
+            priceurl = http.request("GET", realestateurl +
+                                    item[each]["suburb"] + "-vic" + "-" + (str(each)) , preload_content=False)
+
             soup = BeautifulSoup(priceurl)
-            links = soup.findAll("div", {"class": "price strong"})
-            postcode[0][each]["price"] = links[2]
-            string = postcode[0][each]["price"]
+            dom = etree.HTML(str(soup))
+            links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
             try:
-                blah = (str(string))
-                newblah = blah.replace('<div class="price strong">$', "$")
-                finalblah = newblah.replace('</div>', "")
-                postcode[0][each]["price"] = finalblah
+                postcode[0][each]["price"] = links[0].text
+                string = postcode[0][each]["price"]
             except:
                 postcode[0][each]["price"] = "No DATA!"
 
-    print("looping through postcodes")
 
     legend = 'Price'
 
