@@ -5,6 +5,7 @@ import urllib3
 import threading
 import json
 import os
+from colours import colour
 
 
 app = Flask(__name__)
@@ -48,7 +49,7 @@ def getcontent():
             print "This is soup"
             print(soup)
             pricetable = soup.find_all(class_='div.price.strong')
-            print(pricetable)
+            print colour.red(pricetable)
             print "That was pricetable"
             links = soup.find(class_='div.price.strong')
             print(links)
