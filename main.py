@@ -1,29 +1,14 @@
 from flask import Flask, render_template, Response, redirect, url_for, request, session, abort
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from datetime import datetime
-import urllib
 import urllib3
 import threading
 import json
 import os
-from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
+
 
 app = Flask(__name__)
 http = urllib3.PoolManager()
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = "login"
-
-# silly user model
-class User(UserMixin):
-
-    def __init__(self, id):
-        self.id = id
-        self.name = "user" + str(id)
-        self.password = self.name + "_secret"
-
-    def __repr__(self):
-        return "%d/%s/%s" % (self.id, self.name, self.password)
 
 
 class myThread (threading.Thread):
@@ -40,27 +25,47 @@ class myThread (threading.Thread):
 
 def getcontent():
 
-    realestateurl = "https://www.realestate.com.au/neighbourhoods/"
+    realestateurl = "https://www.domain.com.au/suburb-profile/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
                  "3193": {"price": "100000", "suburb": "beaumaris"},
                  "3195": {"price": "500000", "suburb": "parkdale"},
                  "3194": {"price": "777777", "suburb": "mentone"}}]
 
+    print "This is the postcode"
+    print postcode
+
     for item in postcode:
+        print "This is the item"
+        print item
         for each in item:
+            print "This is each"
+            print each
             priceurl = http.request("GET", realestateurl +
-                                    item[each]["suburb"] + "-" + (str(each)) + "-vic", preload_content=False)
+                                    item[each]["suburb"] + "-vic" + "-" + (str(each)) , preload_content=False)
+            print "This is priceurl"
+            print(priceurl)
             soup = BeautifulSoup(priceurl)
-            links = soup.findAll("div", {"class": "price strong"})
-            postcode[0][each]["price"] = links[2]
+            print "This is soup"
+            print(soup)
+            pricetable = soup.find_all(class_='css-15k02nu')
+            print(pricetable)
+            print "That was pricetable"
+            links = soup.find(class_='css-15k02nu')
+            print(links)
+            print "This is after soup"
+            print postcode[0][each]["price"]
+            postcode[0][each]["price"] = links[1]
             string = postcode[0][each]["price"]
+            print(string)
             try:
                 blah = (str(string))
-                newblah = blah.replace('<div class="price strong">$', "$")
-                finalblah = newblah.replace('</div>', "")
+                newblah = blah.replace('<td class="css-15k02nu">$', "$")
+                finalblah = newblah.replace('</td>', "")
                 postcode[0][each]["price"] = finalblah
             except:
                 postcode[0][each]["price"] = "No DATA!"
+            print("Finished collecting all the content mother fuckers!")
+    print(postcode)
 
 
 def letsthread():
@@ -68,61 +73,8 @@ def letsthread():
     # Start new Threads
     thread1.start()
 
-print("Finished collecting all the content mother fuckers!")
 
 letsthread()
-
-# create some users with ids 1 to 20
-users = [User(id) for id in range(1, 21)]
-
-
-# somewhere to login
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        if password == username + "_secret":
-            id = username.split('user')[1]
-            user = User(id)
-            login_user(user)
-            return redirect(request.args.get("next"))
-        else:
-            return abort(401)
-    else:
-        return Response('''
-        <form action="" method="post">
-            <p><input type=text name=username>
-            <p><input type=password name=password>
-            <p><input type=submit value=Login>
-        </form>
-        ''')
-
-
-# some protected url
-@app.route('/testlogin')
-@login_required
-def home():
-    return Response("Hello World!")
-
-# somewhere to logout
-@app.route("/logout")
-@login_required
-def logout():
-    logout_user()
-    return Response('<p>Logged out</p>')
-
-
-# handle login failed
-@app.errorhandler(401)
-def page_not_found(e):
-    return Response('<p>Login failed</p>')
-
-
-# callback to reload the user object
-@login_manager.user_loader
-def load_user(userid):
-    return User(userid)
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -222,8 +174,8 @@ def default():
         usdlast = (float(usdlastclean['Last']))
         tickers[0][each]["Last"] = (str(usdlast))
 
-    fixer = "http://api.fixer.io/latest?base=AUD"
-    currency = {'USD': 0, 'GBP': 0, 'EUR': 0}
+    fixer = "http://data.fixer.io/api/latest?access_key=fbd745254a65478320a8a49a8c188136"
+    currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
 
     for each in currency:
 
@@ -420,7 +372,7 @@ def default():
                            TOTALDOLLAR=totaldollar, AUSTOTAL=austotal)
 
 
-@app.route('/index_one' , methods=['GET', 'POST'])
+@app.route('/index_one', methods=['GET', 'POST'])
 def login_one():
     return render_template('index_one.html')
 
