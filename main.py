@@ -6,6 +6,7 @@ import threading
 import json
 import os
 from colours import colour
+from lxml import etree
 
 
 app = Flask(__name__)
@@ -26,7 +27,7 @@ class myThread (threading.Thread):
 
 def getcontent():
 
-    realestateurl = "https://realestate.com.au/neighbourhoods/"
+    realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
                  "3193": {"price": "100000", "suburb": "beaumaris"},
                  "3195": {"price": "500000", "suburb": "parkdale"},
@@ -48,21 +49,15 @@ def getcontent():
             soup = BeautifulSoup(priceurl)
             print "This is soup"
             print(soup)
-            pricetable = soup.find_all(class_='div.price.strong')
-            print colour.red(pricetable)
-            print "That was pricetable"
-            links = soup.find(class_='div.price.strong')
+            dom = etree.HTML(str(soup))
+            links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
             print(links)
             print "This is after soup"
             print postcode[0][each]["price"]
-            postcode[0][each]["price"] = links[1]
-            string = postcode[0][each]["price"]
-            print(string)
             try:
-                blah = (str(string))
-                newblah = blah.replace('<td class="div.price.strong">$', "$")
-                finalblah = newblah.replace('</td>', "")
-                postcode[0][each]["price"] = finalblah
+                postcode[0][each]["price"] = links[0].text
+                string = postcode[0][each]["price"]
+                print(string)
             except:
                 postcode[0][each]["price"] = "No DATA!"
             print("Finished collecting all the content mother fuckers!")
