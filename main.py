@@ -165,15 +165,15 @@ def default():
     for each in tickers[0]:
 
         response = http.request("GET", bittick + each)
-        print colour.magenta(response)
+        print colour.purple(response)
         usddict = json.loads(response.data.decode('utf-8'))
-        print colour.magenta(usddict)
+        print colour.purple(usddict)
         usdmain = usddict['result']
-        print colour.magenta(usdmain)
+        print colour.purple(usdmain)
         usdlastclean = usdmain
-        print colour.magenta(usdlastclean)
+        print colour.purple(usdlastclean)
         usdlast = (float(usdlastclean['Last']))
-        print colour.magenta(usdlast)
+        print colour.purple(usdlast)
         tickers[0][each]["Last"] = (str(usdlast))
 
     print colour.green("loading fixer on Route")
