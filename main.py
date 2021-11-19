@@ -206,8 +206,10 @@ def default():
                  "3195": {"price": "500000", "suburb": "parkdale"},
                  "3194": {"price": "777777", "suburb": "mentone"}}]
 
+    postcodeCount = 0
     for item in postcode:
         for each in item:
+            print colour.red("route postcode count starting " + (str(postcodeCount)))
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-vic" + "-" + (str(each)),
                                     preload_content=False)
 
@@ -219,10 +221,11 @@ def default():
                 string = postcode[0][each]["price"]
             except:
                 postcode[0][each]["price"] = "No DATA!"
-
+        postcodeCount += 1
+        print colour.green("route postcode count finishing " + (str(postcodeCount)))
 
     legend = 'Price'
-
+    time.sleep(3)
     print colour.orange("Tickers")
     for key in tickers[0]:
         print("building URL to retrieve " + key)
