@@ -164,13 +164,18 @@ def default():
     for each in tickers[0]:
 
         response = http.request("GET", bittick + each)
+        print colour.red(response)
         usddict = json.loads(response.data.decode('utf-8'))
+        print colour.red(usddict)
         usdmain = usddict['result']
+        print colour.red(usdmain)
         usdlastclean = usdmain
+        print colour.red(usdlastclean)
         usdlast = (float(usdlastclean['Last']))
+        print colour.red(usdlast)
         tickers[0][each]["Last"] = (str(usdlast))
 
-    print colour.red("loading fixer on Route")
+    print colour.green("loading fixer on Route")
     fixer = "http://data.fixer.io/api/latest?access_key=fbd745254a65478320a8a49a8c188136"
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
     print colour.yellow("Currency loaded!")
