@@ -180,8 +180,10 @@ def default():
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
     print colour.yellow("Currency loaded!")
 
+    currencyCount = 0
     for each in currency:
 
+        print "Start of Currency Loop Count " + (str(currencyCount))
         responsefixer = http.request("GET", fixer)
         print colour.red(responsefixer)
         usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
@@ -192,6 +194,8 @@ def default():
         print colour.green(usdratefixer)
         currency[each] = (str(usdratefixer))
         print colour.white(currency[each])
+        print "End of Currency Loop Count " + (str(currencyCount))
+        currencyCount += 1
 
     print colour.yellow("Currency loop has completed")
     realestateurl = "https://domain.com.au/suburb-profile/"
