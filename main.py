@@ -7,6 +7,7 @@ import json
 import os
 from colours import colour
 from lxml import etree
+import time
 
 
 app = Flask(__name__)
@@ -198,6 +199,7 @@ def default():
         currencyCount += 1
 
     print colour.yellow("Currency loop has completed")
+    time.sleep(3)
     realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
                  "3193": {"price": "100000", "suburb": "beaumaris"},
