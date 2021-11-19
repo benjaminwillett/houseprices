@@ -165,15 +165,15 @@ def default():
     for each in tickers[0]:
 
         response = http.request("GET", bittick + each)
-        print colour.red(response)
+        print colour.magenta(response)
         usddict = json.loads(response.data.decode('utf-8'))
-        print colour.red(usddict)
+        print colour.magenta(usddict)
         usdmain = usddict['result']
-        print colour.red(usdmain)
+        print colour.magenta(usdmain)
         usdlastclean = usdmain
-        print colour.red(usdlastclean)
+        print colour.magenta(usdlastclean)
         usdlast = (float(usdlastclean['Last']))
-        print colour.red(usdlast)
+        print colour.magenta(usdlast)
         tickers[0][each]["Last"] = (str(usdlast))
 
     print colour.green("loading fixer on Route")
@@ -186,15 +186,15 @@ def default():
 
         print "Start of Currency Loop Count " + (str(currencyCount))
         responsefixer = http.request("GET", fixer)
-        print colour.red(responsefixer)
+        print colour.blue(responsefixer)
         usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
-        print colour.yellow(usddictfixer)
+        print colour.blue(usddictfixer)
         usdmainfixer = usddictfixer['rates']
         print colour.blue(usdmainfixer)
         usdratefixer = usdmainfixer[each]
-        print colour.green(usdratefixer)
+        print colour.blue(usdratefixer)
         currency[each] = (str(usdratefixer))
-        print colour.white(currency[each])
+        print colour.blue(currency[each])
         print "End of Currency Loop Count " + (str(currencyCount))
         currencyCount += 1
 
@@ -209,7 +209,7 @@ def default():
     postcodeCount = 0
     for item in postcode:
         for each in item:
-            print colour.red("route postcode count starting " + (str(postcodeCount)))
+            print colour.green("route postcode count starting " + (str(postcodeCount)))
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-vic" + "-" + (str(each)),
                                     preload_content=False)
 
