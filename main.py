@@ -185,13 +185,13 @@ def default():
         responsefixer = http.request("GET", fixer)
         print colour.red(responsefixer)
         usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
-        print colour.red(usddictfixer)
+        print colour.yellow(usddictfixer)
         usdmainfixer = usddictfixer['rates']
-        print colour.red(usdmainfixer)
+        print colour.blue(usdmainfixer)
         usdratefixer = usdmainfixer[each]
-        print colour.red(usdratefixer)
+        print colour.green(usdratefixer)
         currency[each] = (str(usdratefixer))
-        print colour.red(currency[each])
+        print colour.white(currency[each])
 
     print colour.yellow("Currency loop has completed")
     realestateurl = "https://domain.com.au/suburb-profile/"
