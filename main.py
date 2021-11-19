@@ -189,8 +189,8 @@ def default():
 
     for item in postcode:
         for each in item:
-            priceurl = http.request("GET", realestateurl +
-                                    item[each]["suburb"] + "-vic" + "-" + (str(each)) , preload_content=False)
+            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-vic" + "-" + (str(each)),
+                                    preload_content=False)
 
             soup = BeautifulSoup(priceurl)
             dom = etree.HTML(str(soup))
@@ -235,7 +235,7 @@ def default():
     for each in tickers[0]:
         lastHol = tickers[0][each]["Last"]
         quantity = tickers[0][each]["quantity"]
-        print(str(type(lastHol)) + " is " + each + " " + lastHol)
+        print(str(type(lastHol)) + " is " + each + " " + (str(lastHol)))
         print(str(type(quantity)) + " is quantity " + (str(quantity)))
         lastholcon = float(lastHol)
         print(str(type(lastholcon)) + " is lastHolcon")
