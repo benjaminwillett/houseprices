@@ -118,7 +118,7 @@ def default():
                       "quantity": 89073,
                       "value": 0,
                       },
-                 "BTC-STRAT":
+                 "BTC-STRAX":
                      {"pair": "BTC",
                       "colour": "rgba(255, 0, 127, 1)",
                       "Last": 0,
