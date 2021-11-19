@@ -199,7 +199,6 @@ def default():
         currencyCount += 1
 
     print colour.yellow("Currency loop has completed")
-    time.sleep(3)
     realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
                  "3193": {"price": "100000", "suburb": "beaumaris"},
@@ -207,6 +206,7 @@ def default():
                  "3194": {"price": "777777", "suburb": "mentone"}}]
 
     postcodeCount = 0
+    print colour.green("About to Loop through items in POSTCODE")
     for item in postcode:
         for each in item:
             print colour.green("route postcode count starting " + (str(postcodeCount)))
@@ -225,7 +225,6 @@ def default():
         print colour.green("route postcode count finishing " + (str(postcodeCount)))
 
     legend = 'Price'
-    time.sleep(3)
     print colour.orange("Tickers")
     for key in tickers[0]:
         print("building URL to retrieve " + key)
