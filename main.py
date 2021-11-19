@@ -48,10 +48,10 @@ def getcontent():
             print(priceurl)
             soup = BeautifulSoup(priceurl)
             print "This is soup"
-            print(soup)
+            # print(soup)
             dom = etree.HTML(str(soup))
             links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
-            print(links)
+            # print(links)
             print "This is after soup"
             print postcode[0][each]["price"]
             try:
