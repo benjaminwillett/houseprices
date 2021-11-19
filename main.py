@@ -76,7 +76,7 @@ letsthread()
 @app.route('/', methods=['GET', 'POST'])
 def default():
     letsthread()
-    print colour.green("Loading bittick")
+    print colour.green("Loading bittick on Route")
     bittick = "https://bittrex.com/api/v1.1/public/getticker?market="
     tickers = [
                 {"USDT-BTC":
@@ -159,7 +159,7 @@ def default():
                       }
                  }]
 
-    print colour.blue("loaded tickers dictionary")
+    print colour.blue("loaded tickers dictionary on Route")
 
     for each in tickers[0]:
 
@@ -170,9 +170,10 @@ def default():
         usdlast = (float(usdlastclean['Last']))
         tickers[0][each]["Last"] = (str(usdlast))
 
-    print colour.yellow("loading fixer")
+    print colour.yellow("loading fixer on Route")
     fixer = "http://data.fixer.io/api/latest?access_key=fbd745254a65478320a8a49a8c188136"
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
+    print colour.yellow("Currency loaded!")
 
     for each in currency:
 
@@ -205,6 +206,7 @@ def default():
 
     legend = 'Price'
 
+    print colour.orange("Tickers")
     for key in tickers[0]:
         print("building URL to retrieve " + key)
         print(tickers[0][key]["url"])
