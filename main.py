@@ -208,11 +208,10 @@ def default():
     postcodeCount = 0
     print colour.green("About to Loop through items in POSTCODE")
     for item in postcode:
+        print colour.green("route postcode count starting " + (str(postcodeCount)))
         for each in item:
-            print colour.green("route postcode count starting " + (str(postcodeCount)))
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-vic" + "-" + (str(each)),
                                     preload_content=False)
-
             soup = BeautifulSoup(priceurl)
             dom = etree.HTML(str(soup))
             links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
