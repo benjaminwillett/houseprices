@@ -188,6 +188,7 @@ def default():
         usdratefixer = usdmainfixer[each]
         currency[each] = (str(usdratefixer))
 
+    print colour.yellow("Currency loop has completed")
     realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
                  "3193": {"price": "100000", "suburb": "beaumaris"},
