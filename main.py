@@ -204,10 +204,11 @@ def default():
                  "3195": {"price": "500000", "suburb": "parkdale"},
                  "3194": {"price": "777777", "suburb": "mentone"}}]
 
-    postcodeCount = 0
     print colour.green("About to Loop through items in POSTCODE")
+    itemCount = 0
     for item in postcode:
-        print colour.green("route postcode count starting " + (str(postcodeCount)))
+        print colour.yellow("This is item loop " + (str(itemCount)))
+        print colour.yellow("This is item " + (str(item)))
         for each in item:
             priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-vic" + "-" + (str(each)),
                                     preload_content=False)
@@ -217,10 +218,11 @@ def default():
             try:
                 postcode[0][each]["price"] = links[0].text
                 string = postcode[0][each]["price"]
+                print(string)
             except:
                 postcode[0][each]["price"] = "No DATA!"
-        postcodeCount += 1
-        print colour.green("route postcode count finishing " + (str(postcodeCount)))
+
+        print colour.yellow("route item count finishing " + (str(itemCount)))
 
     legend = 'Price'
     print colour.orange("Tickers")
