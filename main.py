@@ -29,13 +29,13 @@ def getcontent():
 
     realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "cheltenham"},
+                          "suburb": "cheltenham", "entry": "10000", "highend": "10000"},
                  "3193": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "beaumaris"},
+                          "suburb": "beaumaris", "entry": "10000", "highend": "10000"},
                  "3195": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "parkdale"},
+                          "suburb": "parkdale", "entry": "10000", "highend": "10000"},
                  "3194": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "mentone"}}]
+                          "suburb": "mentone", "entry": "10000", "highend": "10000"}}]
 
     print "This is the postcode"
     print postcode
@@ -206,13 +206,13 @@ def default():
     print colour.yellow("Currency loop has completed")
     realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "cheltenham"},
+                          "suburb": "cheltenham", "entry": "10000", "highend": "10000"},
                  "3193": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "beaumaris"},
+                          "suburb": "beaumaris", "entry": "10000", "highend": "10000"},
                  "3195": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "parkdale"},
+                          "suburb": "parkdale", "entry": "10000", "highend": "10000"},
                  "3194": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "mentone"}}]
+                          "suburb": "mentone", "entry": "10000", "highend": "10000"}}]
 
     print colour.green("About to Loop through items in POSTCODE")
     itemCount = 0
