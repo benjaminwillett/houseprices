@@ -224,9 +224,11 @@ def default():
         itemCount += 1
         print colour.yellow("route item count finishing " + (str(itemCount)))
 
-    legend = 'Price'
+    legend = "Price"
     print colour.orange("Tickers")
+    keyCount = 0
     for key in tickers[0]:
+        print colour.red("Looping through tickers " + (str(keyCount)))
         print("building URL to retrieve " + key)
         print(tickers[0][key]["url"])
         print(tickers[0][key]["pair"])
@@ -253,6 +255,8 @@ def default():
         print((str(tickers[0][key]["30ma"])) + " is the thirtyMa")
         print((str(tickers[0][key]["60ma"])) + " is the sixtyMa")
         print((str(tickers[0][key]["90ma"])) + " is the ninetyMa")
+        keyCount += 1
+        print colour.red("Finished keyCount loop " + (str(keyCount)))
 
     for each in tickers[0]:
         lastHol = tickers[0][each]["Last"]
