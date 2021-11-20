@@ -7,7 +7,6 @@ import json
 import os
 from colours import colour
 from lxml import etree
-import time
 
 
 app = Flask(__name__)
@@ -177,6 +176,7 @@ def default():
         tickers[0][each]["Last"] = (str(usdlast))
 
     print colour.green("loading fixer on Route")
+    fixer =
     fixer = "http://data.fixer.io/api/latest?access_key=f72288cbe5758bf1a6137a467d5c7339"
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
     print colour.yellow("Currency loaded!")
@@ -274,7 +274,7 @@ def default():
     totaldollar = round(float(totalval) * (float(tickers[0]["USDT-BTC"]["Last"])))
     print("$" + str(totaldollar) + " is the totaldollar value")
     print(str(currency["USD"]) + " is exchange rate")
-    conversion = ((float(2) - (float(currency["USD"]))))
+    conversion = (float(2) - (float(currency["USD"])))
     print(str(conversion) + " is the conversion rate")
     austotal = str(round(totaldollar * conversion))
 
