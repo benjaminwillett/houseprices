@@ -221,7 +221,7 @@ def default():
                 print(string)
             except:
                 postcode[0][each]["price"] = "No DATA!"
-
+        itemCount += 1
         print colour.yellow("route item count finishing " + (str(itemCount)))
 
     legend = 'Price'
