@@ -177,7 +177,7 @@ def default():
         tickers[0][each]["Last"] = (str(usdlast))
 
     print colour.green("loading fixer on Route")
-    fixer = "http://data.fixer.io/api/latest?access_key=fbd745254a65478320a8a49a8c188136"
+    fixer = "http://data.fixer.io/api/latest?access_key=f72288cbe5758bf1a6137a467d5c7339"
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
     print colour.yellow("Currency loaded!")
 
