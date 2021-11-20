@@ -28,10 +28,10 @@ class myThread (threading.Thread):
 def getcontent():
 
     realestateurl = "https://domain.com.au/suburb-profile/"
-    postcode = [{"3192": {"fourbedprice": "100000", "suburb": "cheltenham"},
-                 "3193": {"fourbedprice": "100000", "suburb": "beaumaris"},
-                 "3195": {"fourbedprice": "500000", "suburb": "parkdale"},
-                 "3194": {"fourbedprice": "777777", "suburb": "mentone"}}]
+    postcode = [{"3192": {"threebedprice": "100000", "fourbedprice": "100000", "suburb": "cheltenham"},
+                 "3193": {"threebedprice": "100000", "fourbedprice": "100000", "suburb": "beaumaris"},
+                 "3195": {"threebedprice": "500000", "fourbedprice": "100000", "suburb": "parkdale"},
+                 "3194": {"threebedprice": "777777", "fourbedprice": "100000", "suburb": "mentone"}}]
 
     print "This is the postcode"
     print postcode
@@ -50,12 +50,12 @@ def getcontent():
             print "This is soup"
             # print(soup)
             dom = etree.HTML(str(soup))
-            links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
-            # print(links)
+            fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
+            # print(fourbed)
             print "This is after soup"
             print postcode[0][each]["fourbedprice"]
             try:
-                postcode[0][each]["fourbedprice"] = links[0].text
+                postcode[0][each]["fourbedprice"] = fourbed[0].text
                 string = postcode[0][each]["fourbedprice"]
                 print(string)
             except:
@@ -214,9 +214,9 @@ def default():
                                     preload_content=False)
             soup = BeautifulSoup(priceurl)
             dom = etree.HTML(str(soup))
-            links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
+            fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
             try:
-                postcode[0][each]["fourbedprice"] = links[0].text
+                postcode[0][each]["fourbedprice"] = fourbed[0].text
                 string = postcode[0][each]["fourbedprice"]
                 print(string)
             except:
