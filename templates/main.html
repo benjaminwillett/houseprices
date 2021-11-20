@@ -200,6 +200,26 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
 
              <h5 class="w3-text-grey w3-padding-16"><i
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>2 Bedroom House Median</h5>
+            {% for item in POSTCODE %}{% for each in item %}
+                 <ul><li>{{ POSTCODE[0][each]["suburb"] }} is <b>{{ POSTCODE[0][each]["twobedprice"] }}</b></li></ul>
+
+{% endfor %}
+    {% endfor %}
+         </div>
+           <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+
+             <h5 class="w3-text-grey w3-padding-16"><i
+                class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>3 Bedroom House Median</h5>
+            {% for item in POSTCODE %}{% for each in item %}
+                 <ul><li>{{ POSTCODE[0][each]["suburb"] }} is <b>{{ POSTCODE[0][each]["threebedprice"] }}</b></li></ul>
+
+{% endfor %}
+    {% endfor %}
+         </div>
+           <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+
+             <h5 class="w3-text-grey w3-padding-16"><i
                 class="fa fa-home fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>4 Bedroom House Median</h5>
             {% for item in POSTCODE %}{% for each in item %}
                  <ul><li>{{ POSTCODE[0][each]["suburb"] }} is <b>{{ POSTCODE[0][each]["fourbedprice"] }}</b></li></ul>
