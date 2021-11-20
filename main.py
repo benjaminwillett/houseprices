@@ -225,7 +225,7 @@ def default():
         print colour.yellow("route item count finishing " + (str(itemCount)))
 
     legend = "Price"
-    print colour.orange("Tickers")
+    print colour.red("Tickers")
     keyCount = 0
     for key in tickers[0]:
         print colour.red("Looping through tickers " + (str(keyCount)))
