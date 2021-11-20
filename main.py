@@ -57,6 +57,8 @@ def getcontent():
             twobed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr/td[3]')
             threebed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[2]/tr/td[3]')
             fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
+            entry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[2]/div')
+            highend = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[3]/div')
             # print(fourbed)
             print "This is after soup"
             print postcode[0][each]["fourbedprice"]
@@ -64,12 +66,16 @@ def getcontent():
                 postcode[0][each]["twobedprice"] = twobed[0].text
                 postcode[0][each]["threebedprice"] = threebed[0].text
                 postcode[0][each]["fourbedprice"] = fourbed[0].text
+                postcode[0][each]["entry"] = entry[0].text
+                postcode[0][each]["highend"] = highend[0].text
                 string = postcode[0][each]["fourbedprice"]
                 print(string)
             except:
                 postcode[0][each]["twobedprice"] = "No DATA!"
                 postcode[0][each]["threebedprice"] = "No DATA!"
                 postcode[0][each]["fourbedprice"] = "No DATA!"
+                postcode[0][each]["entry"] = "No DATA!"
+                postcode[0][each]["highend"] = "No DATA!"
             print("Finished collecting all the content mother fuckers!")
     print(postcode)
 
@@ -221,16 +227,22 @@ def default():
             twobed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr/td[3]')
             threebed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[2]/tr/td[3]')
             fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
+            entry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[2]/div')
+            highend = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[3]/div')
             try:
                 postcode[0][each]["twobedprice"] = twobed[0].text
                 postcode[0][each]["threebedprice"] = threebed[0].text
                 postcode[0][each]["fourbedprice"] = fourbed[0].text
+                postcode[0][each]["entry"] = entry[0].text
+                postcode[0][each]["highend"] = highend[0].text
                 string = postcode[0][each]["fourbedprice"]
                 print(string)
             except:
                 postcode[0][each]["twobedprice"] = "No DATA!"
                 postcode[0][each]["threebedprice"] = "No DATA!"
                 postcode[0][each]["fourbedprice"] = "No DATA!"
+                postcode[0][each]["entry"] = "No DATA!"
+                postcode[0][each]["highend"] = "No DATA!"
         itemCount += 1
         print colour.yellow("route item count finishing " + (str(itemCount)))
 
