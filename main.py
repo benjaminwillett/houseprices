@@ -99,7 +99,7 @@ def default():
                       "30ma": 0,
                       "60ma": 0,
                       "90ma": 0,
-                      "quantity": 0,
+                      "quantity": 0.11,
                       "value": 0,
                       },
                  "BTC-ETH":
@@ -113,19 +113,6 @@ def default():
                       "60ma": 0,
                       "90ma": 0,
                       "quantity": 0.94,
-                      "value": 0,
-                      },
-                 "BTC-SC":
-                     {"pair": "BTC",
-                      "colour": "rgba(51, 255, 51, 1)",
-                      "Last": 0,
-                      "url": "SC",
-                      "labels": [],
-                      "values": [],
-                      "30ma": 0,
-                      "60ma": 0,
-                      "90ma": 0,
-                      "quantity": 89073,
                       "value": 0,
                       },
                  "BTC-STRAX":
@@ -190,20 +177,23 @@ def default():
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
     print colour.yellow("Currency loaded!")
 
+    responsefixer = http.request("GET", fixer)
+    print colour.blue(responsefixer)
+    usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
+    print colour.blue(usddictfixer)
+    usdmainfixer = usddictfixer['rates']
+    print colour.blue(usdmainfixer)
     currencyCount = 0
-    for each in currency:
 
-        print "Start of Currency Loop Count " + (str(currencyCount))
-        responsefixer = http.request("GET", fixer)
-        print colour.blue(responsefixer)
-        usddictfixer = json.loads(responsefixer.data.decode('utf-8'))
-        print colour.blue(usddictfixer)
-        usdmainfixer = usddictfixer['rates']
-        print colour.blue(usdmainfixer)
-        usdratefixer = usdmainfixer[each]
-        print colour.blue(usdratefixer)
-        currency[each] = (str(usdratefixer))
-        print colour.blue(currency[each])
+    for each in currency:
+        try:
+            print "Start of Currency Loop Count " + (str(currencyCount))
+            usdratefixer = usdmainfixer[each]
+            print colour.blue(usdratefixer)
+            currency[each] = (str(usdratefixer))
+            print colour.blue(currency[each])
+        except:
+            currency[each] = "No Data"
         print "End of Currency Loop Count " + (str(currencyCount))
         currencyCount += 1
 
