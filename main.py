@@ -28,10 +28,10 @@ class myThread (threading.Thread):
 def getcontent():
 
     realestateurl = "https://domain.com.au/suburb-profile/"
-    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
-                 "3193": {"price": "100000", "suburb": "beaumaris"},
-                 "3195": {"price": "500000", "suburb": "parkdale"},
-                 "3194": {"price": "777777", "suburb": "mentone"}}]
+    postcode = [{"3192": {"fourbedprice": "100000", "suburb": "cheltenham"},
+                 "3193": {"fourbedprice": "100000", "suburb": "beaumaris"},
+                 "3195": {"fourbedprice": "500000", "suburb": "parkdale"},
+                 "3194": {"fourbedprice": "777777", "suburb": "mentone"}}]
 
     print "This is the postcode"
     print postcode
@@ -53,13 +53,13 @@ def getcontent():
             links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
             # print(links)
             print "This is after soup"
-            print postcode[0][each]["price"]
+            print postcode[0][each]["fourbedprice"]
             try:
-                postcode[0][each]["price"] = links[0].text
-                string = postcode[0][each]["price"]
+                postcode[0][each]["fourbedprice"] = links[0].text
+                string = postcode[0][each]["fourbedprice"]
                 print(string)
             except:
-                postcode[0][each]["price"] = "No DATA!"
+                postcode[0][each]["fourbedprice"] = "No DATA!"
             print("Finished collecting all the content mother fuckers!")
     print(postcode)
 
@@ -199,10 +199,10 @@ def default():
 
     print colour.yellow("Currency loop has completed")
     realestateurl = "https://domain.com.au/suburb-profile/"
-    postcode = [{"3192": {"price": "100000", "suburb": "cheltenham"},
-                 "3193": {"price": "100000", "suburb": "beaumaris"},
-                 "3195": {"price": "500000", "suburb": "parkdale"},
-                 "3194": {"price": "777777", "suburb": "mentone"}}]
+    postcode = [{"3192": {"fourbedprice": "100000", "suburb": "cheltenham"},
+                 "3193": {"fourbedprice": "100000", "suburb": "beaumaris"},
+                 "3195": {"fourbedprice": "500000", "suburb": "parkdale"},
+                 "3194": {"fourbedprice": "777777", "suburb": "mentone"}}]
 
     print colour.green("About to Loop through items in POSTCODE")
     itemCount = 0
@@ -216,11 +216,11 @@ def default():
             dom = etree.HTML(str(soup))
             links = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
             try:
-                postcode[0][each]["price"] = links[0].text
-                string = postcode[0][each]["price"]
+                postcode[0][each]["fourbedprice"] = links[0].text
+                string = postcode[0][each]["fourbedprice"]
                 print(string)
             except:
-                postcode[0][each]["price"] = "No DATA!"
+                postcode[0][each]["fourbedprice"] = "No DATA!"
         itemCount += 1
         print colour.yellow("route item count finishing " + (str(itemCount)))
 
@@ -322,7 +322,7 @@ def default():
 
     loans = [{"Home":
                   {"Provider": "ANZ",
-                   "ID": "HNeed Data",
+                   "ID": "Need Data",
                    "contact": "Need Data",
                    "payment type": "BPAY"},
               "Car":
