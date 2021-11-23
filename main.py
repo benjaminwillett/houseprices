@@ -57,7 +57,7 @@ def getcontent():
             twobed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr/td[3]')
             threebed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[2]/tr/td[3]')
             fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
-            entry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[2]/tr/td[3]')
+            entry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[2]/div')
             highend = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
             #entry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[
             # 1]/div/div/div[1]/div[2]/div')
