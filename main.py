@@ -29,13 +29,13 @@ def getcontent():
 
     realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "cheltenham", "entry": "10000", "highend": "10000"},
+                          "suburb": "cheltenham", "twobedentry": "10000", "twobedhighend": "10000"},
                  "3193": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "beaumaris", "entry": "10000", "highend": "10000"},
+                          "suburb": "beaumaris", "twobedentry": "10000", "twobedhighend": "10000"},
                  "3195": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "parkdale", "entry": "10000", "highend": "10000"},
+                          "suburb": "parkdale", "twobedentry": "10000", "twobedhighend": "10000"},
                  "3194": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "mentone", "entry": "10000", "highend": "10000"}}]
+                          "suburb": "mentone", "twobedentry": "10000", "twobedhighend": "10000"}}]
 
     print "This is the postcode"
     print postcode
