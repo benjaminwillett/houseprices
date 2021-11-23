@@ -70,8 +70,8 @@ def getcontent():
                 postcode[0][each]["twobedprice"] = twobed[0].text
                 postcode[0][each]["threebedprice"] = threebed[0].text
                 postcode[0][each]["fourbedprice"] = fourbed[0].text
-                postcode[0][each]["entry"] = entry[0].text
-                postcode[0][each]["highend"] = highend[0].text
+                postcode[0][each]["twobedentry"] = twobedentry[0].text
+                postcode[0][each]["twobedhighend"] = twobedhighend[0].text
                 string = postcode[0][each]["fourbedprice"]
                 print(string)
             except:
