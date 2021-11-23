@@ -78,8 +78,8 @@ def getcontent():
                 postcode[0][each]["twobedprice"] = "No DATA!"
                 postcode[0][each]["threebedprice"] = "No DATA!"
                 postcode[0][each]["fourbedprice"] = "No DATA!"
-                postcode[0][each]["entry"] = "No DATA!"
-                postcode[0][each]["highend"] = "No DATA!"
+                postcode[0][each]["twobedentry"] = "No DATA!"
+                postcode[0][each]["twobedhighend"] = "No DATA!"
             print("Finished collecting all the content mother fuckers!")
     print(postcode)
 
@@ -210,49 +210,41 @@ def default():
     print colour.yellow("Currency loop has completed")
     realestateurl = "https://domain.com.au/suburb-profile/"
     postcode = [{"3192": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "cheltenham", "entry": "10000", "highend": "10000"},
+                          "suburb": "cheltenham", "twobedentry": "10000", "twobedhighend": "10000"},
                  "3193": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "beaumaris", "entry": "10000", "highend": "10000"},
+                          "suburb": "beaumaris", "twobedentry": "10000", "twobedhighend": "10000"},
                  "3195": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "parkdale", "entry": "10000", "highend": "10000"},
+                          "suburb": "parkdale", "twobedentry": "10000", "twobedhighend": "10000"},
                  "3194": {"twobedprice": "100000", "threebedprice": "100000", "fourbedprice": "100000",
-                          "suburb": "mentone", "entry": "10000", "highend": "10000"}}]
+                          "suburb": "mentone", "twobedentry": "10000", "twobedhighend": "10000"}}]
 
-    print colour.green("About to Loop through items in POSTCODE")
-    itemCount = 0
     for item in postcode:
-        print colour.yellow("This is item loop " + (str(itemCount)))
-        print colour.yellow("This is item " + (str(item)))
         for each in item:
-            priceurl = http.request("GET", realestateurl + item[each]["suburb"] + "-vic" + "-" + (str(each)),
-                                    preload_content=False)
-            soup = BeautifulSoup(priceurl)
-            dom = etree.HTML(str(soup))
-            twobed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr/td[3]')
-            threebed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[2]/tr/td[3]')
-            fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
-            entry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[2]/tr/td[3]')
-            highend = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
-            #entry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[
-            # 1]/div/div/div[1]/div[2]/div')
-            #highend = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr[2]/td/div/div/div/div/div[
-            # 1]/div/div/div[1]/div[3]/div')
-            try:
-                postcode[0][each]["twobedprice"] = twobed[0].text
-                postcode[0][each]["threebedprice"] = threebed[0].text
-                postcode[0][each]["fourbedprice"] = fourbed[0].text
-                postcode[0][each]["entry"] = entry[0].text
-                postcode[0][each]["highend"] = highend[0].text
-                string = postcode[0][each]["fourbedprice"]
-                print(string)
-            except:
-                postcode[0][each]["twobedprice"] = "No DATA!"
-                postcode[0][each]["threebedprice"] = "No DATA!"
-                postcode[0][each]["fourbedprice"] = "No DATA!"
-                postcode[0][each]["entry"] = "No DATA!"
-                postcode[0][each]["highend"] = "No DATA!"
-        itemCount += 1
-        print colour.yellow("route item count finishing " + (str(itemCount)))
+                priceurl = http.request("GET", realestateurl +
+                                        item[each]["suburb"] + "-vic" + "-" + (str(each)) , preload_content=False)
+
+                soup = BeautifulSoup(priceurl)
+                dom = etree.HTML(str(soup))
+                twobed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr/td[3]')
+                threebed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[2]/tr/td[3]')
+                fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
+                twobedentry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[2]/div')
+                twobedhighend = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[3]/div')
+
+                try:
+                    postcode[0][each]["twobedprice"] = twobed[0].text
+                    postcode[0][each]["threebedprice"] = threebed[0].text
+                    postcode[0][each]["fourbedprice"] = fourbed[0].text
+                    postcode[0][each]["twobedentry"] = twobedentry[0].text
+                    postcode[0][each]["twobedhighend"] = twobedhighend[0].text
+                    string = postcode[0][each]["fourbedprice"]
+                    print(string)
+                except:
+                    postcode[0][each]["twobedprice"] = "No DATA!"
+                    postcode[0][each]["threebedprice"] = "No DATA!"
+                    postcode[0][each]["fourbedprice"] = "No DATA!"
+                    postcode[0][each]["twobedentry"] = "No DATA!"
+                    postcode[0][each]["twobedhighend"] = "No DATA!"
 
     legend = "Price"
     print colour.red("Tickers")
