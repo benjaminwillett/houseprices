@@ -231,7 +231,7 @@ def default():
             fourbed = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[3]/tr/td[3]')
             twobedentry = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[2]/div')
             twobedhighend = dom.xpath('//*[@id="trends"]/div/div/div[2]/table/tbody[1]/tr[2]/td/div/div/div/div/div[1]/div/div/div[1]/div[3]/div')
-            
+
             try:
                 postcode[0][each]["twobedprice"] = twobed[0].text
                 postcode[0][each]["threebedprice"] = threebed[0].text

@@ -1,3 +1,6 @@
-Test readme file
-Sometime the file doesn't change in git repository if the name is the same but the case has changed.
-Git has a problem with some files detecting change if they are empty
+Ensure Docker is installed
+Create a local directory and copy the Dockerfile into this.
+within this directory run the following docker command:
+
+#sudo docker build --no-cache houseprices:latest .
+#sudo docker run -d -p 5001:80 houseprices:latest
