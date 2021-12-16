@@ -1,0 +1,21 @@
+FROM tiangolo/meinheld-gunicorn-flask:python2.7
+
+MAINTAINER Ben Willett "benw@techcamp.com.au"
+
+RUN apt-get update -y && \
+    apt-get install -y python-pip python-dev
+
+COPY . /app
+
+WORKDIR /app
+
+RUN echo pwd
+RUN echo ls
+
+RUN pip install -r requirements.txt
+RUN pip install --upgrade -r requirements.txt
+
+ENTRYPOINT [ "python" ]
+
+CMD [ "main.py" ]
+
