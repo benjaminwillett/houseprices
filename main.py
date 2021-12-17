@@ -183,7 +183,7 @@ def default():
         tickers[0][each]["Last"] = (str(usdlast))
 
     print colour.green("loading fixer on Route")
-    fixer = os.environ('FIXER_URL_APIKEY')
+    fixer = os.environ.get('FIXER_URL_APIKEY')
     currency = {'USD': 0, 'GBP': 0, 'EUR': 0, 'AUD': 0, }
     print colour.yellow("Currency loaded!")
 
